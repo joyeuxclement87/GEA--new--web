@@ -109,34 +109,6 @@ const productCategories = [
   { label: "Fire Protection", desc: "Suppression & detection", icon: Flame },
 ];
 
-const propertiesItems = [
-  {
-    label: "Buy Property",
-    desc: "Browse available listings",
-    href: "/real-estate",
-  },
-  {
-    label: "Rent Property",
-    desc: "Short & long term rentals",
-    href: "/real-estate",
-  },
-  {
-    label: "Sell Property",
-    desc: "List with our expert team",
-    href: "/real-estate",
-  },
-  {
-    label: "Property Management",
-    desc: "End-to-end asset management",
-    href: "/real-estate",
-  },
-  {
-    label: "Investment Opportunities",
-    desc: "High-yield real estate deals",
-    href: "/real-estate",
-  },
-];
-
 const recentSearches = [
   "Architecture Design",
   "Solar Panels",
@@ -152,17 +124,15 @@ const quickLinks = [
 ];
 
 const mainLinks = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services", mega: "expertise" },
+  { label: "Expertise", href: "/services", mega: "expertise" },
   { label: "Projects", href: "/projects" },
-  { label: "Materials", href: "/products", mega: "products" },
-  { label: "Real Estate", href: "/real-estate", mega: "properties" },
-  { label: "News", href: "/insights" },
+  { label: "Solutions", href: "/products", mega: "solutions" },
+  { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
-type MegaKey = "expertise" | "products" | "properties" | null;
+type MegaKey = "expertise" | "solutions" | null;
 
 // ─── Logo ─────────────────────────────────────────────────────────────────────
 
@@ -185,10 +155,10 @@ function GEALogo() {
 function ExpertisePanel({ onClose }: { onClose: () => void }) {
   return (
     <div
-      className="w-full max-w-[1080px] rounded-2xl border border-[#E6E6E6] bg-white overflow-hidden"
+      className="w-full rounded-2xl border border-[#E6E6E6] bg-white overflow-hidden"
       style={{ boxShadow: "0 24px 64px -12px rgba(16,54,125,0.13)" }}
     >
-      <div className="grid grid-cols-[1fr_1fr_1fr_1fr_260px]">
+      <div className="grid grid-cols-[1fr_1fr_1fr_1fr_300px]">
         <div className="col-span-4 grid grid-cols-4 p-8 pb-6 gap-0">
           {expertiseColumns.map((col) => (
             <div key={col.heading} className="pr-8">
@@ -275,7 +245,7 @@ function ExpertisePanel({ onClose }: { onClose: () => void }) {
 function ProductsPanel({ onClose }: { onClose: () => void }) {
   return (
     <div
-      className="w-full max-w-[960px] rounded-2xl border border-[#E6E6E6] bg-white overflow-hidden"
+      className="flex-1 min-w-0 rounded-2xl border border-[#E6E6E6] bg-white overflow-hidden"
       style={{ boxShadow: "0 24px 64px -12px rgba(16,54,125,0.13)" }}
     >
       <div className="grid grid-cols-[1fr_240px]">
@@ -286,7 +256,7 @@ function ProductsPanel({ onClose }: { onClose: () => void }) {
           >
             Product Categories
           </p>
-          <div className="grid grid-cols-3 gap-1.5">
+          <div className="grid grid-cols-4 gap-1.5">
             {productCategories.map((cat) => {
               const Icon = cat.icon;
               return (
@@ -361,44 +331,6 @@ function ProductsPanel({ onClose }: { onClose: () => void }) {
           className="text-[11px] font-[500] text-[#10367D] hover:text-[#C8A45D] transition-colors duration-200"
         >
           Browse all products →
-        </Link>
-      </div>
-    </div>
-  );
-}
-
-// ─── Properties Dropdown Panel ────────────────────────────────────────────────
-
-function PropertiesPanel({ onClose }: { onClose: () => void }) {
-  return (
-    <div
-      className="w-60 rounded-2xl border border-[#E6E6E6] bg-white overflow-hidden"
-      style={{ boxShadow: "0 24px 64px -12px rgba(16,54,125,0.13)" }}
-    >
-      <div className="p-2">
-        {propertiesItems.map((item) => (
-          <Link
-            key={item.label}
-            href={item.href}
-            onClick={onClose}
-            className="group/prop flex flex-col rounded-xl px-4 py-3 transition-colors duration-150 hover:bg-[#F8F8F8]"
-          >
-            <span className="text-[13.5px] font-[500] text-[#1F2937] transition-colors duration-150 group-hover/prop:text-[#10367D]">
-              {item.label}
-            </span>
-            <span className="mt-0.5 text-[11px] text-[#1F2937]/45">
-              {item.desc}
-            </span>
-          </Link>
-        ))}
-      </div>
-      <div className="border-t border-[#E6E6E6] px-4 py-3">
-        <Link
-          href="/real-estate"
-          onClick={onClose}
-          className="inline-flex items-center gap-1 text-[11.5px] font-[500] text-[#C8A45D] hover:gap-2.5 transition-all duration-200"
-        >
-          View all listings <ArrowRight className="h-3 w-3" />
         </Link>
       </div>
     </div>
@@ -595,7 +527,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                         className="overflow-hidden"
                       >
                         <div className="py-3 pl-2 space-y-1">
-                          {link.label === "Services" &&
+                          {link.label === "Expertise" &&
                             expertiseColumns.map((col) => (
                               <div key={col.heading} className="mb-4">
                                 <p className="mb-2 text-[10px] font-[600] uppercase tracking-[0.18em] text-[#10367D]">
@@ -613,7 +545,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                                 ))}
                               </div>
                             ))}
-                          {link.label === "Materials" &&
+                          {link.label === "Solutions" &&
                             productCategories.map((cat) => (
                               <Link
                                 key={cat.label}
@@ -626,17 +558,6 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                                   strokeWidth={1.5}
                                 />
                                 {cat.label}
-                              </Link>
-                            ))}
-                          {link.label === "Real Estate" &&
-                            propertiesItems.map((item) => (
-                              <Link
-                                key={item.label}
-                                href={item.href}
-                                onClick={onClose}
-                                className="block py-2 text-[14px] text-[#1F2937]/60 hover:text-[#C8A45D] transition-colors"
-                              >
-                                {item.label}
                               </Link>
                             ))}
                         </div>
@@ -808,10 +729,10 @@ export default function Navbar() {
                   MegaKey | undefined;
                 const isMegaActive = megaKey ? activeMega === megaKey : false;
                 const isRouteActive =
-                  link.href === "/"
-                    ? pathname === "/"
-                    : pathname === link.href ||
-                      pathname.startsWith(`${link.href}/`);
+                  pathname === link.href ||
+                  pathname.startsWith(`${link.href}/`) ||
+                  (megaKey === "solutions" &&
+                    pathname.startsWith("/real-estate"));
                 const isActive = isMegaActive || isRouteActive;
                 const textColor = "text-[#1F2937] hover:text-[#C8A45D]";
 
@@ -848,26 +769,6 @@ export default function Navbar() {
                         />
                       )}
                     </Link>
-
-                    {megaKey === "properties" && (
-                      <AnimatePresence>
-                        {isActive && (
-                          <motion.div
-                            initial={{ opacity: 0, y: -6 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -6 }}
-                            transition={{ duration: 0.18, ease: "easeOut" }}
-                            className="absolute right-0 pt-3 z-50"
-                            onMouseEnter={cancelClose}
-                            onMouseLeave={closeMega}
-                          >
-                            <PropertiesPanel
-                              onClose={() => setActiveMega(null)}
-                            />
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    )}
                   </div>
                 );
               })}
@@ -907,7 +808,7 @@ export default function Navbar() {
         </div>
 
         <AnimatePresence>
-          {activeMega && activeMega !== "properties" && (
+          {activeMega && (
             <motion.div
               key={activeMega}
               initial={{ opacity: 0, y: -6 }}
@@ -927,11 +828,11 @@ export default function Navbar() {
                   paddingRight: "2rem",
                 }}
               >
-                <div className="flex justify-center">
+                <div className="flex w-full">
                   {activeMega === "expertise" && (
                     <ExpertisePanel onClose={() => setActiveMega(null)} />
                   )}
-                  {activeMega === "products" && (
+                  {activeMega === "solutions" && (
                     <ProductsPanel onClose={() => setActiveMega(null)} />
                   )}
                 </div>
@@ -942,7 +843,7 @@ export default function Navbar() {
       </header>
 
       <AnimatePresence>
-        {activeMega && activeMega !== "properties" && (
+        {activeMega && (
           <motion.div
             key="backdrop"
             initial={{ opacity: 0 }}

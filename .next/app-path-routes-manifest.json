@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/(marketing)/insights/page": "/insights",
+  "/(marketing)/contact/page": "/contact",
+  "/(marketing)/projects/page": "/projects",
+  "/(marketing)/real-estate/page": "/real-estate",
+  "/(marketing)/about/page": "/about",
+  "/(marketing)/quote/page": "/quote",
+  "/(marketing)/services/page": "/services",
+  "/(marketing)/products/page": "/products"
+}
