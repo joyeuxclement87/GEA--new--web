@@ -79,34 +79,39 @@ const productCategories = [
     label: "Bathroom & Sanitary",
     desc: "Fixtures & sanitary ware",
     icon: Bath,
+    slug: "bathroom-sanitary",
   },
   {
     label: "Tiles & Flooring",
     desc: "Ceramic, porcelain & stone",
     icon: Layers,
+    slug: "tiles-flooring",
   },
-  { label: "Electrical", desc: "Wiring, switches & panels", icon: Zap },
-  { label: "Plumbing", desc: "Pipes, fittings & valves", icon: Droplets },
-  { label: "HVAC", desc: "Cooling & ventilation systems", icon: Wind },
-  { label: "Security Systems", desc: "CCTV & access control", icon: Shield },
+  { label: "Electrical", desc: "Wiring, switches & panels", icon: Zap, slug: "electrical" },
+  { label: "Plumbing", desc: "Pipes, fittings & valves", icon: Droplets, slug: "plumbing" },
+  { label: "HVAC", desc: "Cooling & ventilation systems", icon: Wind, slug: "hvac" },
+  { label: "Security Systems", desc: "CCTV & access control", icon: Shield, slug: "security-systems" },
   {
     label: "Solar Solutions",
     desc: "Panels, inverters & batteries",
     icon: Sun,
+    slug: "solar-energy",
   },
-  { label: "Water Pumps", desc: "Submersible & pressure pumps", icon: Waves },
+  { label: "Water Pumps", desc: "Submersible & pressure pumps", icon: Waves, slug: "water-pumps" },
   {
     label: "Water Heaters",
     desc: "Solar & electric heaters",
     icon: Thermometer,
+    slug: "water-heaters",
   },
-  { label: "Doors & Windows", desc: "Aluminium, uPVC & wood", icon: Cpu },
+  { label: "Doors & Windows", desc: "Aluminium, uPVC & wood", icon: Cpu, slug: "doors-windows" },
   {
     label: "Paint & Finishes",
     desc: "Interior & exterior coatings",
     icon: Paintbrush,
+    slug: "paint-finishes",
   },
-  { label: "Fire Protection", desc: "Suppression & detection", icon: Flame },
+  { label: "Fire Protection", desc: "Suppression & detection", icon: Flame, slug: "fire-safety" },
 ];
 
 const recentSearches = [
@@ -128,7 +133,7 @@ const mainLinks = [
   { label: "About", href: "/about" },
   { label: "Expertise", href: "/services", mega: "expertise" },
   { label: "Projects", href: "/projects" },
-  { label: "Solutions", href: "/products", mega: "solutions" },
+  { label: "Solutions", href: "/solutions", mega: "solutions" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -261,7 +266,7 @@ function ProductsPanel({ onClose }: { onClose: () => void }) {
               return (
                 <Link
                   key={cat.label}
-                  href="/products"
+                  href={`/solutions/${cat.slug}`}
                   onClick={onClose}
                   className="group/card flex items-start gap-3 rounded-xl border border-transparent p-3 transition-all duration-200 hover:border-[#E6E6E6] hover:bg-[#F8F8F8] hover:-translate-y-0.5"
                 >
@@ -309,7 +314,7 @@ function ProductsPanel({ onClose }: { onClose: () => void }) {
               </p>
             </div>
             <Link
-              href="/products"
+              href="/solutions/bathroom-sanitary"
               onClick={onClose}
               className="mt-4 inline-flex items-center gap-1.5 text-[12px] font-[500] text-[#10367D] transition-all duration-200 hover:gap-3 hover:text-[#C8A45D] group/coll"
             >
@@ -325,11 +330,11 @@ function ProductsPanel({ onClose }: { onClose: () => void }) {
           3,000+ building products from verified suppliers
         </p>
         <Link
-          href="/products"
+          href="/solutions"
           onClick={onClose}
           className="text-[11px] font-[500] text-[#10367D] hover:text-[#C8A45D] transition-colors duration-200"
         >
-          Browse all products →
+          Browse all solutions →
         </Link>
       </div>
     </div>
@@ -561,7 +566,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                             productCategories.map((cat) => (
                               <Link
                                 key={cat.label}
-                                href="/products"
+                                href={`/solutions/${cat.slug}`}
                                 onClick={onClose}
                                 className="flex items-center gap-2.5 py-2 text-[14px] text-[#1F2937]/60 hover:text-[#C8A45D] transition-colors"
                               >
