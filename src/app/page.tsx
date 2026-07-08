@@ -179,7 +179,7 @@ export default function HomePage() {
     <main id="home" className="min-h-screen bg-white text-[#1F2937] overflow-hidden">
 
       {/* ─── HERO SECTION ─── */}
-      <section className="relative h-[85vh] min-h-[640px] mt-[120px] md:mt-[152px] flex items-center bg-[#1F2937] text-white">
+      <section className="relative mt-[156px] flex min-h-[calc(100vh-156px)] items-center bg-[#1F2937] text-white">
 
         {/* Slideshow background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -210,15 +210,15 @@ export default function HomePage() {
         />
 
         {/* Content + side arrows */}
-        <div className="relative mx-auto w-full max-w-[1440px] px-8 lg:px-16 z-20 py-12 flex justify-between items-center">
-          <div className="max-w-[780px]">
+        <div className="relative z-20 mx-auto flex w-full max-w-[1440px] items-center justify-between px-8 py-14 md:py-16 lg:px-16">
+          <div className="max-w-[780px] space-y-8 md:space-y-10">
 
             {/* Label */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-3 mb-6"
+              className="inline-flex items-center gap-3"
             >
               <span className="h-[1px] w-6 bg-[#C8A45D]" />
               <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -244,7 +244,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-6 text-[15px] sm:text-[16px] font-[300] leading-[1.8] text-white/70 max-w-[580px]"
+              className="max-w-[580px] text-[15px] font-[300] leading-[1.8] text-white/70 sm:text-[16px]"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               At Global Engineering Agency, we transform ideas into reality through professional engineering services, quality construction, and trusted building materials.
@@ -255,18 +255,18 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-wrap gap-4 items-center"
+              className="mt-2 flex flex-wrap items-center gap-3 sm:mt-3 sm:gap-4 md:gap-5"
             >
               <a
                 href="#contact"
-                className="inline-flex items-center gap-3 rounded-[999px] bg-[#C8A45D] px-8 py-4 text-[13.5px] font-[600] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D]"
+                className="inline-flex items-center gap-3 rounded-[999px] bg-[#C8A45D] px-7 py-3.5 text-[13.5px] font-[600] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D] sm:px-8 sm:py-4"
               >
                 <span>Let's Build Together</span>
                 <ChevronRight className="h-4 w-4" strokeWidth={1.5} />
               </a>
               <a
                 href="#products"
-                className="inline-flex items-center justify-center rounded-[999px] border border-white/20 bg-white/5 px-8 py-4 text-[13.5px] font-[500] tracking-[0.02em] text-white transition-all duration-300 hover:bg-white/10 hover:border-white/40"
+                className="inline-flex items-center justify-center rounded-[999px] border border-white/20 bg-white/5 px-7 py-3.5 text-[13.5px] font-[500] tracking-[0.02em] text-white transition-all duration-300 hover:border-white/40 hover:bg-white/10 sm:px-8 sm:py-4"
               >
                 <span>View Our Products</span>
               </a>
@@ -274,7 +274,7 @@ export default function HomePage() {
           </div>
 
           {/* Side arrows */}
-          <div className="hidden md:flex flex-col gap-3">
+          <div className="hidden md:flex flex-col gap-4">
             <button
               onClick={prevImage}
               className="flex h-10 w-10 items-center justify-center rounded-[999px] border border-white/20 hover:border-white hover:bg-white/10 transition-all duration-200"

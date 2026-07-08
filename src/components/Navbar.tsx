@@ -639,7 +639,6 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
 export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [visible, setVisible] = useState(true);
   const [activeMega, setActiveMega] = useState<MegaKey>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -649,15 +648,13 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
-      setScrolled(y > 60);
-      if (y < 60) {
-        setVisible(true);
-      } else if (y > lastScrollY.current + 4) {
-        setVisible(false);
+      const isScrolled = y > 60;
+      setScrolled((prev) => (prev === isScrolled ? prev : isScrolled));
+
+      if (y > lastScrollY.current + 4) {
         setActiveMega(null);
-      } else if (y < lastScrollY.current - 4) {
-        setVisible(true);
       }
+
       lastScrollY.current = y;
     };
     onScroll();
