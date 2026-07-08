@@ -156,8 +156,7 @@ function GEALogo() {
 function ExpertisePanel({ onClose }: { onClose: () => void }) {
   return (
     <div
-      className="w-full rounded-2xl border border-[#E6E6E6] bg-white overflow-hidden"
-      style={{ boxShadow: "0 24px 64px -12px rgba(16,54,125,0.13)" }}
+      className="w-full border-t border-[#E6E6E6] bg-white overflow-hidden"
     >
       <div className="grid grid-cols-[1fr_1fr_1fr_1fr_300px]">
         <div className="col-span-4 grid grid-cols-4 p-8 pb-6 gap-0">
@@ -246,8 +245,7 @@ function ExpertisePanel({ onClose }: { onClose: () => void }) {
 function ProductsPanel({ onClose }: { onClose: () => void }) {
   return (
     <div
-      className="flex-1 min-w-0 rounded-2xl border border-[#E6E6E6] bg-white overflow-hidden"
-      style={{ boxShadow: "0 24px 64px -12px rgba(16,54,125,0.13)" }}
+      className="w-full min-w-0 border-t border-[#E6E6E6] bg-white overflow-hidden"
     >
       <div className="grid grid-cols-[1fr_240px]">
         <div className="p-6 border-r border-[#E6E6E6]">
@@ -822,51 +820,26 @@ export default function Navbar() {
           {activeMega && (
             <motion.div
               key={activeMega}
-              initial={{ opacity: 0, y: -6 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -6 }}
-              transition={{ duration: 0.18, ease: "easeOut" }}
-              className="absolute left-0 right-0 flex justify-center px-8 pt-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.12, ease: "easeOut" }}
+              className="w-full border-b border-[#E6E6E6] bg-white"
               onMouseEnter={cancelClose}
               onMouseLeave={closeMega}
-              style={{ top: `${navHeight + 38}px` }}
             >
-              <div
-                className="w-full"
-                style={{
-                  maxWidth: "1440px",
-                  paddingLeft: "2rem",
-                  paddingRight: "2rem",
-                }}
-              >
-                <div className="flex w-full">
-                  {activeMega === "expertise" && (
-                    <ExpertisePanel onClose={() => setActiveMega(null)} />
-                  )}
-                  {activeMega === "solutions" && (
-                    <ProductsPanel onClose={() => setActiveMega(null)} />
-                  )}
-                </div>
+              <div className="mx-auto w-full max-w-[1440px] px-8 lg:px-16">
+                {activeMega === "expertise" && (
+                  <ExpertisePanel onClose={() => setActiveMega(null)} />
+                )}
+                {activeMega === "solutions" && (
+                  <ProductsPanel onClose={() => setActiveMega(null)} />
+                )}
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </header>
-
-      <AnimatePresence>
-        {activeMega && (
-          <motion.div
-            key="backdrop"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-black/10 backdrop-blur-[2px]"
-            onClick={() => setActiveMega(null)}
-            style={{ top: `${navHeight + 38}px` }}
-          />
-        )}
-      </AnimatePresence>
 
       <AnimatePresence>
         {mobileOpen && <MobileMenu onClose={() => setMobileOpen(false)} />}
