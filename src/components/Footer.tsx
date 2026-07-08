@@ -62,16 +62,16 @@ export default function Footer() {
               to your inbox.
             </p>
           </div>
-          <form className="flex w-full max-w-[460px] rounded-[999px] bg-white/5 border border-white/10 overflow-hidden focus-within:border-[#C8A45D]/40 transition-colors">
+          <form className="flex flex-col sm:flex-row w-full max-w-[460px] rounded-[12px] sm:rounded-[999px] bg-white/5 border border-white/10 overflow-hidden focus-within:border-[#C8A45D]/40 transition-colors">
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 bg-transparent px-6 py-4 text-[13px] font-[300] text-white placeholder-white/30 outline-none"
+              className="flex-1 bg-transparent px-4 sm:px-6 py-3 sm:py-4 text-[13px] font-[300] text-white placeholder-white/30 outline-none"
               style={{ fontFamily: "Inter, sans-serif" }}
             />
             <button
               type="submit"
-              className="bg-[#C8A45D] px-8 py-4 text-[13px] font-[600] text-[#1F2937] transition-all duration-300 hover:bg-white shrink-0"
+              className="bg-[#C8A45D] px-6 sm:px-8 py-3 sm:py-4 text-[13px] font-[600] text-[#1F2937] transition-all duration-300 hover:bg-white shrink-0 w-full sm:w-auto"
             >
               Subscribe
             </button>

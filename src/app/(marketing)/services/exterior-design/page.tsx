@@ -107,7 +107,7 @@ export default function ExteriorDesignPage() {
     <main className="min-h-screen bg-white text-[#1F2937] overflow-x-hidden">
 
       {/* HERO SECTION (Premium Asymmetrical Split-Screen) */}
-      <section className="relative min-h-[90vh] mt-[152px] flex items-center bg-[#0D1B2A] text-white overflow-hidden">
+      <section className="relative min-h-[90vh] mt-[96px] md:mt-[152px] flex items-center bg-[#0D1B2A] text-white overflow-hidden">
         {/* Background Decorative Grid */}
         <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         
@@ -128,7 +128,7 @@ export default function ExteriorDesignPage() {
                 <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Facade &amp; Envelope Expertise</span>
               </motion.div>
 
-              <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.18 }} className="text-[40px] sm:text-[52px] lg:text-[68px] font-[800] tracking-[-0.03em] text-white leading-[1.1] max-w-[720px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
+              <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.18 }} className="text-[30px] sm:text-[40px] md:text-[52px] lg:text-[76px] font-[800] tracking-[-0.03em] text-white leading-[1.1] max-w-[720px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
                 Exterior Design That <span className="text-[#C8A45D] font-[350]">Defines Identity.</span>
               </motion.h1>
 
