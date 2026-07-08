@@ -35,7 +35,7 @@ const expertiseColumns = [
     items: [
       {
         label: "Architecture Drawings",
-        href: "/services#architecture-drawings",
+        href: "/services/architecture-drawings",
       },
       { label: "Interior Design", href: "/services#interior-design" },
       { label: "Exterior Design", href: "/services#exterior-design" },

@@ -15,7 +15,10 @@ const fadeUp = {
   }),
 };
 
-// ─── Data ────────────────────────────────────────────────────────────────────
+// ─── Data ───────────────────────────────────────────────────────────
+
+// Services with a dedicated detail page live at /services/[slug]
+const servicesWithDetailPage = new Set(["architecture-drawings"]);
 
 const services = [
   {
@@ -607,7 +610,11 @@ export default function ServicesPage() {
                     </ul>
 
                     <a
-                      href={`#${service.slug}`}
+                      href={
+                        servicesWithDetailPage.has(service.slug)
+                          ? `/services/${service.slug}`
+                          : `#${service.slug}`
+                      }
                       className="inline-flex items-center gap-4 text-[13px] font-[600] tracking-[0.04em] text-[#1F2937] group transition-all duration-300 w-fit"
                       style={{ fontFamily: "Inter, sans-serif" }}
                       aria-label={`Learn more about ${service.title}`}
