@@ -124,6 +124,7 @@ const quickLinks = [
 ];
 
 const mainLinks = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Expertise", href: "/services", mega: "expertise" },
   { label: "Projects", href: "/projects" },
@@ -502,24 +503,33 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
               const isOpen = openSection === megaKey;
               return (
                 <li key={link.label}>
-                  <button
-                    type="button"
-                    onClick={() => setOpenSection(isOpen ? null : megaKey)}
-                    className="flex w-full items-center justify-between py-4 border-b border-[#E6E6E6]/60"
-                    aria-expanded={isOpen}
-                    aria-controls={megaKey}
-                  >
-                    <span
-                      className="text-[21px] font-[300] text-[#1F2937] tracking-[-0.01em]"
-                      style={{ fontFamily: "Manrope, sans-serif" }}
+                  <div className="flex w-full items-center justify-between py-4 border-b border-[#E6E6E6]/60">
+                    <Link
+                      href={link.href}
+                      onClick={onClose}
+                      className="flex-1"
                     >
-                      {link.label}
-                    </span>
-                    <ChevronDown
-                      className={`h-5 w-5 text-[#1F2937]/35 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-                      strokeWidth={1.5}
-                    />
-                  </button>
+                      <span
+                        className="text-[21px] font-[300] text-[#1F2937] tracking-[-0.01em]"
+                        style={{ fontFamily: "Manrope, sans-serif" }}
+                      >
+                        {link.label}
+                      </span>
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setOpenSection(isOpen ? null : megaKey)}
+                      className="ml-3 flex items-center justify-center p-2"
+                      aria-expanded={isOpen}
+                      aria-controls={megaKey}
+                      aria-label={isOpen ? `Collapse ${link.label}` : `Expand ${link.label}`}
+                    >
+                      <ChevronDown
+                        className={`h-5 w-5 text-[#1F2937]/35 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                        strokeWidth={1.5}
+                      />
+                    </button>
+                  </div>
                   <AnimatePresence>
                     {isOpen && (
                       <motion.div
