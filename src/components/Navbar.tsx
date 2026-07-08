@@ -30,18 +30,18 @@ import { useCallback, useEffect, useRef, useState } from "react";
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const expertiseColumns = [
-  {
-    heading: "Design & Documentation",
-    items: [
       {
-        label: "Architecture Drawings",
-        href: "/services/architecture-drawings",
+        heading: "Design & Documentation",
+        items: [
+          {
+            label: "Architecture Drawings",
+            href: "/services/architecture-drawings",
+          },
+          { label: "Interior Design", href: "/services/interior-design" },
+          { label: "Exterior Design", href: "/services/exterior-design" },
+          { label: "Landscaping", href: "/services#landscaping" },
+        ],
       },
-      { label: "Interior Design", href: "/services#interior-design" },
-      { label: "Exterior Design", href: "/services#exterior-design" },
-      { label: "Landscaping", href: "/services#landscaping" },
-    ],
-  },
   {
     heading: "Construction & Planning",
     items: [
@@ -498,13 +498,16 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           {mainLinks.map((link) => {
             const hasMega = "mega" in link && link.mega;
             if (hasMega) {
-              const isOpen = openSection === link.label;
+              const megaKey = (link as any).mega as string;
+              const isOpen = openSection === megaKey;
               return (
                 <li key={link.label}>
                   <button
-                    onClick={() => setOpenSection(isOpen ? null : link.label)}
+                    type="button"
+                    onClick={() => setOpenSection(isOpen ? null : megaKey)}
                     className="flex w-full items-center justify-between py-4 border-b border-[#E6E6E6]/60"
                     aria-expanded={isOpen}
+                    aria-controls={megaKey}
                   >
                     <span
                       className="text-[21px] font-[300] text-[#1F2937] tracking-[-0.01em]"
@@ -520,6 +523,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                   <AnimatePresence>
                     {isOpen && (
                       <motion.div
+                        id={megaKey}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -527,7 +531,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                         className="overflow-hidden"
                       >
                         <div className="py-3 pl-2 space-y-1">
-                          {link.label === "Expertise" &&
+                          {megaKey === "expertise" &&
                             expertiseColumns.map((col) => (
                               <div key={col.heading} className="mb-4">
                                 <p className="mb-2 text-[10px] font-[600] uppercase tracking-[0.18em] text-[#10367D]">
@@ -545,7 +549,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                                 ))}
                               </div>
                             ))}
-                          {link.label === "Solutions" &&
+                          {megaKey === "solutions" &&
                             productCategories.map((cat) => (
                               <Link
                                 key={cat.label}

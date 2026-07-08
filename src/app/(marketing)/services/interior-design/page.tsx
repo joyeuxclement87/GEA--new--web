@@ -6,110 +6,77 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
 
-const deliverables = [
+const servicesProvided = [
   {
     num: '01',
-    title: 'Floor Plans',
-    desc: 'Precisely dimensioned layouts that define every room, circulation path, and structural element — the foundation every other drawing builds on.',
-    points: ['Room layouts & dimensions', 'Furniture & fixture placement', 'Structural grid coordination', 'Area & efficiency calculations'],
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80',
+    title: 'Space Planning',
+    desc: 'Layouts that prioritise flow, natural light and the way people actually use the room.',
+    points: ['Circulation & adjacency studies', 'Furniture layouts', 'Zoning & program optimisation'],
+    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80',
   },
   {
     num: '02',
-    title: 'Building Elevations',
-    desc: 'Elevation drawings that resolve how a building presents itself from every angle — material, proportion, and detail resolved before construction begins.',
-    points: ['Facade composition', 'Material & finish callouts', 'Height & datum references', 'Window & door scheduling'],
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=80',
+    title: 'Concept Development',
+    desc: 'Concepts that set the tone — material direction, palette and spatial character that feels uniquely yours.',
+    points: ['Mood & material boards', 'Mood sketches & concept diagrams', 'Design language definition'],
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80',
   },
   {
     num: '03',
-    title: 'Section Drawings',
-    desc: 'Cross-sectional views that reveal the vertical relationships within a building — critical for coordinating structure, services, and spatial quality.',
-    points: ['Vertical circulation', 'Ceiling & floor build-ups', 'Structural depth coordination', 'Natural light & ventilation study'],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80',
+    title: 'Material & Finish Selection',
+    desc: 'Curated materials chosen for durability, tactility and lasting refinement.',
+    points: ['Finish schedules', 'Sample coordination', 'Sustainability & maintenance guidance'],
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
   },
   {
     num: '04',
-    title: '3D Visualization',
-    desc: 'Photorealistic renders and walkthroughs that let clients see and approve their project long before the first brick is laid.',
-    points: ['Exterior & interior renders', 'Material & lighting studies', 'Walkthrough animations', 'Client presentation packages'],
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80',
+    title: 'Residential Interiors',
+    desc: 'Tailored homes that balance comfort, proportion and crafted detail.',
+    points: ['Private residences & apartments', 'Custom joinery design', 'Lighting & furniture specification'],
+    image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1600&q=80',
   },
   {
     num: '05',
-    title: 'Construction Documentation',
-    desc: 'Fully coordinated drawing sets issued for construction and permitting — the technical backbone that keeps every trade aligned on site.',
-    points: ['Permit & approval sets', 'Detail & assembly drawings', 'Specification schedules', 'Contractor coordination sets'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80',
+    title: 'Commercial Interiors',
+    desc: 'Commercial spaces designed for clarity, flexibility and brand expression.',
+    points: ['Office & workspace layouts', 'Retail & hospitality fit-outs', 'Brand integration'],
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    num: '06',
+    title: '3D Visualization',
+    desc: 'Photoreal renders and walkthroughs to validate design choices and communicate intent.',
+    points: ['Renders & walkthroughs', 'Lighting studies', 'Material & colour verification'],
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80',
   },
 ];
 
 const process = [
-  { num: '01', title: 'Consultation', desc: 'Understanding your brief, site conditions, and long-term ambitions for the space.' },
-  { num: '02', title: 'Concept Development', desc: 'Early spatial studies and massing options that establish the project\u2019s direction.' },
-  { num: '03', title: 'Design Refinement', desc: 'Layouts, elevations, and sections resolved in detail with your feedback built in.' },
-  { num: '04', title: 'Technical Documentation', desc: 'Fully coordinated construction drawings prepared for permitting and build.' },
-  { num: '05', title: 'Project Support', desc: 'Ongoing drawing revisions and technical support through to project completion.' },
+  { num: '01', title: 'Discovery', desc: 'Stakeholder interviews, site review and a clear brief that defines success.' },
+  { num: '02', title: 'Concept Design', desc: 'Initial spatial options, palettes and concept visuals for direction and sign-off.' },
+  { num: '03', title: 'Design Development', desc: 'Detailed plans, sections and schedules coordinated for procurement.' },
+  { num: '04', title: 'Visualization', desc: 'Photoreal renders and material mockups to confirm the design.' },
+  { num: '05', title: 'Implementation Support', desc: 'Site visits, contractor coordination and finish checks through handover.' },
 ];
 
-const strengths = [
-  { num: '01', title: 'Precision & Accuracy', desc: 'Every drawing checked and cross-referenced before it ever reaches a contractor.' },
-  { num: '02', title: 'Experienced Architects', desc: 'A qualified team with two decades of combined design and documentation experience.' },
-  { num: '03', title: 'Code Compliant', desc: 'Drawings prepared to meet local regulatory and permitting requirements from the outset.' },
-  { num: '04', title: 'Collaborative Process', desc: 'You review and shape every stage — nothing is finalised without your sign-off.' },
-  { num: '05', title: 'Fast Turnaround', desc: 'A disciplined workflow that keeps your project moving without sacrificing detail.' },
-  { num: '06', title: 'Ongoing Support', desc: 'Revisions and technical clarifications available throughout construction.' },
+const principles = [
+  { title: 'Function First', desc: 'Design that serves how the space is used, not trends.' },
+  { title: 'Timeless Aesthetics', desc: 'Clean, restrained palettes that age with dignity.' },
+  { title: 'Detail Driven', desc: 'Every junction, material and edge considered and resolved.' },
 ];
 
-const relatedProjects = [
-  {
-    title: 'The Horizon Commission',
-    category: 'Structural Engineering & Architecture',
-    location: 'Dubai, UAE',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
-    span: 'lg:col-span-2 lg:row-span-2',
-  },
-  {
-    title: 'Opus Residence',
-    category: 'Interior Finishes & Supply',
-    location: 'London, UK',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    span: '',
-  },
-  {
-    title: 'Aura Technology Hub',
-    category: 'Commercial Contracting',
-    location: 'Berlin, Germany',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80',
-    span: '',
-  },
+const featured = [
+  { title: 'Lark House', location: 'Nairobi, KE', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80', span: 'lg:col-span-2' },
+  { title: 'Claremont Loft', location: 'Cape Town, ZA', image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80', span: '' },
+  { title: 'Mercer Offices', location: 'Kigali, RW', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80', span: '' },
 ];
 
 const faqs = [
-  {
-    q: 'What are architectural drawings and why do I need them?',
-    a: 'Architectural drawings are the detailed technical documents — floor plans, elevations, sections, and construction sets — that translate a design concept into a buildable set of instructions. They are required for permitting, contractor pricing, and construction, and they protect you from costly misunderstandings on site.',
-  },
-  {
-    q: 'How long does it take to complete a full drawing set?',
-    a: 'Timelines depend on project scale and complexity, but most residential projects move from consultation to a permit-ready drawing set within 4–8 weeks. Larger commercial projects are scoped individually during your initial consultation.',
-  },
-  {
-    q: 'Can you help with permits and regulatory approval?',
-    a: 'Yes. Every drawing set we produce is prepared to meet local building code and permitting requirements, and we can manage submission and liaison with the relevant regulatory authority on your behalf.',
-  },
-  {
-    q: 'Do you provide 3D renders alongside technical drawings?',
-    a: 'Yes. Photorealistic 3D visualisation is available as part of every architecture drawings engagement, giving you a clear picture of the finished space before construction begins.',
-  },
-  {
-    q: 'Can you work from an existing concept or design I already have?',
-    a: 'Absolutely. We regularly take a client’s existing concept, sketch, or brief from another designer and develop it into a fully coordinated, construction-ready drawing set.',
-  },
-  {
-    q: 'Will the drawings be compatible with my contractor?',
-    a: 'Yes. All construction documentation is issued in industry-standard formats and coordinated with structural, MEP, and other engineering disciplines so any qualified contractor can build directly from the set.',
-  },
+  { q: 'What does an interior design engagement include?', a: 'Our interior design service covers space planning, concept development, material selection, documentation and implementation support — tailored to the scale of your project.' },
+  { q: 'How long does an interior design project take?', a: 'Timelines vary by scope. A residential scheme from concept to implementation support typically ranges 8-16 weeks; larger commercial projects are scheduled after an initial briefing.' },
+  { q: 'Can you manage procurement and fit-out?', a: 'Yes. We provide procurement support, contractor coordination and on-site inspections to ensure finishes and installations meet the design intent.' },
+  { q: 'Do you offer bespoke joinery design?', a: 'We design custom joinery as part of our documentation package and can work with trusted workshops and suppliers to realise the pieces.' },
+  { q: 'Do you provide 3D renders?', a: 'Yes. High-quality 3D visualisation is offered to every client so you can see the finished space before procurement begins.' },
 ];
 
 function FaqItem({ q, a, isOpen, onToggle }: { q: string; a: string; isOpen: boolean; onToggle: () => void }) {
@@ -126,7 +93,7 @@ function FaqItem({ q, a, isOpen, onToggle }: { q: string; a: string; isOpen: boo
   );
 }
 
-export default function ArchitectureDrawingsPage() {
+export default function InteriorDesignPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeStep, setActiveStep] = useState<number>(0);
 
@@ -151,15 +118,15 @@ export default function ArchitectureDrawingsPage() {
 
               <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="inline-flex items-center gap-3 mb-6">
                 <span className="h-[1px] w-6 bg-[#C8A45D]" />
-                <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Design &amp; Documentation</span>
+                <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Design &amp; Finishes</span>
               </motion.div>
 
-              <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.18 }} className="text-[40px] sm:text-[52px] lg:text-[68px] font-[800] tracking-[-0.03em] text-white leading-[1.1] max-w-[720px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                Architecture Drawings <span className="text-[#C8A45D] font-[350]">With Precision.</span>
+                <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.18 }} className="text-[30px] sm:text-[40px] md:text-[52px] lg:text-[76px] font-[800] tracking-[-0.03em] text-white leading-[1.1] max-w-[720px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
+                Interior Design That <span className="text-[#C8A45D] font-[350]">Shapes Experience.</span>
               </motion.h1>
 
               <motion.p initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.26 }} className="mt-6 text-[15.5px] sm:text-[16.5px] font-[300] leading-[1.85] text-white/70 max-w-[620px]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Precise architectural drawings that translate ambition into buildable form — from early concept sketches to fully coordinated construction documentation.
+                Considered interiors that balance material honesty, spatial comfort, and lasting quality — tailored to how each space will actually be used.
               </motion.p>
 
               <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.34 }} className="mt-10 flex flex-wrap gap-4">
@@ -181,8 +148,8 @@ export default function ArchitectureDrawingsPage() {
                 className="relative aspect-[3/4] max-w-[420px] mx-auto lg:ml-auto w-full rounded-[24px] overflow-hidden border border-white/10 shadow-2xl"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" 
-                  alt="Architecture drawing blueprints" 
+                  src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80" 
+                  alt="Modern minimalist interior space" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/90 via-transparent to-transparent" />
@@ -190,8 +157,8 @@ export default function ArchitectureDrawingsPage() {
                 {/* Floating Architectural Data Card */}
                 <div className="absolute bottom-6 left-6 right-6 p-5 bg-[#0D1B2A]/80 backdrop-blur-md rounded-[16px] border border-white/10">
                   <div className="text-[10px] uppercase tracking-[0.2em] text-[#C8A45D] font-[600]">Featured Work</div>
-                  <div className="text-[16px] font-[700] text-white mt-1" style={{ fontFamily: 'Manrope, sans-serif' }}>The Horizon Commission</div>
-                  <div className="text-[12px] text-white/50 font-[300] mt-0.5">Dubai, UAE • 2024</div>
+                  <div className="text-[16px] font-[700] text-white mt-1" style={{ fontFamily: 'Manrope, sans-serif' }}>Claremont Loft</div>
+                  <div className="text-[12px] text-white/50 font-[300] mt-0.5">Cape Town, South Africa • 2024</div>
                 </div>
               </motion.div>
             </div>
@@ -208,17 +175,17 @@ export default function ArchitectureDrawingsPage() {
             <div className="lg:col-span-5">
               <div className="inline-flex items-center gap-3 mb-6">
                 <span className="h-[1px] w-6 bg-[#10367D]" />
-                <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]" style={{ fontFamily: 'Inter, sans-serif' }}>Why It Matters</span>
+                <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]" style={{ fontFamily: 'Inter, sans-serif' }}>Our Philosophy</span>
               </div>
               <h2 className="text-3xl lg:text-[44px] font-[700] text-[#1F2937] tracking-tight leading-[1.2]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                Steel and Stone <br />
-                <span className="font-[300] text-[#10367D]">Begin on Paper.</span>
+                Use, Craft, <br />
+                <span className="font-[300] text-[#10367D]">and Longevity.</span>
               </h2>
             </div>
 
             <div className="lg:col-span-7 pt-4">
               <p className="text-[17px] leading-[1.9] font-[300] text-[#1F2937]/70" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Architectural drawings are the single point of truth for every person involved in a project — the client approving a vision, the contractor pricing the build, and the authority granting a permit. Get them wrong, and costly errors surface on site. Get them right, and every stage that follows moves with confidence. It is the most consequential, least visible work in construction.
+                Our approach blends pragmatic planning with refined material intent — creating spaces that perform beautifully over time. We focus on clarity, material honesty and detailed execution to ensure each project reads as a considered whole.
               </p>
             </div>
 
@@ -231,16 +198,16 @@ export default function ArchitectureDrawingsPage() {
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16 mb-16 lg:mb-20">
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="h-[1px] w-6 bg-[#10367D]" />
-            <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Deliverables</span>
+            <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Expertise</span>
           </div>
           <h2 className="text-4xl lg:text-[52px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] max-w-[700px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            A complete <span className="font-[300]">drawing set.</span>
+            Bespoke design for <span className="font-[300]">refined spaces.</span>
           </h2>
         </div>
 
         {/* Bento Grid */}
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {deliverables.map((item, idx) => (
+          {servicesProvided.map((item, idx) => (
             <motion.div 
               key={item.num} 
               initial={{ opacity: 0, y: 20 }} 
@@ -282,11 +249,11 @@ export default function ArchitectureDrawingsPage() {
           <div className="text-center max-w-[650px] mx-auto mb-20">
             <div className="inline-flex items-center gap-3 mb-6 justify-center">
               <span className="h-[1px] w-6 bg-[#10367D]" />
-              <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">How We Work</span>
+              <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Design Process</span>
               <span className="h-[1px] w-6 bg-[#10367D]" />
             </div>
-            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] mb-4">From first brief to buildable set.</h2>
-            <p className="text-[15.5px] font-[300] text-[#1F2937]/60">Explore each phase of our collaborative engineering journey.</p>
+            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] mb-4">A structured path to perfect execution.</h2>
+            <p className="text-[15.5px] font-[300] text-[#1F2937]/60">Click through each phase of our collaborative design journey.</p>
           </div>
 
           {/* Stepper Buttons */}
@@ -333,52 +300,71 @@ export default function ArchitectureDrawingsPage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
-      <section className="bg-[#0D1B2A] text-white py-20 lg:py-28">
-        <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 lg:mb-14">
-            <div className="max-w-[560px]"><div className="inline-flex items-center gap-3 mb-5"><span className="h-[1px] w-6 bg-[#C8A45D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]">Why Choose Us</span></div><h2 className="text-3xl lg:text-[42px] font-[700] tracking-tight leading-[1.2]">Drawings you and your <span className="font-[300] text-white/70">contractor can build on.</span></h2></div>
-            <p className="text-[13.5px] leading-[1.75] font-[300] text-white/45 max-w-[340px]">Every set is checked, coordinated, and issued the way a premium studio would sign its own name to it.</p>
+      {/* DESIGN PRINCIPLES (Editorial split cover) */}
+      <section className="bg-[#F8F8F8] py-24 lg:py-32 border-t border-[#E6E6E6]">
+        <div className="mx-auto max-w-[1440px] px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div className="lg:col-span-7">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <span className="h-[1px] w-6 bg-[#10367D]" />
+              <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Design Principles</span>
+            </div>
+            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.05] mb-10">Principles that guide every spatial decision.</h2>
+            
+            <div className="space-y-8">
+              {principles.map((p, idx) => (
+                <div key={idx} className="flex gap-4 items-start">
+                  <span className="text-[14px] font-[700] text-[#C8A45D] mt-1">/ 0{idx + 1}</span>
+                  <div>
+                    <h3 className="text-[20px] font-[700] text-[#1F2937] mb-2" style={{ fontFamily: 'Manrope, sans-serif' }}>{p.title}</h3>
+                    <p className="text-[15px] leading-[1.8] font-[300] text-[#1F2937]/60" style={{ fontFamily: 'Inter, sans-serif' }}>{p.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
-            {strengths.map((item, idx) => (
-              <motion.div
-                key={item.num}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.6, delay: (idx % 3) * 0.06 }}
-                className="group flex items-start gap-4 py-6 lg:pr-8 border-b border-white/10"
-              >
-                <span className="text-[12px] font-[600] tracking-[0.15em] text-[#C8A45D] shrink-0 pt-0.5">{item.num}</span>
-                <div>
-                  <h3 className="text-[15px] font-[600] text-white tracking-tight mb-1.5 group-hover:text-[#C8A45D] transition-colors duration-300" style={{ fontFamily: 'Manrope, sans-serif' }}>{item.title}</h3>
-                  <p className="text-[12.5px] leading-[1.65] font-[300] text-white/45">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div className="lg:col-span-5">
+            <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[24px] border border-[#E6E6E6] shadow-xl">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80" alt="Interior detail" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* RELATED PROJECTS */}
+      {/* WHY CHOOSE GEA */}
+      <section className="bg-[#0D1B2A] text-white py-20 lg:py-28">
+        <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 lg:mb-14">
+            <div className="max-w-[560px]"><div className="inline-flex items-center gap-3 mb-5"><span className="h-[1px] w-6 bg-[#C8A45D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]">Why Choose GEA</span></div><h2 className="text-3xl lg:text-[42px] font-[700] tracking-tight leading-[1.2]">A studio approach with <span className="font-[300] text-white/70">measurable delivery.</span></h2></div>
+            <p className="text-[13.5px] leading-[1.75] font-[300] text-white/45 max-w-[340px]">We combine refined design sensibility with practical delivery capabilities — so projects feel premium and build reliably.</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
+            <div className="group flex items-start gap-4 py-6 lg:pr-8 border-b border-white/10"><span className="text-[12px] font-[600] tracking-[0.15em] text-[#C8A45D] shrink-0 pt-0.5">01</span><div><h3 className="text-[15px] font-[600] text-white tracking-tight mb-1.5">Craft &amp; Quality</h3><p className="text-[12.5px] leading-[1.65] font-[300] text-white/45">Materials and workmanship specified to a premium standard.</p></div></div>
+            <div className="group flex items-start gap-4 py-6 lg:pr-8 border-b border-white/10"><span className="text-[12px] font-[600] tracking-[0.15em] text-[#C8A45D] shrink-0 pt-0.5">02</span><div><h3 className="text-[15px] font-[600] text-white tracking-tight mb-1.5">Integrated Delivery</h3><p className="text-[12.5px] leading-[1.65] font-[300] text-white/45">Coordination with engineering and contracting for seamless handover.</p></div></div>
+            <div className="group flex items-start gap-4 py-6 lg:pr-8 border-b border-white/10"><span className="text-[12px] font-[600] tracking-[0.15em] text-[#C8A45D] shrink-0 pt-0.5">03</span><div><h3 className="text-[15px] font-[600] text-white tracking-tight mb-1.5">Client Partnership</h3><p className="text-[12.5px] leading-[1.65] font-[300] text-white/45">We treat each brief as a collaboration, not a transaction.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED PROJECTS */}
       <section className="bg-white py-24 lg:py-40">
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-20">
-            <div><div className="inline-flex items-center gap-3 mb-6"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Related Work</span></div><h2 className="text-4xl lg:text-[56px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Drawn, documented, <span className="font-[300]">delivered.</span></h2></div>
+            <div><div className="inline-flex items-center gap-3 mb-6"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Featured Projects</span></div><h2 className="text-4xl lg:text-[56px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Selected interior <span className="font-[300]">work.</span></h2></div>
             <Link href="/projects" className="inline-flex items-center gap-4 text-[13px] font-[600] tracking-[0.04em] text-[#1F2937] group transition-all duration-300 mb-2" style={{ fontFamily: 'Inter, sans-serif' }}><span className="h-[1px] bg-[#1F2937] w-6 transition-all duration-300 group-hover:w-12 group-hover:bg-[#10367D]" /><span className="group-hover:text-[#10367D] transition-colors">View All Projects</span><ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#10367D]" strokeWidth={1.5} /></Link>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 auto-rows-[260px] lg:auto-rows-[300px] gap-4 lg:gap-5">
-            {relatedProjects.map((project, idx) => (
-              <motion.div key={project.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.7, delay: idx * 0.08 }} className={`group relative overflow-hidden rounded-[20px] cursor-default ${project.span}`}>
-                <img src={project.image} alt={project.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            {featured.map((p, idx) => (
+              <motion.div key={p.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.7, delay: idx * 0.08 }} className={`group relative overflow-hidden rounded-[20px] cursor-default ${p.span}`}>
+                <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1F2937]/85 via-[#1F2937]/10 to-transparent" />
                 <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
-                  <span className="text-[10px] font-[600] uppercase tracking-[0.2em] text-[#C8A45D] mb-2">{project.category}</span>
-                  <h3 className="text-xl lg:text-[26px] font-[700] text-white tracking-tight leading-[1.2] mb-1" style={{ fontFamily: 'Manrope, sans-serif' }}>{project.title}</h3>
-                  <span className="text-[12px] font-[300] text-white/60">{project.location}</span>
+                  <span className="text-[10px] font-[600] uppercase tracking-[0.2em] text-[#C8A45D] mb-2">Interior Design</span>
+                  <h3 className="text-xl lg:text-[26px] font-[700] text-white tracking-tight leading-[1.2] mb-1" style={{ fontFamily: 'Manrope, sans-serif' }}>{p.title}</h3>
+                  <span className="text-[12px] font-[300] text-white/60">{p.location}</span>
                 </div>
               </motion.div>
             ))}
@@ -392,12 +378,12 @@ export default function ArchitectureDrawingsPage() {
           <div className="text-center mb-14 lg:mb-16"><div className="inline-flex items-center gap-3 mb-6 justify-center"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">FAQ</span><span className="h-[1px] w-6 bg-[#10367D]" /></div><h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Common <span className="font-[300]">questions.</span></h2></div>
 
           <div className="border-t border-[#E6E6E6]">
-            {faqs.map((faq, idx) => (
-              <div key={faq.q} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                <meta itemProp="name" content={faq.q} />
+            {faqs.map((f, idx) => (
+              <div key={f.q} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                <meta itemProp="name" content={f.q} />
                 <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                  <meta itemProp="text" content={faq.a} />
-                  <FaqItem q={faq.q} a={faq.a} isOpen={openFaq === idx} onToggle={() => setOpenFaq(openFaq === idx ? null : idx)} />
+                  <meta itemProp="text" content={f.a} />
+                  <FaqItem q={f.q} a={f.a} isOpen={openFaq === idx} onToggle={() => setOpenFaq(openFaq === idx ? null : idx)} />
                 </div>
               </div>
             ))}
@@ -409,11 +395,11 @@ export default function ArchitectureDrawingsPage() {
       <section className="relative overflow-hidden bg-[#0D1B2A] py-32 lg:py-44">
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C8A45D] to-transparent" />
         <div className="relative z-10 mx-auto max-w-[1440px] px-8 lg:px-16 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-[64px] font-[700] tracking-tight leading-[1.03] text-white mb-6">Ready to put your vision <span className="text-[#C8A45D]">on paper?</span></h2>
-          <p className="mx-auto max-w-[680px] text-[16px] leading-[1.8] font-[300] text-white/55 mb-8">From first sketch to permit-ready set, our architects are ready to give your project the precision it deserves.</p>
+          <h2 className="text-4xl sm:text-5xl lg:text-[64px] font-[700] tracking-tight leading-[1.03] text-white mb-6">Bring your interiors to life — <span className="text-[#C8A45D]">with GEA.</span></h2>
+          <p className="mx-auto max-w-[680px] text-[16px] leading-[1.8] font-[300] text-white/55 mb-8">We combine design ambition with delivery rigour to produce interiors that look refined and function effortlessly.</p>
           <div className="flex items-center justify-center gap-4">
             <Link href="/quote" className="inline-flex items-center gap-3 rounded-full bg-[#C8A45D] px-12 py-5 text-[14px] font-[700] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D]">Request Consultation<ArrowRight className="h-4 w-4" strokeWidth={2} /></Link>
-            <Link href="/services" className="inline-flex items-center justify-center rounded-full border border-white/20 px-12 py-5 text-[14px] font-[500] tracking-[0.02em] text-white/80 transition-all duration-300 hover:border-[#C8A45D]/60 hover:text-white">Explore All Services</Link>
+            <Link href="/contact" className="inline-flex items-center justify-center rounded-full border border-white/20 px-12 py-5 text-[14px] font-[500] tracking-[0.02em] text-white/80 transition-all duration-300 hover:border-[#C8A45D]/60 hover:text-white">Contact Us</Link>
           </div>
         </div>
       </section>

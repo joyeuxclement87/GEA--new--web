@@ -179,7 +179,7 @@ export default function HomePage() {
     <main id="home" className="min-h-screen bg-white text-[#1F2937] overflow-hidden">
 
       {/* ─── HERO SECTION ─── */}
-      <section className="relative h-[85vh] min-h-[700px] mt-[152px] flex items-center bg-[#1F2937] text-white">
+      <section className="relative h-[85vh] min-h-[640px] mt-[120px] md:mt-[152px] flex items-center bg-[#1F2937] text-white">
 
         {/* Slideshow background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -231,7 +231,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[48px] sm:text-[58px] lg:text-[78px] font-[800] tracking-[-0.03em] text-white leading-[1.08]"
+              className="text-[34px] sm:text-[48px] md:text-[58px] lg:text-[78px] font-[800] tracking-[-0.03em] text-white leading-[1.08]"
               style={{ fontFamily: 'Manrope, sans-serif' }}
             >
               Every Great Building <br />
