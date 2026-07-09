@@ -87,17 +87,28 @@ export default function ProjectsClientPage() {
   };
 
   return (
-    <main className="min-h-screen bg-white text-[#1F2937]">
+    <main className="min-h-screen bg-[#F7F8FA] text-[#1F2937]">
       <section className="relative mt-[152px] flex h-[74vh] min-h-[580px] items-center overflow-hidden bg-[#1F2937] text-white">
-        <img
-          src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2200&q=80"
-          alt="Architectural project portfolio by Global Engineering Agency"
-          className="absolute inset-0 h-full w-full object-cover opacity-55"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#10367D]/86 via-[#1F2937]/72 to-[#1F2937]/35" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1F2937]/88 via-transparent to-transparent" />
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2200&q=80"
+            alt="Architectural project portfolio by Global Engineering Agency"
+            className="absolute inset-0 h-full w-full object-cover opacity-55"
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#10367D]/95 via-[#1F2937]/90 to-transparent" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#1F2937]/95 via-transparent to-transparent" />
+        </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-8 lg:px-16">
+        <div
+          className="pointer-events-none absolute inset-0 z-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+            backgroundSize: "120px 100%",
+          }}
+        />
+
+        <div className="relative z-20 mx-auto w-full max-w-[1440px] px-8 lg:px-16">
           <motion.p
             initial="hidden"
             whileInView="show"
@@ -170,13 +181,17 @@ export default function ProjectsClientPage() {
           custom={0}
           className="max-w-[700px]"
         >
+          <p className="mb-5 inline-flex items-center gap-3 text-[10px] font-[600] uppercase tracking-[0.24em] text-[#C8A45D]">
+            <span className="h-px w-7 bg-[#C8A45D]" />
+            Portfolio Narrative
+          </p>
           <h2
-            className="text-[34px] font-[500] leading-[1.15] tracking-[-0.02em] text-[#1F2937] sm:text-[44px]"
+            className="max-w-[760px] text-[34px] font-[700] leading-[1.08] tracking-[-0.03em] text-[#1F2937] sm:text-[44px] lg:text-[52px]"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
             Every Project Tells a Story.
           </h2>
-          <p className="mt-7 text-[16px] font-[300] leading-[1.85] text-[#1F2937]/70">
+          <p className="mt-6 max-w-[760px] text-[15px] font-[300] leading-[1.85] text-[#1F2937]/75 sm:text-[16px]">
             Every assignment reflects close collaboration, technical excellence,
             thoughtful design decisions, and long-term value creation. Our work
             is measured not only by completion, but by performance years after
@@ -385,8 +400,12 @@ export default function ProjectsClientPage() {
 
       <section className="border-y border-[#E6E6E6] bg-[#FAFAFA]">
         <div className="mx-auto max-w-[1440px] px-8 py-20 lg:px-16 lg:py-24">
+          <p className="mb-5 inline-flex items-center gap-3 text-[10px] font-[600] uppercase tracking-[0.24em] text-[#C8A45D]">
+            <span className="h-px w-7 bg-[#C8A45D]" />
+            Project Impact
+          </p>
           <h2
-            className="text-[30px] font-[500] tracking-[-0.02em] text-[#1F2937] sm:text-[40px]"
+            className="text-[30px] font-[700] leading-[1.08] tracking-[-0.03em] text-[#1F2937] sm:text-[40px] lg:text-[48px]"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
             Project Statistics
@@ -439,16 +458,17 @@ export default function ProjectsClientPage() {
 
       <section className="mx-auto max-w-[1440px] px-8 py-20 lg:px-16 lg:py-24">
         <div className="max-w-[760px]">
-          <p className="text-[10px] font-[600] uppercase tracking-[0.2em] text-[#C8A45D]">
+          <p className="mb-5 inline-flex items-center gap-3 text-[10px] font-[600] uppercase tracking-[0.24em] text-[#C8A45D]">
+            <span className="h-px w-7 bg-[#C8A45D]" />
             Project Process
           </p>
           <h2
-            className="mt-5 text-[30px] font-[500] tracking-[-0.02em] text-[#1F2937] sm:text-[40px]"
+            className="text-[30px] font-[700] leading-[1.08] tracking-[-0.03em] text-[#1F2937] sm:text-[40px] lg:text-[48px]"
             style={{ fontFamily: "Manrope, sans-serif" }}
           >
             A Clear Path From Brief to Delivery.
           </h2>
-          <p className="mt-5 text-[16px] leading-[1.85] text-[#1F2937]/70">
+          <p className="mt-6 text-[15px] font-[300] leading-[1.85] text-[#1F2937]/75 sm:text-[16px]">
             Our process stays lean and coordinated: we shape the brief, resolve
             the technical path, refine the design intent, build with control,
             and deliver with accountability.
@@ -501,28 +521,40 @@ export default function ProjectsClientPage() {
         </ol>
       </section>
 
-      <section
-        className="border-y border-[#E6E6E6]"
-        style={{
-          backgroundImage:
-            "linear-gradient(120deg, rgba(15, 23, 42, 0.95) 0%, rgba(16, 54, 125, 0.92) 42%, rgba(16, 54, 125, 0.78) 100%), url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="mx-auto max-w-[1440px] px-8 py-20 lg:px-16 lg:py-24">
+      <section className="relative overflow-hidden border-y border-[#E6E6E6] bg-[#1F2937] text-white">
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80"
+            alt="Client voice background"
+            className="absolute inset-0 h-full w-full object-cover opacity-35"
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#10367D]/95 via-[#1F2937]/90 to-transparent" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#1F2937]/95 via-transparent to-transparent" />
+        </div>
+
+        <div
+          className="pointer-events-none absolute inset-0 z-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+            backgroundSize: "120px 100%",
+          }}
+        />
+
+        <div className="relative z-20 mx-auto max-w-[1440px] px-8 py-20 lg:px-16 lg:py-24">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
-              <p className="text-[10px] font-[600] uppercase tracking-[0.24em] text-[#C8A45D]">
+              <p className="mb-5 inline-flex items-center gap-3 text-[10px] font-[600] uppercase tracking-[0.24em] text-[#C8A45D]">
+                <span className="h-px w-7 bg-[#C8A45D]" />
                 Client Voice
               </p>
               <h2
-                className="mt-4 text-[30px] font-[500] tracking-[-0.02em] text-white sm:text-[40px]"
+                className="text-[30px] font-[700] leading-[1.08] tracking-[-0.03em] text-white sm:text-[40px] lg:text-[50px]"
                 style={{ fontFamily: "Manrope, sans-serif" }}
               >
                 Voices shaped by trust, precision, and enduring impact.
               </h2>
-              <p className="mt-4 max-w-xl text-[15px] leading-[1.85] text-white/75">
+              <p className="mt-6 max-w-xl text-[15px] font-[300] leading-[1.85] text-white/75 sm:text-[16px]">
                 Each project is guided by a clear brief, a disciplined delivery
                 rhythm, and a collaborative partnership that continues long after
                 handover.
@@ -671,8 +703,12 @@ export default function ProjectsClientPage() {
       </section>
 
       <section className="mx-auto max-w-[1440px] px-8 py-20 lg:px-16 lg:py-24">
+        <p className="mb-5 inline-flex items-center gap-3 text-[10px] font-[600] uppercase tracking-[0.24em] text-[#C8A45D]">
+          <span className="h-px w-7 bg-[#C8A45D]" />
+          Related Expertise
+        </p>
         <h2
-          className="text-[30px] font-[500] tracking-[-0.02em] text-[#1F2937] sm:text-[40px]"
+          className="text-[30px] font-[700] leading-[1.08] tracking-[-0.03em] text-[#1F2937] sm:text-[40px] lg:text-[48px]"
           style={{ fontFamily: "Manrope, sans-serif" }}
         >
           Related Expertise
