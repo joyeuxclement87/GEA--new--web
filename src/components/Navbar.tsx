@@ -45,10 +45,10 @@ const expertiseColumns = [
   {
     heading: "Construction & Planning",
     items: [
-      { label: "General Contracting", href: "/services#general-contracting" },
-      { label: "Project Management", href: "/services#project-management" },
-      { label: "BOQ & Cost Estimation", href: "/services#boq-cost-estimation" },
-      { label: "Project Consultation", href: "/services#project-consultation" },
+      { label: "General Contracting", href: "/services/general-contracting" },
+      { label: "Project Management", href: "/services/project-management" },
+      { label: "BOQ & Cost Estimation", href: "/services/boq-cost-estimation" },
+      { label: "Project Consultation", href: "/services/project-consultation" },
     ],
   },
   {
@@ -64,7 +64,7 @@ const expertiseColumns = [
   {
     heading: "Property & Investment",
     items: [
-      { label: "Real Estate Services", href: "/services#real-estate-services" },
+      { label: "Real Estate Services", href: "/services/real-estate" },
       {
         label: "Property Refurbishment",
         href: "/services#property-refurbishment",
@@ -123,7 +123,7 @@ const quickLinks = [
   { label: "Services", href: "/services" },
   { label: "Materials", href: "/products" },
   { label: "Projects", href: "/projects" },
-  { label: "Real Estate", href: "/real-estate" },
+  { label: "Real Estate", href: "/services/real-estate" },
   { label: "News", href: "/insights" },
   { label: "Get a Quote", href: "/quote" },
 ];

@@ -98,72 +98,53 @@ export default function InteriorDesignPage() {
   const [activeStep, setActiveStep] = useState<number>(0);
 
   return (
-    <main className="min-h-screen bg-white text-[#1F2937] overflow-x-hidden">
+    <main className="min-h-screen bg-white text-[#1F2937] overflow-hidden" style={{ marginTop: '88px' }}>
 
-      {/* HERO SECTION (Premium Asymmetrical Split-Screen) */}
-      <section className="relative min-h-[90vh] mt-[152px] flex items-center bg-[#0D1B2A] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        
-        <div className="relative mx-auto w-full max-w-[1440px] px-8 lg:px-16 py-12 lg:py-20 z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            
-            {/* Hero Text Content */}
-            <div className="lg:col-span-7 flex flex-col justify-center">
-              <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-                <Link href="/services" className="group inline-flex items-center gap-2 text-[12px] font-[500] uppercase tracking-[0.15em] text-[#C8A45D] hover:text-white transition-colors duration-200 mb-8">
-                  <ArrowLeft className="h-3.5 w-3.5 transition-transform duration-200 group-hover:-translate-x-1" strokeWidth={1.5} />
-                  All Services
-                </Link>
-              </motion.div>
+      {/* HERO SECTION */}
+      <section className="relative flex items-end bg-[#0D1B2A] text-white overflow-hidden" style={{ minHeight: '70vh' }}>
+        <div className="absolute inset-0">
+          <motion.img
+            initial={{ scale: 1.06, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.30 }}
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1800&q=80"
+            alt="Interior Design"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/75 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/90 via-transparent to-transparent" />
+        </div>
 
-              <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="inline-flex items-center gap-3 mb-6">
-                <span className="h-[1px] w-6 bg-[#C8A45D]" />
-                <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Design &amp; Finishes</span>
-              </motion.div>
-
-                <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.18 }} className="text-[30px] sm:text-[40px] md:text-[52px] lg:text-[76px] font-[800] tracking-[-0.03em] text-white leading-[1.1] max-w-[720px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                Interior Design That <span className="text-[#C8A45D] font-[350]">Shapes Experience.</span>
-              </motion.h1>
-
-              <motion.p initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.26 }} className="mt-6 text-[15.5px] sm:text-[16.5px] font-[300] leading-[1.85] text-white/70 max-w-[620px]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Considered interiors that balance material honesty, spatial comfort, and lasting quality — tailored to how each space will actually be used.
-              </motion.p>
-
-              <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.34 }} className="mt-10 flex flex-wrap gap-4">
-                <Link href="/quote" className="inline-flex items-center gap-3 rounded-[999px] bg-[#C8A45D] px-8 py-4 text-[13.5px] font-[600] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D]">
-                  Request Consultation <ChevronRight className="h-4 w-4" strokeWidth={1.5} />
-                </Link>
-                <Link href="/projects" className="inline-flex items-center justify-center rounded-[999px] border border-white/20 bg-white/5 px-8 py-4 text-[13.5px] font-[500] tracking-[0.02em] text-white transition-all duration-300 hover:bg-white/10 hover:border-white/40">
-                  View Portfolio
-                </Link>
-              </motion.div>
-            </div>
-
-            {/* Hero Image Panel */}
-            <div className="lg:col-span-5 relative">
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.95, y: 30 }} 
-                animate={{ opacity: 1, scale: 1, y: 0 }} 
-                transition={{ duration: 0.9, delay: 0.2 }}
-                className="relative aspect-[3/4] max-w-[420px] mx-auto lg:ml-auto w-full rounded-[24px] overflow-hidden border border-white/10 shadow-2xl"
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80" 
-                  alt="Modern minimalist interior space" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/90 via-transparent to-transparent" />
-                
-                {/* Floating Architectural Data Card */}
-                <div className="absolute bottom-6 left-6 right-6 p-5 bg-[#0D1B2A]/80 backdrop-blur-md rounded-[16px] border border-white/10">
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-[#C8A45D] font-[600]">Featured Work</div>
-                  <div className="text-[16px] font-[700] text-white mt-1" style={{ fontFamily: 'Manrope, sans-serif' }}>Claremont Loft</div>
-                  <div className="text-[12px] text-white/50 font-[300] mt-0.5">Cape Town, South Africa • 2024</div>
-                </div>
-              </motion.div>
-            </div>
-
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-8 lg:px-16 pb-20 pt-24">
+          <div className="flex items-center gap-2 mb-10 text-[11px] font-[500] text-white/40" style={{ fontFamily: 'Inter, sans-serif' }}>
+            <Link href="/services" className="hover:text-white/70 transition-colors">Expertise</Link>
+            <ChevronRight className="h-3.5 w-3.5" strokeWidth={1.5} />
+            <span className="text-white/70">Interior Design</span>
           </div>
+
+          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="inline-flex items-center gap-3 mb-6">
+            <span className="h-[1px] w-6 bg-[#C8A45D]" />
+            <span className="text-[10px] font-[600] uppercase tracking-[0.28em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Design &amp; Finishes</span>
+          </motion.div>
+
+          <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.08, ease: [0.16, 1, 0.3, 1] }} className="text-[36px] sm:text-[52px] lg:text-[68px] font-[800] tracking-[-0.03em] leading-[1.06] text-white mb-5 max-w-[800px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
+            Interior Design That Shapes Experience.
+          </motion.h1>
+
+          <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.22, ease: [0.16, 1, 0.3, 1] }} className="text-[15px] leading-[1.8] font-[300] text-white/55 max-w-[540px] mb-10" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Considered interiors that balance material honesty, spatial comfort, and lasting quality — tailored to how each space will actually be used.
+          </motion.p>
+
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.3, ease: [0.16, 1, 0.3, 1] }} className="flex flex-wrap gap-4">
+            <Link href="/quote" className="inline-flex items-center gap-3 rounded-[999px] bg-[#C8A45D] px-7 py-3.5 text-[13.5px] font-[600] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D]">
+              Request Consultation
+              <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+            </Link>
+            <Link href="/services" className="inline-flex items-center gap-2.5 rounded-[999px] border border-white/20 px-7 py-3.5 text-[13.5px] font-[500] text-white/80 transition-all duration-300 hover:border-white/40 hover:text-white">
+              <ArrowLeft className="h-4 w-4" strokeWidth={1.5} />
+              All Expertise
+            </Link>
+          </motion.div>
         </div>
       </section>
 

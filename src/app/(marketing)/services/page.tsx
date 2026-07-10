@@ -18,7 +18,7 @@ const fadeUp = {
 // ─── Data ───────────────────────────────────────────────────────────
 
 // Services with a dedicated detail page live at /services/[slug]
-const servicesWithDetailPage = new Set(["architecture-drawings", "interior-design", "exterior-design", "landscaping"]);
+const servicesWithDetailPage = new Set(["architecture-drawings", "interior-design", "exterior-design", "landscaping", "general-contracting", "project-management", "boq-cost-estimation", "project-consultation"]);
 
 const services = [
   {

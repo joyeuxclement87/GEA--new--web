@@ -11,10 +11,10 @@ import {
 } from "lucide-react";
 
 const footerServices = [
-  { label: "Architecture Drawings", href: "/services#architecture-drawings" },
-  { label: "General Contracting", href: "/services#general-contracting" },
-  { label: "Project Management", href: "/services#project-management" },
-  { label: "Interior Design", href: "/services#interior-design" },
+  { label: "Architecture Drawings", href: "/services/architecture-drawings" },
+  { label: "General Contracting", href: "/services/general-contracting" },
+  { label: "Project Management", href: "/services/project-management" },
+  { label: "Interior Design", href: "/services/interior-design" },
   { label: "HVAC Systems", href: "/services#hvac" },
   { label: "Solar Energy Solutions", href: "/services#solar-energy" },
 ];
@@ -28,9 +28,9 @@ const footerMaterials = [
 ];
 
 const footerRealEstate = [
-  { label: "Buy Property", href: "/real-estate" },
-  { label: "Rent Property", href: "/real-estate" },
-  { label: "Investment", href: "/real-estate" },
+  { label: "Buy Property", href: "/services/real-estate" },
+  { label: "Rent Property", href: "/services/real-estate" },
+  { label: "Investment", href: "/services/real-estate" },
 ];
 
 const footerCompany = [

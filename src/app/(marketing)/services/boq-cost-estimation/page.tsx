@@ -9,127 +9,145 @@ import Footer from '@/components/Footer';
 const deliverables = [
   {
     num: '01',
-    title: 'Landscape Master Planning',
-    desc: 'Create comprehensive outdoor strategies that organize circulation, planting, recreation, and visual balance across the whole site.',
-    points: ['Site analysis & zoning', 'Circulation & amenity planning', 'Spatial hierarchy & views', 'Landscape concept frameworks'],
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80',
+    title: 'Bill of Quantities (BOQ)',
+    desc: 'Prepare detailed schedules of materials, quantities, specifications, and project requirements for accurate pricing and procurement.',
+    points: ['Itemised material schedules', 'Detailed specifications', 'Quantity breakdowns', 'Procurement-ready documentation'],
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '02',
-    title: 'Garden Design',
-    desc: 'Design elegant residential and commercial gardens that combine planting composition, texture, and seasonal interest with daily comfort.',
-    points: ['Planting palettes', 'Garden rooms & transitions', 'Outdoor comfort & privacy', 'Seasonal planting strategy'],
-    image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=80',
+    title: 'Construction Cost Estimation',
+    desc: 'Provide accurate financial projections based on project scope, materials, labor, and current market conditions.',
+    points: ['Scope-based cost projections', 'Labor & material pricing', 'Market rate benchmarking', 'Contingency planning'],
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '03',
-    title: 'Hardscape Design',
-    desc: 'Plan pathways, patios, retaining walls, pergolas, and outdoor structures that are durable, elegant, and functionally integrated.',
-    points: ['Paving & surface design', 'Retaining & edge details', 'Outdoor structures', 'Material & finish coordination'],
-    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80',
+    title: 'Material Quantity Take-Off',
+    desc: 'Analyze drawings and documents to calculate the precise quantities required for every construction material.',
+    points: ['Drawing-based measurement', 'Waste & allowance factoring', 'Trade-by-trade breakdown', 'Cross-checked calculations'],
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '04',
-    title: 'Outdoor Living Spaces',
-    desc: 'Shape inviting environments for dining, gathering, relaxation, and entertainment that feel natural and effortless.',
-    points: ['Terrace & seating design', 'Entertainment zones', 'Shade & climate comfort', 'Visual connection to architecture'],
-    image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80',
+    title: 'Budget Planning',
+    desc: 'Develop realistic project budgets that align client expectations with available resources and project ambitions.',
+    points: ['Phased budget structuring', 'Cash flow forecasting', 'Risk & contingency allowances', 'Stakeholder alignment'],
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '05',
-    title: 'Irrigation Systems',
-    desc: 'Develop efficient irrigation solutions that support healthy landscapes while conserving water and reducing long-term maintenance demands.',
-    points: ['Water-efficient zoning', 'System layout & controls', 'Soil & plant performance', 'Maintenance-friendly design'],
-    image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80',
+    title: 'Cost Optimization',
+    desc: 'Identify opportunities to improve construction efficiency and reduce spend while maintaining quality standards.',
+    points: ['Value engineering review', 'Alternative material analysis', 'Efficiency recommendations', 'Quality-conscious savings'],
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '06',
-    title: 'Landscape Lighting',
-    desc: 'Add lighting that improves safety, highlights planting and architecture, and extends comfort well into the evening.',
-    points: ['Ambient & feature lighting', 'Pathway & safety illumination', 'Night-time visual balance', 'Low-energy lighting strategies'],
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80',
+    title: 'Tender Documentation',
+    desc: 'Prepare professional cost documents that support contractor selection and a competitive procurement process.',
+    points: ['Tender & pricing schedules', 'Contractor comparison sets', 'Procurement documentation', 'Bid evaluation support'],
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '07',
-    title: 'Sustainable Landscaping',
-    desc: 'Incorporate native planting, drainage, soil stewardship, and water management to create resilient, environmentally responsible spaces.',
-    points: ['Native planting strategies', 'Stormwater & drainage planning', 'Low-maintenance plant systems', 'Ecological performance'],
-    image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=80',
+    title: 'Project Cost Monitoring',
+    desc: 'Track expenses throughout construction to maintain financial control and flag variances before they escalate.',
+    points: ['Ongoing budget tracking', 'Variance reporting', 'Cost control recommendations', 'Financial close-out support'],
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1400&q=80',
   },
 ];
 
 const process = [
-  { num: '01', title: 'Site Assessment', desc: 'Evaluate site conditions, topography, climate, and lifestyle needs before shaping any design direction.' },
-  { num: '02', title: 'Concept Design', desc: 'Develop landscape concepts that respond to the architecture, setting, and intended way of living.' },
-  { num: '03', title: 'Detailed Planning', desc: 'Prepare planting plans, hardscape layouts, irrigation, drainage, and lighting strategies with precision.' },
-  { num: '04', title: 'Implementation', desc: 'Coordinate installation and delivery while maintaining quality standards and design intent.' },
-  { num: '05', title: 'Maintenance Guidance', desc: 'Provide clear recommendations so the landscape continues to perform beautifully over time.' },
+  { num: '01', title: 'Project Review', desc: 'Analyze drawings, specifications, and project requirements before any figures are drafted.' },
+  { num: '02', title: 'Quantity Take-Off', desc: 'Calculate required materials, labor, and construction components with precision.' },
+  { num: '03', title: 'Cost Analysis', desc: 'Evaluate pricing, suppliers, and construction methods against current market conditions.' },
+  { num: '04', title: 'BOQ Preparation', desc: 'Develop detailed cost documentation and project estimates ready for procurement.' },
+  { num: '05', title: 'Final Review', desc: 'Present transparent cost information and support confident project decisions.' },
 ];
 
 const strengths = [
-  { num: '01', title: 'Integrated Design', desc: 'Landscape solutions developed alongside architecture, engineering, and construction teams from the outset.' },
-  { num: '02', title: 'Sustainable Approach', desc: 'Designs that prioritize environmental responsibility, water efficiency, and long-term resilience.' },
-  { num: '03', title: 'Functional Beauty', desc: 'Outdoor spaces crafted for daily living while preserving visual elegance and spatial harmony.' },
-  { num: '04', title: 'End-to-End Support', desc: 'Professional guidance from concept development through implementation and handover.' },
-  { num: '05', title: 'Local Sensitivity', desc: 'Planting and materials selected for climate, soil, maintenance, and cultural context.' },
-  { num: '06', title: 'Measured Detail', desc: 'Every surface, planting layer, and lighting strategy is resolved with clarity and intention.' },
+  { num: '01', title: 'Detailed Analysis', desc: 'Every estimate is developed through careful review of project requirements and technical documents.' },
+  { num: '02', title: 'Transparent Pricing', desc: 'Clear cost breakdowns that help clients understand exactly where their investment goes.' },
+  { num: '03', title: 'Construction Knowledge', desc: 'Our estimates are supported by genuine architectural, engineering, and construction expertise.' },
+  { num: '04', title: 'Better Decision Making', desc: 'Helping clients plan effectively and reduce the risk of unexpected project costs.' },
+  { num: '05', title: 'Market-Aware Pricing', desc: 'Estimates benchmarked against current material, labor, and supplier market conditions.' },
+  { num: '06', title: 'Procurement Ready', desc: 'Documentation prepared to a standard contractors and suppliers can price with confidence.' },
 ];
 
 const relatedProjects = [
   {
-    title: 'Luxury Residential Garden',
-    category: 'Private Residence Landscape',
+    title: 'Residential Villa Development',
+    category: 'Private Residential Costing',
     location: 'Kigali, Rwanda',
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80',
+    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=80',
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
-    title: 'Commercial Office Landscape',
-    category: 'Corporate Outdoor Planning',
+    title: 'Commercial Building Project',
+    category: 'Corporate Cost Planning',
     location: 'Nairobi, Kenya',
-    image: 'https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     span: '',
   },
   {
-    title: 'Hotel & Hospitality Landscape',
-    category: 'Guest Experience Design',
+    title: 'Apartment Complex',
+    category: 'Multi-Unit Budgeting',
     location: 'Dubai, UAE',
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
     span: '',
   },
   {
-    title: 'Residential Estate Master Plan',
-    category: 'Large-Scale Outdoor Development',
+    title: 'Renovation Project',
+    category: 'Refurbishment Cost Estimation',
     location: 'Marrakech, Morocco',
-    image: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80',
+    span: '',
+  },
+  {
+    title: 'Industrial Facility',
+    category: 'Industrial Cost Planning',
+    location: 'Mombasa, Kenya',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    span: '',
+  },
+  {
+    title: 'Infrastructure Development',
+    category: 'Public Infrastructure Costing',
+    location: 'Berlin, Germany',
+    image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80',
     span: '',
   },
 ];
 
 const faqs = [
   {
-    q: 'What landscaping services do you provide?',
-    a: 'We provide full-service landscaping support including master planning, garden design, hardscape design, outdoor living spaces, irrigation planning, landscape lighting, and sustainable landscape strategies for residential and commercial projects.',
+    q: 'What is included in a BOQ?',
+    a: 'A Bill of Quantities includes an itemised schedule of all materials, labor, and works required for a project, along with quantities, specifications, and unit rates used to determine overall project cost.',
   },
   {
-    q: 'Do you design residential gardens?',
-    a: 'Yes. We create bespoke residential landscapes that reflect your lifestyle, enhance the architecture, and support comfortable use throughout the year.',
+    q: 'Why is cost estimation important before construction?',
+    a: 'Cost estimation gives clients a clear, realistic picture of project investment before committing capital, helping avoid budget overruns, informing financing decisions, and supporting confident contractor negotiations.',
   },
   {
-    q: 'Can landscaping be included in new construction projects?',
-    a: 'Absolutely. We often integrate landscape design early in the process so outdoor spaces are planned alongside the building rather than added later as an afterthought.',
+    q: 'Can GEA prepare BOQ from architectural drawings?',
+    a: 'Yes. We regularly prepare full bills of quantities directly from architectural, structural, and MEP drawings — whether they were produced by our team or another consultant.',
   },
   {
-    q: 'Do you provide irrigation system design?',
-    a: 'Yes. Our team develops irrigation concepts that support healthy planting while prioritising water efficiency and long-term maintenance.',
+    q: 'How accurate are construction cost estimates?',
+    a: 'Our estimates are developed from detailed quantity take-offs and current market pricing, giving clients a high level of accuracy. Precision naturally improves as drawings and specifications become more detailed.',
   },
   {
-    q: 'Can you redesign an existing outdoor space?',
-    a: 'Yes. We can rework existing gardens, courtyards, and exterior areas to improve usability, visual coherence, and environmental performance.',
+    q: 'Do you estimate material quantities?',
+    a: 'Yes. Material quantity take-off is a core part of our service — we calculate precise quantities for every trade directly from your project drawings and documentation.',
   },
   {
-    q: 'Do you provide landscape implementation support?',
-    a: 'Yes. We coordinate closely with contractors and suppliers to ensure the design intent is carried through to installation and final completion.',
+    q: 'Can you help reduce project costs?',
+    a: 'Yes. Through value engineering and cost optimization review, we identify opportunities to reduce spend without compromising quality, structural integrity, or design intent.',
+  },
+  {
+    q: 'Do you provide estimates for residential projects?',
+    a: 'Absolutely. We prepare cost estimates and BOQs for residential projects of every scale, from single family homes to large multi-unit residential developments.',
   },
 ];
 
@@ -147,20 +165,22 @@ function FaqItem({ q, a, isOpen, onToggle }: { q: string; a: string; isOpen: boo
   );
 }
 
-export default function LandscapingPage() {
+export default function BoqCostEstimationPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeStep, setActiveStep] = useState<number>(0);
 
   return (
     <main className="min-h-screen bg-white text-[#1F2937] overflow-hidden" style={{ marginTop: '88px' }}>
+
+      {/* HERO SECTION */}
       <section className="relative flex items-end bg-[#0D1B2A] text-white overflow-hidden" style={{ minHeight: '70vh' }}>
         <div className="absolute inset-0">
           <motion.img
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80"
-            alt="Landscaping"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80"
+            alt="BOQ & Cost Estimation"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/75 to-transparent" />
@@ -171,80 +191,86 @@ export default function LandscapingPage() {
           <div className="flex items-center gap-2 mb-10 text-[11px] font-[500] text-white/40" style={{ fontFamily: 'Inter, sans-serif' }}>
             <Link href="/services" className="hover:text-white/70 transition-colors">Expertise</Link>
             <ChevronRight className="h-3.5 w-3.5" strokeWidth={1.5} />
-            <span className="text-white/70">Landscaping</span>
+            <span className="text-white/70">BOQ &amp; Cost Estimation</span>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="inline-flex items-center gap-3 mb-6">
             <span className="h-[1px] w-6 bg-[#C8A45D]" />
-            <span className="text-[10px] font-[600] uppercase tracking-[0.28em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Design &amp; Documentation</span>
+            <span className="text-[10px] font-[600] uppercase tracking-[0.28em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Construction &amp; Planning</span>
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.08, ease: [0.16, 1, 0.3, 1] }} className="text-[36px] sm:text-[52px] lg:text-[68px] font-[800] tracking-[-0.03em] leading-[1.06] text-white mb-5 max-w-[800px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            Creating Outdoor Spaces That Inspire, Connect, and Endure.
+            Accurate Cost Planning for Smarter Construction Decisions.
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.22, ease: [0.16, 1, 0.3, 1] }} className="text-[15px] leading-[1.8] font-[300] text-white/55 max-w-[540px] mb-10" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Create inspiring outdoor environments that combine nature, functionality, and aesthetics. From residential gardens to commercial landscapes, we design spaces that elevate everyday experiences and long-term property value.
+            Global Engineering Agency provides detailed quantity surveying, bill of quantities preparation, and construction cost estimation services to help clients plan budgets, control expenses, and make confident project decisions.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.3, ease: [0.16, 1, 0.3, 1] }} className="flex flex-wrap gap-4">
             <Link href="/quote" className="inline-flex items-center gap-3 rounded-[999px] bg-[#C8A45D] px-7 py-3.5 text-[13.5px] font-[600] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D]">
-              Request Consultation
+              Request Cost Estimate
               <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </Link>
-            <Link href="/services" className="inline-flex items-center gap-2.5 rounded-[999px] border border-white/20 px-7 py-3.5 text-[13.5px] font-[500] text-white/80 transition-all duration-300 hover:border-white/40 hover:text-white">
+            <Link href="/contact" className="inline-flex items-center gap-2.5 rounded-[999px] border border-white/20 px-7 py-3.5 text-[13.5px] font-[500] text-white/80 transition-all duration-300 hover:border-white/40 hover:text-white">
               <ArrowLeft className="h-4 w-4" strokeWidth={1.5} />
-              All Expertise
+              Discuss Your Project
             </Link>
           </motion.div>
         </div>
       </section>
 
+      {/* INTRODUCTION (Two-Column Editorial Overview) */}
       <section className="bg-white py-24 lg:py-32">
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            
             <div className="lg:col-span-5">
               <div className="inline-flex items-center gap-3 mb-6">
                 <span className="h-[1px] w-6 bg-[#10367D]" />
                 <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]" style={{ fontFamily: 'Inter, sans-serif' }}>Why It Matters</span>
               </div>
               <h2 className="text-3xl lg:text-[44px] font-[700] text-[#1F2937] tracking-tight leading-[1.2]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                Landscapes Designed <br />
-                <span className="font-[300] text-[#10367D]">Around Nature and Lifestyle.</span>
+                Building Financial Confidence <br />
+                <span className="font-[300] text-[#10367D]">Before Construction Begins.</span>
               </h2>
             </div>
 
             <div className="lg:col-span-7 pt-4">
               <p className="text-[17px] leading-[1.9] font-[300] text-[#1F2937]/70" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Landscaping is more than planting trees and flowers. It is the art of shaping outdoor environments so they support wellbeing, functionality, sustainability, and visual calm. At GEA, we integrate landscape design with architecture and construction to create cohesive places that feel natural from the first step outside the door.
+                Accurate cost estimation is essential for successful project delivery. GEA analyzes drawings, specifications, materials, labor requirements, and project conditions to develop transparent cost projections that help clients make informed decisions. Without a clear financial roadmap, even the strongest design can be undermined by budget surprises — with a properly prepared BOQ and cost plan, every stakeholder moves forward with clarity and confidence.
               </p>
             </div>
+
           </div>
         </div>
       </section>
 
+      {/* SERVICES PROVIDED (Minimalist Bento-inspired Grid) */}
       <section className="bg-[#F8F8F8] py-24 lg:py-32 border-t border-[#E6E6E6]">
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16 mb-16 lg:mb-20">
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="h-[1px] w-6 bg-[#10367D]" />
             <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">What We Provide</span>
           </div>
-          <h2 className="text-4xl lg:text-[52px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] max-w-[760px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            Outdoor environments <span className="font-[300]">that feel considered at every scale.</span>
+          <h2 className="text-4xl lg:text-[52px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] max-w-[700px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
+            A complete <span className="font-[300]">cost picture.</span>
           </h2>
         </div>
 
+        {/* Bento Grid */}
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {deliverables.map((item, idx) => (
-            <motion.div
-              key={item.num}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
+            <motion.div 
+              key={item.num} 
+              initial={{ opacity: 0, y: 20 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true, margin: '-60px' }} 
               transition={{ duration: 0.6, delay: idx * 0.05 }}
               className="group relative flex flex-col justify-between bg-white rounded-[24px] overflow-hidden border border-[#E6E6E6] hover:border-[#C8A45D] hover:shadow-card-hover transition-all duration-500 p-8 min-h-[420px]"
             >
               <div>
+                {/* Image Showcase inside Card */}
                 <div className="relative w-full h-[180px] overflow-hidden rounded-[16px] mb-6">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-full w-8 h-8 flex items-center justify-center border border-[#E6E6E6]">
@@ -256,6 +282,7 @@ export default function LandscapingPage() {
                 <p className="text-[14px] leading-[1.65] text-[#1F2937]/60 font-[300] mb-6">{item.desc}</p>
               </div>
 
+              {/* Point highlights */}
               <ul className="space-y-2 pt-4 border-t border-[#F0F0F0]">
                 {item.points.map((p) => (
                   <li key={p} className="flex items-center gap-2.5 text-[12.5px] text-[#1F2937]/70 font-[300]">
@@ -269,6 +296,7 @@ export default function LandscapingPage() {
         </div>
       </section>
 
+      {/* ESTIMATION PROCESS (Premium Stepper Timeline) */}
       <section className="bg-white py-24 lg:py-36">
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
           <div className="text-center max-w-[650px] mx-auto mb-20">
@@ -277,18 +305,19 @@ export default function LandscapingPage() {
               <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">How We Work</span>
               <span className="h-[1px] w-6 bg-[#10367D]" />
             </div>
-            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] mb-4">From first brief to lasting landscape.</h2>
-            <p className="text-[15.5px] font-[300] text-[#1F2937]/60">Explore each phase of our collaborative outdoor design journey.</p>
+            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] mb-4">From drawings to a clear financial plan.</h2>
+            <p className="text-[15.5px] font-[300] text-[#1F2937]/60">Explore each phase of our cost estimation process.</p>
           </div>
 
+          {/* Stepper Buttons */}
           <div className="relative max-w-[1000px] mx-auto">
             <div className="absolute top-[20px] left-8 right-8 h-[2px] bg-[#E6E6E6] hidden md:block z-0" />
-
+            
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4 relative z-10 mb-12">
               {process.map((step, idx) => {
                 const isActive = activeStep === idx;
                 return (
-                  <button
+                  <button 
                     key={step.num}
                     onClick={() => setActiveStep(idx)}
                     className="flex flex-col items-center text-center focus:outline-none group"
@@ -304,7 +333,8 @@ export default function LandscapingPage() {
               })}
             </div>
 
-            <motion.div
+            {/* Stepper Active Card */}
+            <motion.div 
               key={activeStep}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -323,14 +353,12 @@ export default function LandscapingPage() {
         </div>
       </section>
 
+      {/* WHY CHOOSE US */}
       <section className="bg-[#0D1B2A] text-white py-20 lg:py-28">
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 lg:mb-14">
-            <div className="max-w-[560px]">
-              <div className="inline-flex items-center gap-3 mb-5"><span className="h-[1px] w-6 bg-[#C8A45D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]">Why Choose GEA</span></div>
-              <h2 className="text-3xl lg:text-[42px] font-[700] tracking-tight leading-[1.2]">Creating landscapes that <span className="font-[300] text-white/70">grow with your vision.</span></h2>
-            </div>
-            <p className="text-[13.5px] leading-[1.75] font-[300] text-white/45 max-w-[340px]">Every landscape is shaped with the same discipline, care, and design rigor as our architecture and construction work.</p>
+            <div className="max-w-[560px]"><div className="inline-flex items-center gap-3 mb-5"><span className="h-[1px] w-6 bg-[#C8A45D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]">Why Choose Us</span></div><h2 className="text-3xl lg:text-[42px] font-[700] tracking-tight leading-[1.2]">Accurate estimates built on <span className="font-[300] text-white/70">technical understanding.</span></h2></div>
+            <p className="text-[13.5px] leading-[1.75] font-[300] text-white/45 max-w-[340px]">Every figure is checked, cross-referenced, and delivered with the transparency a premium project deserves.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
@@ -354,13 +382,11 @@ export default function LandscapingPage() {
         </div>
       </section>
 
+      {/* RELATED PROJECTS */}
       <section className="bg-white py-24 lg:py-40">
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-20">
-            <div>
-              <div className="inline-flex items-center gap-3 mb-6"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Related Work</span></div>
-              <h2 className="text-4xl lg:text-[56px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Designed to <span className="font-[300]">belong.</span></h2>
-            </div>
+            <div><div className="inline-flex items-center gap-3 mb-6"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Related Work</span></div><h2 className="text-4xl lg:text-[56px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Costed, planned, <span className="font-[300]">delivered.</span></h2></div>
             <Link href="/projects" className="inline-flex items-center gap-4 text-[13px] font-[600] tracking-[0.04em] text-[#1F2937] group transition-all duration-300 mb-2" style={{ fontFamily: 'Inter, sans-serif' }}><span className="h-[1px] bg-[#1F2937] w-6 transition-all duration-300 group-hover:w-12 group-hover:bg-[#10367D]" /><span className="group-hover:text-[#10367D] transition-colors">View All Projects</span><ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#10367D]" strokeWidth={1.5} /></Link>
           </div>
 
@@ -380,12 +406,10 @@ export default function LandscapingPage() {
         </div>
       </section>
 
+      {/* FAQ */}
       <section className="bg-[#F8F8F8] py-24 lg:py-32 border-t border-[#E6E6E6]" itemScope itemType="https://schema.org/FAQPage">
         <div className="mx-auto max-w-[900px] px-8 lg:px-16">
-          <div className="text-center mb-14 lg:mb-16">
-            <div className="inline-flex items-center gap-3 mb-6 justify-center"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">FAQ</span><span className="h-[1px] w-6 bg-[#10367D]" /></div>
-            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Common <span className="font-[300]">questions.</span></h2>
-          </div>
+          <div className="text-center mb-14 lg:mb-16"><div className="inline-flex items-center gap-3 mb-6 justify-center"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">FAQ</span><span className="h-[1px] w-6 bg-[#10367D]" /></div><h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Common <span className="font-[300]">questions.</span></h2></div>
 
           <div className="border-t border-[#E6E6E6]">
             {faqs.map((faq, idx) => (
@@ -401,29 +425,29 @@ export default function LandscapingPage() {
         </div>
       </section>
 
+      {/* FINAL CTA */}
       <section className="relative overflow-hidden bg-[#0D1B2A] py-32 lg:py-44">
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C8A45D] to-transparent" />
         <div className="relative z-10 mx-auto max-w-[1440px] px-8 lg:px-16 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-[64px] font-[700] tracking-tight leading-[1.03] text-white mb-6">Let&apos;s Transform <span className="text-[#C8A45D]">Your Outdoor Space.</span></h2>
-          <p className="mx-auto max-w-[680px] text-[16px] leading-[1.8] font-[300] text-white/55 mb-8">Whether you&apos;re developing a residential property, commercial project, or public space, our team creates landscapes that balance beauty, functionality, and sustainability.</p>
-          <div className="flex items-center justify-center gap-4 flex-wrap">
-            <Link href="/quote" className="inline-flex items-center gap-3 rounded-full bg-[#C8A45D] px-12 py-5 text-[14px] font-[700] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D]">Request Consultation<ArrowRight className="h-4 w-4" strokeWidth={2} /></Link>
-            <Link href="/projects" className="inline-flex items-center justify-center rounded-full border border-white/20 px-12 py-5 text-[14px] font-[500] tracking-[0.02em] text-white/80 transition-all duration-300 hover:border-[#C8A45D]/60 hover:text-white">View Our Projects</Link>
-          </div>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-[13px] font-[300] text-white/60">
-            <Link href="/services/architecture-drawings" className="transition-colors duration-200 hover:text-[#C8A45D]">Architecture Drawings</Link>
-            <span className="text-white/20">•</span>
-            <Link href="/services/exterior-design" className="transition-colors duration-200 hover:text-[#C8A45D]">Exterior Design</Link>
-            <span className="text-white/20">•</span>
-            <Link href="/services/interior-design" className="transition-colors duration-200 hover:text-[#C8A45D]">Interior Design</Link>
-            <span className="text-white/20">•</span>
-            <Link href="/services/general-contracting" className="transition-colors duration-200 hover:text-[#C8A45D]">General Contracting</Link>
-            <span className="text-white/20">•</span>
-            <Link href="/services/project-management" className="transition-colors duration-200 hover:text-[#C8A45D]">Project Management</Link>
-            <span className="text-white/20">•</span>
-            <Link href="/contact" className="transition-colors duration-200 hover:text-[#C8A45D]">Contact</Link>
+          <h2 className="text-4xl sm:text-5xl lg:text-[64px] font-[700] tracking-tight leading-[1.03] text-white mb-6">Plan your project <span className="text-[#C8A45D]">with financial confidence.</span></h2>
+          <p className="mx-auto max-w-[680px] text-[16px] leading-[1.8] font-[300] text-white/55 mb-8">Accurate cost planning helps you understand your investment, control expenses, and move forward with a clear construction strategy.</p>
+          <div className="flex items-center justify-center gap-4">
+            <Link href="/quote" className="inline-flex items-center gap-3 rounded-full bg-[#C8A45D] px-12 py-5 text-[14px] font-[700] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D]">Request Cost Estimate<ArrowRight className="h-4 w-4" strokeWidth={2} /></Link>
+            <Link href="/contact" className="inline-flex items-center justify-center rounded-full border border-white/20 px-12 py-5 text-[14px] font-[500] tracking-[0.02em] text-white/80 transition-all duration-300 hover:border-[#C8A45D]/60 hover:text-white">Contact Our Team</Link>
           </div>
         </div>
+      </section>
+
+      {/* INTERNAL LINKS (SEO) */}
+      <section className="sr-only" aria-hidden="false">
+        <nav aria-label="Related services">
+          <Link href="/services/architecture-drawings">Architecture Drawings</Link>
+          <Link href="/services/general-contracting">General Contracting</Link>
+          <Link href="/services/project-management">Project Management</Link>
+          <Link href="/services#project-consultation">Project Consultation</Link>
+          <Link href="/projects">Projects</Link>
+          <Link href="/solutions">Solutions</Link>
+        </nav>
       </section>
 
       <Footer />

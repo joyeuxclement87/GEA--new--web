@@ -9,127 +9,131 @@ import Footer from '@/components/Footer';
 const deliverables = [
   {
     num: '01',
-    title: 'Landscape Master Planning',
-    desc: 'Create comprehensive outdoor strategies that organize circulation, planting, recreation, and visual balance across the whole site.',
-    points: ['Site analysis & zoning', 'Circulation & amenity planning', 'Spatial hierarchy & views', 'Landscape concept frameworks'],
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80',
+    title: 'Residential Construction',
+    desc: 'Deliver modern homes, villas, apartments, and residential developments with disciplined construction planning and quality craftsmanship.',
+    points: ['Custom home builds', 'Villa & apartment delivery', 'Interior fit-out coordination', 'Turnkey residential execution'],
+    image: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '02',
-    title: 'Garden Design',
-    desc: 'Design elegant residential and commercial gardens that combine planting composition, texture, and seasonal interest with daily comfort.',
-    points: ['Planting palettes', 'Garden rooms & transitions', 'Outdoor comfort & privacy', 'Seasonal planting strategy'],
-    image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=80',
+    title: 'Commercial Construction',
+    desc: 'Build offices, retail spaces, mixed-use developments, and commercial facilities with coordination across trades and timelines.',
+    points: ['Office & retail fit-out', 'Mixed-use development delivery', 'Stakeholder coordination', 'Commercial occupancy readiness'],
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '03',
-    title: 'Hardscape Design',
-    desc: 'Plan pathways, patios, retaining walls, pergolas, and outdoor structures that are durable, elegant, and functionally integrated.',
-    points: ['Paving & surface design', 'Retaining & edge details', 'Outdoor structures', 'Material & finish coordination'],
-    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80',
+    title: 'Industrial Construction',
+    desc: 'Support warehouses, factories, and industrial infrastructure with capable site supervision and build execution.',
+    points: ['Warehouse & factory builds', 'Industrial fit-out', 'Plant infrastructure', 'Operational readiness'],
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '04',
-    title: 'Outdoor Living Spaces',
-    desc: 'Shape inviting environments for dining, gathering, relaxation, and entertainment that feel natural and effortless.',
-    points: ['Terrace & seating design', 'Entertainment zones', 'Shade & climate comfort', 'Visual connection to architecture'],
-    image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80',
+    title: 'Construction Planning & Coordination',
+    desc: 'Manage schedules, resources, subcontractors, and site operations so every stage of delivery runs in sequence.',
+    points: ['Programme management', 'Subcontractor coordination', 'Site logistics', 'Progress reporting'],
+    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '05',
-    title: 'Irrigation Systems',
-    desc: 'Develop efficient irrigation solutions that support healthy landscapes while conserving water and reducing long-term maintenance demands.',
-    points: ['Water-efficient zoning', 'System layout & controls', 'Soil & plant performance', 'Maintenance-friendly design'],
-    image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80',
+    title: 'Procurement & Material Management',
+    desc: 'Source and manage the right materials and equipment to keep quality high and delivery efficient.',
+    points: ['Material sourcing', 'Supplier coordination', 'Cost-conscious procurement', 'Delivery scheduling'],
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '06',
-    title: 'Landscape Lighting',
-    desc: 'Add lighting that improves safety, highlights planting and architecture, and extends comfort well into the evening.',
-    points: ['Ambient & feature lighting', 'Pathway & safety illumination', 'Night-time visual balance', 'Low-energy lighting strategies'],
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80',
+    title: 'Site Supervision & Safety',
+    desc: 'Provide continuous project oversight with rigorous safety standards, quality control, and compliance monitoring.',
+    points: ['On-site supervision', 'Safety protocol management', 'Quality assurance checks', 'Compliance oversight'],
+    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80',
   },
   {
     num: '07',
-    title: 'Sustainable Landscaping',
-    desc: 'Incorporate native planting, drainage, soil stewardship, and water management to create resilient, environmentally responsible spaces.',
-    points: ['Native planting strategies', 'Stormwater & drainage planning', 'Low-maintenance plant systems', 'Ecological performance'],
-    image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=80',
+    title: 'Quality Assurance & Handover',
+    desc: 'Complete every project with thorough inspections, close-out procedures, and final handover support.',
+    points: ['Inspection & testing', 'Punch-list resolution', 'Snagging & close-out', 'Occupancy readiness'],
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80',
   },
 ];
 
 const process = [
-  { num: '01', title: 'Site Assessment', desc: 'Evaluate site conditions, topography, climate, and lifestyle needs before shaping any design direction.' },
-  { num: '02', title: 'Concept Design', desc: 'Develop landscape concepts that respond to the architecture, setting, and intended way of living.' },
-  { num: '03', title: 'Detailed Planning', desc: 'Prepare planting plans, hardscape layouts, irrigation, drainage, and lighting strategies with precision.' },
-  { num: '04', title: 'Implementation', desc: 'Coordinate installation and delivery while maintaining quality standards and design intent.' },
-  { num: '05', title: 'Maintenance Guidance', desc: 'Provide clear recommendations so the landscape continues to perform beautifully over time.' },
+  { num: '01', title: 'Project Consultation', desc: 'Understand the project goals, scope, budget, and desired timeline from the outset.' },
+  { num: '02', title: 'Planning & Procurement', desc: 'Prepare schedules, mobilise resources, and procure the materials and services needed.' },
+  { num: '03', title: 'Construction Execution', desc: 'Coordinate site activities with disciplined project management, quality controls, and safe delivery.' },
+  { num: '04', title: 'Quality Inspection', desc: 'Carry out inspections, testing, and checks throughout the build to maintain standards.' },
+  { num: '05', title: 'Project Handover', desc: 'Deliver completed works ready for occupancy, use, and long-term performance.' },
 ];
 
 const strengths = [
-  { num: '01', title: 'Integrated Design', desc: 'Landscape solutions developed alongside architecture, engineering, and construction teams from the outset.' },
-  { num: '02', title: 'Sustainable Approach', desc: 'Designs that prioritize environmental responsibility, water efficiency, and long-term resilience.' },
-  { num: '03', title: 'Functional Beauty', desc: 'Outdoor spaces crafted for daily living while preserving visual elegance and spatial harmony.' },
-  { num: '04', title: 'End-to-End Support', desc: 'Professional guidance from concept development through implementation and handover.' },
-  { num: '05', title: 'Local Sensitivity', desc: 'Planting and materials selected for climate, soil, maintenance, and cultural context.' },
-  { num: '06', title: 'Measured Detail', desc: 'Every surface, planting layer, and lighting strategy is resolved with clarity and intention.' },
+  { num: '01', title: 'Experienced Project Teams', desc: 'Qualified engineers, architects, supervisors, and construction professionals working together from day one.' },
+  { num: '02', title: 'End-to-End Project Delivery', desc: 'One partner overseeing planning, procurement, execution, and handover without fragmented responsibility.' },
+  { num: '03', title: 'Quality Workmanship', desc: 'Strict quality standards that protect durability, performance, and long-term value.' },
+  { num: '04', title: 'On-Time Execution', desc: 'Disciplined planning and proactive coordination designed to minimise delays and maximise value.' },
+  { num: '05', title: 'Safety-Focused Delivery', desc: 'Construction sites managed with strong safety systems and clear compliance procedures.' },
+  { num: '06', title: 'Transparent Communication', desc: 'Regular reporting and clear updates so clients remain informed at every stage.' },
 ];
 
 const relatedProjects = [
   {
-    title: 'Luxury Residential Garden',
-    category: 'Private Residence Landscape',
+    title: 'Residential Villa Construction',
+    category: 'Private Residential Delivery',
     location: 'Kigali, Rwanda',
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80',
+    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=80',
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
-    title: 'Commercial Office Landscape',
-    category: 'Corporate Outdoor Planning',
+    title: 'Commercial Office Complex',
+    category: 'Corporate Construction',
     location: 'Nairobi, Kenya',
-    image: 'https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     span: '',
   },
   {
-    title: 'Hotel & Hospitality Landscape',
-    category: 'Guest Experience Design',
+    title: 'Industrial Warehouse',
+    category: 'Industrial Infrastructure',
     location: 'Dubai, UAE',
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
     span: '',
   },
   {
-    title: 'Residential Estate Master Plan',
-    category: 'Large-Scale Outdoor Development',
+    title: 'Educational Facility',
+    category: 'Institutional Development',
     location: 'Marrakech, Morocco',
-    image: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80',
     span: '',
   },
 ];
 
 const faqs = [
   {
-    q: 'What landscaping services do you provide?',
-    a: 'We provide full-service landscaping support including master planning, garden design, hardscape design, outdoor living spaces, irrigation planning, landscape lighting, and sustainable landscape strategies for residential and commercial projects.',
+    q: 'What is included in your General Contracting service?',
+    a: 'Our general contracting service includes construction planning, procurement, site supervision, subcontractor coordination, quality assurance, safety management, and project handover.',
   },
   {
-    q: 'Do you design residential gardens?',
-    a: 'Yes. We create bespoke residential landscapes that reflect your lifestyle, enhance the architecture, and support comfortable use throughout the year.',
+    q: 'Do you manage residential and commercial construction projects?',
+    a: 'Yes. We deliver both residential and commercial developments, including villas, apartments, offices, retail spaces, and mixed-use projects.',
   },
   {
-    q: 'Can landscaping be included in new construction projects?',
-    a: 'Absolutely. We often integrate landscape design early in the process so outdoor spaces are planned alongside the building rather than added later as an afterthought.',
+    q: 'Can GEA provide both design and construction services?',
+    a: 'Yes. We work effectively across design and construction stages and can support projects through integrated delivery when required.',
   },
   {
-    q: 'Do you provide irrigation system design?',
-    a: 'Yes. Our team develops irrigation concepts that support healthy planting while prioritising water efficiency and long-term maintenance.',
+    q: 'How do you ensure construction quality?',
+    a: 'We apply structured quality controls, inspections, and site supervision practices from mobilization through handover.',
   },
   {
-    q: 'Can you redesign an existing outdoor space?',
-    a: 'Yes. We can rework existing gardens, courtyards, and exterior areas to improve usability, visual coherence, and environmental performance.',
+    q: 'Do you supply construction materials?',
+    a: 'Yes. We coordinate procurement and material sourcing to support timely delivery, cost control, and construction quality.',
   },
   {
-    q: 'Do you provide landscape implementation support?',
-    a: 'Yes. We coordinate closely with contractors and suppliers to ensure the design intent is carried through to installation and final completion.',
+    q: 'Can you manage subcontractors and suppliers?',
+    a: 'Yes. We coordinate subcontractors, suppliers, and site operations to keep the project aligned with schedule, budget, and standards.',
+  },
+  {
+    q: 'How do you keep projects on schedule?',
+    a: 'We use disciplined project planning, regular progress tracking, clear communication, and proactive issue resolution to maintain momentum.',
   },
 ];
 
@@ -147,7 +151,7 @@ function FaqItem({ q, a, isOpen, onToggle }: { q: string; a: string; isOpen: boo
   );
 }
 
-export default function LandscapingPage() {
+export default function GeneralContractingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeStep, setActiveStep] = useState<number>(0);
 
@@ -159,8 +163,8 @@ export default function LandscapingPage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80"
-            alt="Landscaping"
+            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80"
+            alt="General Contracting"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/75 to-transparent" />
@@ -171,20 +175,20 @@ export default function LandscapingPage() {
           <div className="flex items-center gap-2 mb-10 text-[11px] font-[500] text-white/40" style={{ fontFamily: 'Inter, sans-serif' }}>
             <Link href="/services" className="hover:text-white/70 transition-colors">Expertise</Link>
             <ChevronRight className="h-3.5 w-3.5" strokeWidth={1.5} />
-            <span className="text-white/70">Landscaping</span>
+            <span className="text-white/70">General Contracting</span>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="inline-flex items-center gap-3 mb-6">
             <span className="h-[1px] w-6 bg-[#C8A45D]" />
-            <span className="text-[10px] font-[600] uppercase tracking-[0.28em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Design &amp; Documentation</span>
+            <span className="text-[10px] font-[600] uppercase tracking-[0.28em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Construction &amp; Planning</span>
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.08, ease: [0.16, 1, 0.3, 1] }} className="text-[36px] sm:text-[52px] lg:text-[68px] font-[800] tracking-[-0.03em] leading-[1.06] text-white mb-5 max-w-[800px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            Creating Outdoor Spaces That Inspire, Connect, and Endure.
+            Building Projects with Precision, Quality, and Confidence.
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.22, ease: [0.16, 1, 0.3, 1] }} className="text-[15px] leading-[1.8] font-[300] text-white/55 max-w-[540px] mb-10" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Create inspiring outdoor environments that combine nature, functionality, and aesthetics. From residential gardens to commercial landscapes, we design spaces that elevate everyday experiences and long-term property value.
+            Global Engineering Agency delivers comprehensive general contracting services for residential, commercial, industrial, and institutional developments. We manage every stage of construction with technical expertise, trusted coordination, and efficient project delivery.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.3, ease: [0.16, 1, 0.3, 1] }} className="flex flex-wrap gap-4">
@@ -209,14 +213,14 @@ export default function LandscapingPage() {
                 <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]" style={{ fontFamily: 'Inter, sans-serif' }}>Why It Matters</span>
               </div>
               <h2 className="text-3xl lg:text-[44px] font-[700] text-[#1F2937] tracking-tight leading-[1.2]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                Landscapes Designed <br />
-                <span className="font-[300] text-[#10367D]">Around Nature and Lifestyle.</span>
+                Complete Construction Solutions <br />
+                <span className="font-[300] text-[#10367D]">Under One Trusted Partner.</span>
               </h2>
             </div>
 
             <div className="lg:col-span-7 pt-4">
               <p className="text-[17px] leading-[1.9] font-[300] text-[#1F2937]/70" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Landscaping is more than planting trees and flowers. It is the art of shaping outdoor environments so they support wellbeing, functionality, sustainability, and visual calm. At GEA, we integrate landscape design with architecture and construction to create cohesive places that feel natural from the first step outside the door.
+                General contracting is the coordination of every moving part during construction — planning, procurement, workforce management, scheduling, quality control, and delivery. At GEA, our multidisciplinary team brings this work together with professionalism, accountability, and a commitment to safe, efficient execution from start to finish.
               </p>
             </div>
           </div>
@@ -230,7 +234,7 @@ export default function LandscapingPage() {
             <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">What We Provide</span>
           </div>
           <h2 className="text-4xl lg:text-[52px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] max-w-[760px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            Outdoor environments <span className="font-[300]">that feel considered at every scale.</span>
+            Construction delivery <span className="font-[300]">shaped around quality and control.</span>
           </h2>
         </div>
 
@@ -277,8 +281,8 @@ export default function LandscapingPage() {
               <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">How We Work</span>
               <span className="h-[1px] w-6 bg-[#10367D]" />
             </div>
-            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] mb-4">From first brief to lasting landscape.</h2>
-            <p className="text-[15.5px] font-[300] text-[#1F2937]/60">Explore each phase of our collaborative outdoor design journey.</p>
+            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] mb-4">From consultation to handover.</h2>
+            <p className="text-[15.5px] font-[300] text-[#1F2937]/60">A structured construction journey designed to keep each project on course and on standard.</p>
           </div>
 
           <div className="relative max-w-[1000px] mx-auto">
@@ -328,9 +332,9 @@ export default function LandscapingPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 lg:mb-14">
             <div className="max-w-[560px]">
               <div className="inline-flex items-center gap-3 mb-5"><span className="h-[1px] w-6 bg-[#C8A45D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]">Why Choose GEA</span></div>
-              <h2 className="text-3xl lg:text-[42px] font-[700] tracking-tight leading-[1.2]">Creating landscapes that <span className="font-[300] text-white/70">grow with your vision.</span></h2>
+              <h2 className="text-3xl lg:text-[42px] font-[700] tracking-tight leading-[1.2]">Construction built on <span className="font-[300] text-white/70">experience and trust.</span></h2>
             </div>
-            <p className="text-[13.5px] leading-[1.75] font-[300] text-white/45 max-w-[340px]">Every landscape is shaped with the same discipline, care, and design rigor as our architecture and construction work.</p>
+            <p className="text-[13.5px] leading-[1.75] font-[300] text-white/45 max-w-[340px]">Every project is delivered with the same discipline, accountability, and care we would expect for our own developments.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
@@ -359,7 +363,7 @@ export default function LandscapingPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-20">
             <div>
               <div className="inline-flex items-center gap-3 mb-6"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Related Work</span></div>
-              <h2 className="text-4xl lg:text-[56px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Designed to <span className="font-[300]">belong.</span></h2>
+              <h2 className="text-4xl lg:text-[56px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Executed with <span className="font-[300]">discipline.</span></h2>
             </div>
             <Link href="/projects" className="inline-flex items-center gap-4 text-[13px] font-[600] tracking-[0.04em] text-[#1F2937] group transition-all duration-300 mb-2" style={{ fontFamily: 'Inter, sans-serif' }}><span className="h-[1px] bg-[#1F2937] w-6 transition-all duration-300 group-hover:w-12 group-hover:bg-[#10367D]" /><span className="group-hover:text-[#10367D] transition-colors">View All Projects</span><ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#10367D]" strokeWidth={1.5} /></Link>
           </div>
@@ -404,22 +408,22 @@ export default function LandscapingPage() {
       <section className="relative overflow-hidden bg-[#0D1B2A] py-32 lg:py-44">
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C8A45D] to-transparent" />
         <div className="relative z-10 mx-auto max-w-[1440px] px-8 lg:px-16 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-[64px] font-[700] tracking-tight leading-[1.03] text-white mb-6">Let&apos;s Transform <span className="text-[#C8A45D]">Your Outdoor Space.</span></h2>
-          <p className="mx-auto max-w-[680px] text-[16px] leading-[1.8] font-[300] text-white/55 mb-8">Whether you&apos;re developing a residential property, commercial project, or public space, our team creates landscapes that balance beauty, functionality, and sustainability.</p>
+          <h2 className="text-4xl sm:text-5xl lg:text-[64px] font-[700] tracking-tight leading-[1.03] text-white mb-6">Let&apos;s Build <span className="text-[#C8A45D]">Your Vision Together.</span></h2>
+          <p className="mx-auto max-w-[680px] text-[16px] leading-[1.8] font-[300] text-white/55 mb-8">Whether you&apos;re planning a residential home, commercial facility, or large-scale development, Global Engineering Agency brings reliable construction delivery built on quality, safety, and experience.</p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link href="/quote" className="inline-flex items-center gap-3 rounded-full bg-[#C8A45D] px-12 py-5 text-[14px] font-[700] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D]">Request Consultation<ArrowRight className="h-4 w-4" strokeWidth={2} /></Link>
-            <Link href="/projects" className="inline-flex items-center justify-center rounded-full border border-white/20 px-12 py-5 text-[14px] font-[500] tracking-[0.02em] text-white/80 transition-all duration-300 hover:border-[#C8A45D]/60 hover:text-white">View Our Projects</Link>
+            <Link href="/projects" className="inline-flex items-center justify-center rounded-full border border-white/20 px-12 py-5 text-[14px] font-[500] tracking-[0.02em] text-white/80 transition-all duration-300 hover:border-[#C8A45D]/60 hover:text-white">Explore Our Projects</Link>
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-[13px] font-[300] text-white/60">
+            <Link href="/services/project-management" className="transition-colors duration-200 hover:text-[#C8A45D]">Project Management</Link>
+            <span className="text-white/20">•</span>
+            <Link href="/services/boq-cost-estimation" className="transition-colors duration-200 hover:text-[#C8A45D]">BOQ &amp; Cost Estimation</Link>
+            <span className="text-white/20">•</span>
             <Link href="/services/architecture-drawings" className="transition-colors duration-200 hover:text-[#C8A45D]">Architecture Drawings</Link>
             <span className="text-white/20">•</span>
-            <Link href="/services/exterior-design" className="transition-colors duration-200 hover:text-[#C8A45D]">Exterior Design</Link>
+            <Link href="/services/mep" className="transition-colors duration-200 hover:text-[#C8A45D]">MEP Services</Link>
             <span className="text-white/20">•</span>
-            <Link href="/services/interior-design" className="transition-colors duration-200 hover:text-[#C8A45D]">Interior Design</Link>
-            <span className="text-white/20">•</span>
-            <Link href="/services/general-contracting" className="transition-colors duration-200 hover:text-[#C8A45D]">General Contracting</Link>
-            <span className="text-white/20">•</span>
-            <Link href="/services/project-management" className="transition-colors duration-200 hover:text-[#C8A45D]">Project Management</Link>
+            <Link href="/services/fire-protection" className="transition-colors duration-200 hover:text-[#C8A45D]">Fire Protection Systems</Link>
             <span className="text-white/20">•</span>
             <Link href="/contact" className="transition-colors duration-200 hover:text-[#C8A45D]">Contact</Link>
           </div>
