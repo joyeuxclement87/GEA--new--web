@@ -39,7 +39,7 @@ const expertiseColumns = [
           },
           { label: "Interior Design", href: "/services/interior-design" },
           { label: "Exterior Design", href: "/services/exterior-design" },
-          { label: "Landscaping", href: "/services#landscaping" },
+          { label: "Landscaping", href: "/services/landscaping" },
         ],
       },
   {

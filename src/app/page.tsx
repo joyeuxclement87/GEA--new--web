@@ -337,7 +337,7 @@ export default function HomePage() {
 
             <div className="flex-1 w-full flex flex-col items-center text-center py-8 md:py-10">
               <span className="text-[64px] font-[700] text-[#10367D] leading-none mb-3" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                <Counter from={0} to={15} suffix="+" />
+                <Counter from={0} to={8} suffix="+" />
               </span>
               <span className="text-[14px] uppercase tracking-[0.15em] text-[#6B7280]">
                 Years Experience
