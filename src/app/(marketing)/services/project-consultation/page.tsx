@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Minus, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 const deliverables = [
   {
@@ -12,49 +13,49 @@ const deliverables = [
     title: 'Project Feasibility Assessment',
     desc: 'Evaluate project opportunities, requirements, challenges, and potential outcomes before development begins.',
     points: ['Opportunity evaluation', 'Risk & challenge identification', 'Outcome projections', 'Go / no-go guidance'],
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-project-consultation-project-feasibility-assessment', { w: 1400 }),
   },
   {
     num: '02',
     title: 'Design & Planning Advice',
     desc: 'Provide professional recommendations regarding design direction, functionality, and project requirements.',
     points: ['Design direction guidance', 'Functional programming', 'Requirement definition', 'Concept alignment'],
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-project-consultation-design-and-planning-advice', { w: 1400 }),
   },
   {
     num: '03',
     title: 'Technical Consultation',
     desc: 'Offer expert guidance on architectural, engineering, construction, and building system decisions.',
     points: ['Architectural & structural input', 'Building systems guidance', 'Constructability review', 'Regulatory considerations'],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-project-consultation-technical-consultation', { w: 1400 }),
   },
   {
     num: '04',
     title: 'Budget & Investment Guidance',
     desc: 'Help clients understand project costs, priorities, and financial planning ahead of committing capital.',
     points: ['Cost & priority guidance', 'Investment planning', 'Phasing recommendations', 'Financial risk awareness'],
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-project-consultation-budget-and-investment-guidance', { w: 1400 }),
   },
   {
     num: '05',
     title: 'Site Evaluation',
     desc: 'Analyze site conditions, opportunities, limitations, and development potential before design begins.',
     points: ['Site condition analysis', 'Development potential review', 'Constraint identification', 'Opportunity mapping'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-project-consultation-site-evaluation', { w: 1400 }),
   },
   {
     num: '06',
     title: 'Material & System Recommendations',
     desc: 'Advise clients on suitable materials, technologies, and construction solutions for their project.',
     points: ['Material suitability review', 'Technology recommendations', 'Performance & durability advice', 'Cost-conscious alternatives'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-project-consultation-material-and-system-recommendations', { w: 1400 }),
   },
   {
     num: '07',
     title: 'Development Strategy',
     desc: 'Create practical strategies that support efficient project execution and long-term value creation.',
     points: ['Execution roadmaps', 'Stakeholder alignment', 'Long-term value planning', 'Delivery strategy'],
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-project-consultation-development-strategy', { w: 1400 }),
   },
 ];
 
@@ -80,42 +81,42 @@ const relatedProjects = [
     title: 'Residential Development Planning',
     category: 'Feasibility & Strategy',
     location: 'Kigali, Rwanda',
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-project-consultation-related-residential-development-planning', { w: 1600 }),
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
     title: 'Commercial Building Consultation',
     category: 'Technical & Design Advisory',
     location: 'Nairobi, Kenya',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-project-consultation-related-commercial-building-consultation', { w: 1200 }),
     span: '',
   },
   {
     title: 'Property Investment Assessment',
     category: 'Investment Feasibility',
     location: 'Dubai, UAE',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-project-consultation-related-property-investment-assessment', { w: 1200 }),
     span: '',
   },
   {
     title: 'Renovation Strategy',
     category: 'Refurbishment Planning',
     location: 'Marrakech, Morocco',
-    image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-project-consultation-related-renovation-strategy', { w: 1200 }),
     span: '',
   },
   {
     title: 'Mixed-Use Development',
     category: 'Development Strategy',
     location: 'Mombasa, Kenya',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-project-consultation-related-mixed-use-development', { w: 1200 }),
     span: '',
   },
   {
     title: 'Industrial Project Planning',
     category: 'Site & Technical Evaluation',
     location: 'Berlin, Germany',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-project-consultation-related-industrial-project-planning', { w: 1200 }),
     span: '',
   },
 ];
@@ -179,8 +180,8 @@ export default function ProjectConsultationPage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1800&q=80"
-            alt="Project Consultation"
+            src={cld('heroes-services-project-consultation', { w: 1800 })}
+                        alt="Project Consultation"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/75 to-transparent" />

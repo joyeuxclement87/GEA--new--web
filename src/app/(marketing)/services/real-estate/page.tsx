@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 const offerings = [
   {
@@ -11,7 +12,7 @@ const offerings = [
     title: 'Real Estate Services',
     desc: 'Advisory grounded in real technical expertise — helping clients find, evaluate, and acquire property with genuine confidence.',
     points: ['Property sourcing & advisory', 'Investment feasibility analysis', 'Acquisition support', 'Portfolio strategy'],
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-real-estate-real-estate-services', { w: 1400 }),
     href: '/services#real-estate-services',
   },
   {
@@ -19,7 +20,7 @@ const offerings = [
     title: 'Property Refurbishment',
     desc: 'Renovation and refurbishment that restores and elevates existing properties — extending their life and unlocking additional value.',
     points: ['Condition assessment', 'Refurbishment design', 'Structural upgrades', 'Full renovation delivery'],
-    image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-real-estate-property-refurbishment', { w: 1400 }),
     href: '/services#property-refurbishment',
   },
   {
@@ -27,7 +28,7 @@ const offerings = [
     title: 'Property Demolition',
     desc: 'Safe, controlled demolition and site clearance carried out to regulatory standard — preparing sites for what comes next.',
     points: ['Demolition planning & permits', 'Safe dismantling & clearance', 'Waste & material disposal', 'Site preparation handover'],
-    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-real-estate-property-demolition', { w: 1400 }),
     href: '/services#property-demolition',
   },
 ];
@@ -52,8 +53,8 @@ export default function RealEstatePage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1800&q=80"
-            alt="Real Estate Services"
+            src={cld('heroes-services-real-estate', { w: 1800 })}
+                        alt="Real Estate Services"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/75 to-transparent" />

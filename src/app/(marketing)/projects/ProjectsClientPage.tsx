@@ -7,6 +7,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { expertiseLinks, projectCategories, projects } from "./projects-data";
 import { useEffect, useRef } from "react";
 import Footer from "@/components/Footer";
+import { cld } from "@/lib/cloudinary";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -91,7 +92,7 @@ export default function ProjectsClientPage() {
       <section className="relative mt-[152px] flex h-[74vh] min-h-[580px] items-center overflow-hidden bg-[#1F2937] text-white">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2200&q=80"
+            src={cld('heroes-projects', { w: 2200 })}
             alt="Architectural project portfolio by Global Engineering Agency"
             className="absolute inset-0 h-full w-full object-cover opacity-55"
           />
@@ -524,7 +525,7 @@ export default function ProjectsClientPage() {
       <section className="relative overflow-hidden border-y border-[#E6E6E6] bg-[#1F2937] text-white">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80"
+            src={cld('projects-client-voice-background', { w: 1800 })}
             alt="Client voice background"
             className="absolute inset-0 h-full w-full object-cover opacity-35"
           />

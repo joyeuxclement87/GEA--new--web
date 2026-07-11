@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Minus, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 const deliverables = [
   {
@@ -12,49 +13,49 @@ const deliverables = [
     title: 'Residential Construction',
     desc: 'Deliver modern homes, villas, apartments, and residential developments with disciplined construction planning and quality craftsmanship.',
     points: ['Custom home builds', 'Villa & apartment delivery', 'Interior fit-out coordination', 'Turnkey residential execution'],
-    image: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-general-contracting-residential-construction', { w: 1400 }),
   },
   {
     num: '02',
     title: 'Commercial Construction',
     desc: 'Build offices, retail spaces, mixed-use developments, and commercial facilities with coordination across trades and timelines.',
     points: ['Office & retail fit-out', 'Mixed-use development delivery', 'Stakeholder coordination', 'Commercial occupancy readiness'],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-general-contracting-commercial-construction', { w: 1400 }),
   },
   {
     num: '03',
     title: 'Industrial Construction',
     desc: 'Support warehouses, factories, and industrial infrastructure with capable site supervision and build execution.',
     points: ['Warehouse & factory builds', 'Industrial fit-out', 'Plant infrastructure', 'Operational readiness'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-general-contracting-industrial-construction', { w: 1400 }),
   },
   {
     num: '04',
     title: 'Construction Planning & Coordination',
     desc: 'Manage schedules, resources, subcontractors, and site operations so every stage of delivery runs in sequence.',
     points: ['Programme management', 'Subcontractor coordination', 'Site logistics', 'Progress reporting'],
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-general-contracting-construction-planning-and-coordination', { w: 1400 }),
   },
   {
     num: '05',
     title: 'Procurement & Material Management',
     desc: 'Source and manage the right materials and equipment to keep quality high and delivery efficient.',
     points: ['Material sourcing', 'Supplier coordination', 'Cost-conscious procurement', 'Delivery scheduling'],
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-general-contracting-procurement-and-material-management', { w: 1400 }),
   },
   {
     num: '06',
     title: 'Site Supervision & Safety',
     desc: 'Provide continuous project oversight with rigorous safety standards, quality control, and compliance monitoring.',
     points: ['On-site supervision', 'Safety protocol management', 'Quality assurance checks', 'Compliance oversight'],
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-general-contracting-site-supervision-and-safety', { w: 1400 }),
   },
   {
     num: '07',
     title: 'Quality Assurance & Handover',
     desc: 'Complete every project with thorough inspections, close-out procedures, and final handover support.',
     points: ['Inspection & testing', 'Punch-list resolution', 'Snagging & close-out', 'Occupancy readiness'],
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-general-contracting-quality-assurance-and-handover', { w: 1400 }),
   },
 ];
 
@@ -80,28 +81,28 @@ const relatedProjects = [
     title: 'Residential Villa Construction',
     category: 'Private Residential Delivery',
     location: 'Kigali, Rwanda',
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-general-contracting-related-residential-villa-construction', { w: 1600 }),
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
     title: 'Commercial Office Complex',
     category: 'Corporate Construction',
     location: 'Nairobi, Kenya',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-general-contracting-related-commercial-office-complex', { w: 1200 }),
     span: '',
   },
   {
     title: 'Industrial Warehouse',
     category: 'Industrial Infrastructure',
     location: 'Dubai, UAE',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-general-contracting-related-industrial-warehouse', { w: 1200 }),
     span: '',
   },
   {
     title: 'Educational Facility',
     category: 'Institutional Development',
     location: 'Marrakech, Morocco',
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-general-contracting-related-educational-facility', { w: 1200 }),
     span: '',
   },
 ];
@@ -163,8 +164,8 @@ export default function GeneralContractingPage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80"
-            alt="General Contracting"
+            src={cld('heroes-services-general-contracting', { w: 1800 })}
+                        alt="General Contracting"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/75 to-transparent" />
@@ -421,9 +422,9 @@ export default function GeneralContractingPage() {
             <span className="text-white/20">•</span>
             <Link href="/services/architecture-drawings" className="transition-colors duration-200 hover:text-[#C8A45D]">Architecture Drawings</Link>
             <span className="text-white/20">•</span>
-            <Link href="/services/mep" className="transition-colors duration-200 hover:text-[#C8A45D]">MEP Services</Link>
+            <Link href="/services/mep-engineering" className="transition-colors duration-200 hover:text-[#C8A45D]">MEP Services</Link>
             <span className="text-white/20">•</span>
-            <Link href="/services/fire-protection" className="transition-colors duration-200 hover:text-[#C8A45D]">Fire Protection Systems</Link>
+            <Link href="/services/fire-protection-systems" className="transition-colors duration-200 hover:text-[#C8A45D]">Fire Protection Systems</Link>
             <span className="text-white/20">•</span>
             <Link href="/contact" className="transition-colors duration-200 hover:text-[#C8A45D]">Contact</Link>
           </div>

@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Minus, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 const deliverables = [
   {
@@ -12,35 +13,35 @@ const deliverables = [
     title: 'Floor Plans',
     desc: 'Precisely dimensioned layouts that define every room, circulation path, and structural element — the foundation every other drawing builds on.',
     points: ['Room layouts & dimensions', 'Furniture & fixture placement', 'Structural grid coordination', 'Area & efficiency calculations'],
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-architecture-drawings-floor-plans', { w: 1400 }),
   },
   {
     num: '02',
     title: 'Building Elevations',
     desc: 'Elevation drawings that resolve how a building presents itself from every angle — material, proportion, and detail resolved before construction begins.',
     points: ['Facade composition', 'Material & finish callouts', 'Height & datum references', 'Window & door scheduling'],
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-architecture-drawings-building-elevations', { w: 1400 }),
   },
   {
     num: '03',
     title: 'Section Drawings',
     desc: 'Cross-sectional views that reveal the vertical relationships within a building — critical for coordinating structure, services, and spatial quality.',
     points: ['Vertical circulation', 'Ceiling & floor build-ups', 'Structural depth coordination', 'Natural light & ventilation study'],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-architecture-drawings-section-drawings', { w: 1400 }),
   },
   {
     num: '04',
     title: '3D Visualization',
     desc: 'Photorealistic renders and walkthroughs that let clients see and approve their project long before the first brick is laid.',
     points: ['Exterior & interior renders', 'Material & lighting studies', 'Walkthrough animations', 'Client presentation packages'],
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-architecture-drawings-3d-visualization', { w: 1400 }),
   },
   {
     num: '05',
     title: 'Construction Documentation',
     desc: 'Fully coordinated drawing sets issued for construction and permitting — the technical backbone that keeps every trade aligned on site.',
     points: ['Permit & approval sets', 'Detail & assembly drawings', 'Specification schedules', 'Contractor coordination sets'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-architecture-drawings-construction-documentation', { w: 1400 }),
   },
 ];
 
@@ -66,21 +67,21 @@ const relatedProjects = [
     title: 'The Horizon Commission',
     category: 'Structural Engineering & Architecture',
     location: 'Dubai, UAE',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-architecture-drawings-related-the-horizon-commission', { w: 1600 }),
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
     title: 'Opus Residence',
     category: 'Interior Finishes & Supply',
     location: 'London, UK',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-architecture-drawings-related-opus-residence', { w: 1200 }),
     span: '',
   },
   {
     title: 'Aura Technology Hub',
     category: 'Commercial Contracting',
     location: 'Berlin, Germany',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-architecture-drawings-related-aura-technology-hub', { w: 1200 }),
     span: '',
   },
 ];
@@ -140,7 +141,7 @@ export default function ArchitectureDrawingsPage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80"
+            src={cld('heroes-services-architecture-drawings', { w: 1800 })}
             alt="Architecture Drawings"
             className="absolute inset-0 w-full h-full object-cover"
           />

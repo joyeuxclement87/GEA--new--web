@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Minus, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 const deliverables = [
   {
@@ -12,49 +13,49 @@ const deliverables = [
     title: 'Bill of Quantities (BOQ)',
     desc: 'Prepare detailed schedules of materials, quantities, specifications, and project requirements for accurate pricing and procurement.',
     points: ['Itemised material schedules', 'Detailed specifications', 'Quantity breakdowns', 'Procurement-ready documentation'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-boq-cost-estimation-bill-of-quantities', { w: 1400 }),
   },
   {
     num: '02',
     title: 'Construction Cost Estimation',
     desc: 'Provide accurate financial projections based on project scope, materials, labor, and current market conditions.',
     points: ['Scope-based cost projections', 'Labor & material pricing', 'Market rate benchmarking', 'Contingency planning'],
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-boq-cost-estimation-construction-cost-estimation', { w: 1400 }),
   },
   {
     num: '03',
     title: 'Material Quantity Take-Off',
     desc: 'Analyze drawings and documents to calculate the precise quantities required for every construction material.',
     points: ['Drawing-based measurement', 'Waste & allowance factoring', 'Trade-by-trade breakdown', 'Cross-checked calculations'],
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-boq-cost-estimation-material-quantity-take-off', { w: 1400 }),
   },
   {
     num: '04',
     title: 'Budget Planning',
     desc: 'Develop realistic project budgets that align client expectations with available resources and project ambitions.',
     points: ['Phased budget structuring', 'Cash flow forecasting', 'Risk & contingency allowances', 'Stakeholder alignment'],
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-boq-cost-estimation-budget-planning', { w: 1400 }),
   },
   {
     num: '05',
     title: 'Cost Optimization',
     desc: 'Identify opportunities to improve construction efficiency and reduce spend while maintaining quality standards.',
     points: ['Value engineering review', 'Alternative material analysis', 'Efficiency recommendations', 'Quality-conscious savings'],
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-boq-cost-estimation-cost-optimization', { w: 1400 }),
   },
   {
     num: '06',
     title: 'Tender Documentation',
     desc: 'Prepare professional cost documents that support contractor selection and a competitive procurement process.',
     points: ['Tender & pricing schedules', 'Contractor comparison sets', 'Procurement documentation', 'Bid evaluation support'],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-boq-cost-estimation-tender-documentation', { w: 1400 }),
   },
   {
     num: '07',
     title: 'Project Cost Monitoring',
     desc: 'Track expenses throughout construction to maintain financial control and flag variances before they escalate.',
     points: ['Ongoing budget tracking', 'Variance reporting', 'Cost control recommendations', 'Financial close-out support'],
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-boq-cost-estimation-project-cost-monitoring', { w: 1400 }),
   },
 ];
 
@@ -80,42 +81,42 @@ const relatedProjects = [
     title: 'Residential Villa Development',
     category: 'Private Residential Costing',
     location: 'Kigali, Rwanda',
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-boq-cost-estimation-related-residential-villa-development', { w: 1600 }),
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
     title: 'Commercial Building Project',
     category: 'Corporate Cost Planning',
     location: 'Nairobi, Kenya',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-boq-cost-estimation-related-commercial-building-project', { w: 1200 }),
     span: '',
   },
   {
     title: 'Apartment Complex',
     category: 'Multi-Unit Budgeting',
     location: 'Dubai, UAE',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-boq-cost-estimation-related-apartment-complex', { w: 1200 }),
     span: '',
   },
   {
     title: 'Renovation Project',
     category: 'Refurbishment Cost Estimation',
     location: 'Marrakech, Morocco',
-    image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-boq-cost-estimation-related-renovation-project', { w: 1200 }),
     span: '',
   },
   {
     title: 'Industrial Facility',
     category: 'Industrial Cost Planning',
     location: 'Mombasa, Kenya',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-boq-cost-estimation-related-industrial-facility', { w: 1200 }),
     span: '',
   },
   {
     title: 'Infrastructure Development',
     category: 'Public Infrastructure Costing',
     location: 'Berlin, Germany',
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-boq-cost-estimation-related-infrastructure-development', { w: 1200 }),
     span: '',
   },
 ];
@@ -179,8 +180,8 @@ export default function BoqCostEstimationPage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80"
-            alt="BOQ & Cost Estimation"
+            src={cld('heroes-services-boq-cost-estimation', { w: 1800 })}
+                        alt="BOQ & Cost Estimation"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/75 to-transparent" />

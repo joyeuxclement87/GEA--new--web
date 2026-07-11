@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 // ─── Animation helper ─────────────────────────────────────────────────────────
 const fadeUp = {
@@ -386,7 +387,7 @@ export default function ContactPage() {
               initial={{ scale: 1.06, opacity: 0 }}
               animate={{ scale: 1, opacity: 0.25 }}
               transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=80"
+              src={cld('heroes-contact', { w: 2400 })}
               alt="Modern office with professionals in consultation"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -479,7 +480,7 @@ export default function ContactPage() {
                 className="relative w-full aspect-[4/3] overflow-hidden rounded-[28px] bg-[#E6E6E6]"
               >
                 <motion.img whileHover={{ scale: 1.03 }} transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80"
+                  src={cld('contact-team-in-consultation', { w: 1200 })}
                   alt="GEA team in consultation with clients" className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/20 to-transparent" />
@@ -667,7 +668,7 @@ export default function ContactPage() {
                 className="relative w-full aspect-[4/5] overflow-hidden rounded-[28px]"
               >
                 <motion.img whileHover={{ scale: 1.03 }} transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80"
+                  src={cld('contact-professionals-working-on-project', { w: 1200 })}
                   alt="GEA professionals working on a project" className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/30 to-transparent" />

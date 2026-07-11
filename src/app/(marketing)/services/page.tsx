@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import Footer from "@/components/Footer";
+import { cld } from "@/lib/cloudinary";
 
 // ─── Shared animation variant ────────────────────────────────────────────────
 
@@ -18,7 +19,13 @@ const fadeUp = {
 // ─── Data ───────────────────────────────────────────────────────────
 
 // Services with a dedicated detail page live at /services/[slug]
-const servicesWithDetailPage = new Set(["architecture-drawings", "interior-design", "exterior-design", "landscaping", "general-contracting", "project-management", "boq-cost-estimation", "project-consultation"]);
+const servicesWithDetailPage = new Set(["architecture-drawings", "interior-design", "exterior-design", "landscaping", "general-contracting", "project-management", "boq-cost-estimation", "project-consultation", "mep", "fire-protection"]);
+
+// Slugs whose detail page route differs from the listing slug.
+const detailPageSlugOverrides: Record<string, string> = {
+  mep: "mep-engineering",
+  "fire-protection": "fire-protection-systems",
+};
 
 const services = [
   {
@@ -33,8 +40,7 @@ const services = [
       "Permit & approval documentation",
       "3D visualisation & renders",
     ],
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-architecture-drawings-card", { w: 1400 }),
   },
   {
     num: "02",
@@ -48,8 +54,7 @@ const services = [
       "Quality control on every trade",
       "Handover & snagging",
     ],
-    image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-general-contracting-card", { w: 1400 }),
   },
   {
     num: "03",
@@ -63,8 +68,7 @@ const services = [
       "Risk & change management",
       "Stakeholder reporting",
     ],
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-project-management-card", { w: 1400 }),
   },
   {
     num: "04",
@@ -78,8 +82,7 @@ const services = [
       "Tender documentation",
       "Value engineering review",
     ],
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-boq-cost-estimation-card", { w: 1400 }),
   },
   {
     num: "05",
@@ -93,8 +96,7 @@ const services = [
       "Technical due diligence",
       "Strategic project roadmap",
     ],
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-project-consultation-card", { w: 1400 }),
   },
   {
     num: "06",
@@ -108,8 +110,7 @@ const services = [
       "Custom joinery & fit-out",
       "Furniture & lighting design",
     ],
-    image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-interior-design-card", { w: 1400 }),
   },
   {
     num: "07",
@@ -123,8 +124,7 @@ const services = [
       "Envelope performance review",
       "Elevation drawings",
     ],
-    image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-exterior-design-card", { w: 1400 }),
   },
   {
     num: "08",
@@ -138,8 +138,7 @@ const services = [
       "Irrigation planning",
       "Planting specification",
     ],
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-landscaping-card", { w: 1400 }),
   },
   {
     num: "09",
@@ -153,8 +152,7 @@ const services = [
       "Coordinated shop drawings",
       "Commissioning & testing",
     ],
-    image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-mep-card", { w: 1400 }),
   },
   {
     num: "10",
@@ -168,8 +166,7 @@ const services = [
       "Emergency egress planning",
       "Compliance certification",
     ],
-    image:
-      "https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-fire-protection-card", { w: 1400 }),
   },
   {
     num: "11",
@@ -183,8 +180,7 @@ const services = [
       "Perimeter security planning",
       "Monitoring integration",
     ],
-    image:
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-security-systems-card", { w: 1400 }),
   },
   {
     num: "12",
@@ -198,8 +194,7 @@ const services = [
       "Ductwork & equipment installation",
       "Performance commissioning",
     ],
-    image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-hvac-card", { w: 1400 }),
   },
   {
     num: "13",
@@ -213,8 +208,7 @@ const services = [
       "Installation & grid integration",
       "Performance monitoring",
     ],
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-solar-energy-card", { w: 1400 }),
   },
   {
     num: "14",
@@ -228,8 +222,7 @@ const services = [
       "Acquisition support",
       "Portfolio strategy",
     ],
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-real-estate-services-card", { w: 1400 }),
   },
   {
     num: "15",
@@ -243,8 +236,7 @@ const services = [
       "Structural upgrades",
       "Full renovation delivery",
     ],
-    image:
-      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-property-refurbishment-card", { w: 1400 }),
   },
   {
     num: "16",
@@ -258,8 +250,7 @@ const services = [
       "Waste & material disposal",
       "Site preparation handover",
     ],
-    image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1400&q=80",
+    image: cld("services-property-demolition-card", { w: 1400 }),
   },
 ];
 
@@ -327,44 +318,37 @@ const strengths = [
 const industries = [
   {
     label: "Residential",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
+    image: cld("services-industries-residential", { w: 1000 }),
     span: "lg:col-span-2 lg:row-span-2",
   },
   {
     label: "Commercial",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    image: cld("services-industries-commercial", { w: 800 }),
     span: "",
   },
   {
     label: "Hospitality",
-    image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+    image: cld("services-industries-hospitality", { w: 800 }),
     span: "",
   },
   {
     label: "Industrial",
-    image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+    image: cld("services-industries-industrial", { w: 800 }),
     span: "",
   },
   {
     label: "Government",
-    image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80",
+    image: cld("services-industries-government", { w: 1000 }),
     span: "lg:col-span-2",
   },
   {
     label: "Education",
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+    image: cld("services-industries-education", { w: 800 }),
     span: "",
   },
   {
     label: "Healthcare",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+    image: cld("services-industries-healthcare", { w: 800 }),
     span: "",
   },
 ];
@@ -378,7 +362,7 @@ export default function ServicesPage() {
       <section className="relative h-[80vh] min-h-[620px] mt-[152px] flex items-center bg-[#1F2937] text-white">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
+            src={cld("heroes-services", { w: 2000 })}
             alt="Global Engineering Agency project site"
             loading="eager"
             className="absolute inset-0 w-full h-full object-cover opacity-30"
@@ -612,7 +596,7 @@ export default function ServicesPage() {
                     <a
                       href={
                         servicesWithDetailPage.has(service.slug)
-                          ? `/services/${service.slug}`
+                          ? `/services/${detailPageSlugOverrides[service.slug] ?? service.slug}`
                           : `#${service.slug}`
                       }
                       className="inline-flex items-center gap-4 text-[13px] font-[600] tracking-[0.04em] text-[#1F2937] group transition-all duration-300 w-fit"

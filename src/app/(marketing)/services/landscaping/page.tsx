@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Minus, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 const deliverables = [
   {
@@ -12,49 +13,49 @@ const deliverables = [
     title: 'Landscape Master Planning',
     desc: 'Create comprehensive outdoor strategies that organize circulation, planting, recreation, and visual balance across the whole site.',
     points: ['Site analysis & zoning', 'Circulation & amenity planning', 'Spatial hierarchy & views', 'Landscape concept frameworks'],
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-landscaping-landscape-master-planning', { w: 1400 }),
   },
   {
     num: '02',
     title: 'Garden Design',
-    desc: 'Design elegant residential and commercial gardens that combine planting composition, texture, and seasonal interest with daily comfort.',
-    points: ['Planting palettes', 'Garden rooms & transitions', 'Outdoor comfort & privacy', 'Seasonal planting strategy'],
-    image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=80',
+        desc: 'Design elegant residential and commercial gardens that combine planting composition, texture, and seasonal interest with daily comfort.',
+        points: ['Planting palettes', 'Garden rooms & transitions', 'Outdoor comfort & privacy', 'Seasonal planting strategy'],
+        image: cld('services-landscaping-garden-design', { w: 1400 }),
   },
   {
     num: '03',
     title: 'Hardscape Design',
     desc: 'Plan pathways, patios, retaining walls, pergolas, and outdoor structures that are durable, elegant, and functionally integrated.',
     points: ['Paving & surface design', 'Retaining & edge details', 'Outdoor structures', 'Material & finish coordination'],
-    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-landscaping-hardscape-design', { w: 1400 }),
   },
   {
     num: '04',
     title: 'Outdoor Living Spaces',
     desc: 'Shape inviting environments for dining, gathering, relaxation, and entertainment that feel natural and effortless.',
     points: ['Terrace & seating design', 'Entertainment zones', 'Shade & climate comfort', 'Visual connection to architecture'],
-    image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-landscaping-outdoor-living-spaces', { w: 1400 }),
   },
   {
     num: '05',
     title: 'Irrigation Systems',
     desc: 'Develop efficient irrigation solutions that support healthy landscapes while conserving water and reducing long-term maintenance demands.',
     points: ['Water-efficient zoning', 'System layout & controls', 'Soil & plant performance', 'Maintenance-friendly design'],
-    image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-landscaping-irrigation-systems', { w: 1400 }),
   },
   {
     num: '06',
     title: 'Landscape Lighting',
     desc: 'Add lighting that improves safety, highlights planting and architecture, and extends comfort well into the evening.',
     points: ['Ambient & feature lighting', 'Pathway & safety illumination', 'Night-time visual balance', 'Low-energy lighting strategies'],
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80',
+    image: cld('services-landscaping-landscape-lighting', { w: 1400 }),
   },
   {
     num: '07',
     title: 'Sustainable Landscaping',
-    desc: 'Incorporate native planting, drainage, soil stewardship, and water management to create resilient, environmentally responsible spaces.',
-    points: ['Native planting strategies', 'Stormwater & drainage planning', 'Low-maintenance plant systems', 'Ecological performance'],
-    image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1400&q=80',
+        desc: 'Incorporate native planting, drainage, soil stewardship, and water management to create resilient, environmentally responsible spaces.',
+        points: ['Native planting strategies', 'Stormwater & drainage planning', 'Low-maintenance plant systems', 'Ecological performance'],
+        image: cld('services-landscaping-sustainable-landscaping', { w: 1400 }),
   },
 ];
 
@@ -80,28 +81,28 @@ const relatedProjects = [
     title: 'Luxury Residential Garden',
     category: 'Private Residence Landscape',
     location: 'Kigali, Rwanda',
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-landscaping-related-luxury-residential-garden', { w: 1600 }),
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
     title: 'Commercial Office Landscape',
     category: 'Corporate Outdoor Planning',
     location: 'Nairobi, Kenya',
-    image: 'https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-landscaping-related-commercial-office-landscape', { w: 1200 }),
     span: '',
   },
   {
     title: 'Hotel & Hospitality Landscape',
     category: 'Guest Experience Design',
     location: 'Dubai, UAE',
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-landscaping-related-hotel-and-hospitality-landscape', { w: 1200 }),
     span: '',
   },
   {
     title: 'Residential Estate Master Plan',
     category: 'Large-Scale Outdoor Development',
     location: 'Marrakech, Morocco',
-    image: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80',
+    image: cld('services-landscaping-related-residential-estate-master-plan', { w: 1200 }),
     span: '',
   },
 ];
@@ -159,8 +160,8 @@ export default function LandscapingPage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80"
-            alt="Landscaping"
+            src={cld('heroes-services-landscaping', { w: 1800 })}
+                        alt="Landscaping"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/75 to-transparent" />

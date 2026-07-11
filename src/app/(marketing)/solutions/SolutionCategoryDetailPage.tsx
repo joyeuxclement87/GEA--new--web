@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft, ChevronRight, Plus, Minus } from 'lucide-react';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 import { getSolutionCategory } from './solutions-data';
 
 function FAQItem({ q, a }: { q: string; a: string }) {
@@ -46,13 +47,13 @@ export default function SolutionCategoryDetailPage({ slug }: { slug: string }) {
     title: slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
     tagline: 'Premium Solutions for Every Project.',
     description: 'High-quality building products and engineering systems supplied by Global Engineering Agency for residential, commercial, and industrial projects.',
-    heroImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2400&q=80',
+    heroImage: cld('heroes-solutions-default', { w: 2400 }),
     overview: 'Global Engineering Agency carefully curates and supplies this product category from trusted global manufacturers. Every product is selected for quality, durability, and compatibility with modern construction and engineering requirements.',
     applications: ['Residential projects', 'Commercial developments', 'Industrial facilities', 'Hospitality', 'Infrastructure'],
     collections: [
-      { name: 'Standard Collection', desc: 'Core products for residential and light commercial applications.', image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Professional Series', desc: 'Heavy-duty products engineered for demanding commercial and industrial use.', image: 'https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=800&q=80' },
-      { name: 'Premium Range', desc: 'Best-in-class products for high-specification architectural projects.', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80' },
+      { name: 'Standard Collection', desc: 'Core products for residential and light commercial applications.', image: cld('solutions-default-standard-collection', { w: 800 }) },
+      { name: 'Professional Series', desc: 'Heavy-duty products engineered for demanding commercial and industrial use.', image: cld('solutions-default-professional-series', { w: 800 }) },
+      { name: 'Premium Range', desc: 'Best-in-class products for high-specification architectural projects.', image: cld('solutions-default-premium-range', { w: 800 }) },
     ],
     specs: [
       { label: 'Product Types', value: '50+' },

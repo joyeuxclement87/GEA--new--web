@@ -4,6 +4,7 @@ import { motion, useInView, animate } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import Footer from "@/components/Footer";
+import { cld } from "@/lib/cloudinary";
 
 // ─── Shared animation variant ────────────────────────────────────────────────
 
@@ -91,22 +92,22 @@ const values = [
 
 const team = [
   {
-    name: "Michael Okenwa",
+    name: "Cyuzuzo Christian",
     role: "Managing Director",
     bio: "Over 20 years leading complex engineering and architectural projects across Africa and the Middle East.",
-    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
+    img: cld('team-cyuzuzo-christian', { w: 800 }),
   },
   {
-    name: "Sarah Al-Fayed",
+    name: "Havugimana Fabrice",
     role: "Head of Architecture",
     bio: "Award-winning architect specialising in sustainable urban development and premium high-rise structures.",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+    img: cld('team-havugimana-fabrice ', { w: 800 }),
   },
   {
-    name: "David Chen",
+    name: "Jean D'amour",
     role: "Chief of Procurement",
     bio: "Ensures GEA always sources the highest-quality building materials from trusted global suppliers.",
-    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+    img: cld('team-jean-damour', { w: 800 }),
   },
 ];
 
@@ -239,7 +240,7 @@ export default function AboutPage() {
       <section className="relative h-[70vh] min-h-[560px] mt-[152px] flex items-center bg-[#1F2937] text-white">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=80"
+            src={cld('heroes-about', { w: 2000 })}
             alt="Global Engineering Agency"
             className="absolute inset-0 w-full h-full object-cover opacity-30"
           />
@@ -397,7 +398,7 @@ export default function AboutPage() {
         >
           <div className="relative w-full aspect-[16/7] rounded-[28px] overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80"
+              src={cld('engineers-on-site', { w: 1800 })}
               alt="GEA engineers on site"
               className="w-full h-full object-cover"
             />

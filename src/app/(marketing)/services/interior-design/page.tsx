@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Minus, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 const servicesProvided = [
   {
@@ -12,42 +13,42 @@ const servicesProvided = [
     title: 'Space Planning',
     desc: 'Layouts that prioritise flow, natural light and the way people actually use the room.',
     points: ['Circulation & adjacency studies', 'Furniture layouts', 'Zoning & program optimisation'],
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-interior-design-space-planning', { w: 1600 }),
   },
   {
     num: '02',
     title: 'Concept Development',
     desc: 'Concepts that set the tone — material direction, palette and spatial character that feels uniquely yours.',
     points: ['Mood & material boards', 'Mood sketches & concept diagrams', 'Design language definition'],
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-interior-design-concept-development', { w: 1600 }),
   },
   {
     num: '03',
     title: 'Material & Finish Selection',
     desc: 'Curated materials chosen for durability, tactility and lasting refinement.',
     points: ['Finish schedules', 'Sample coordination', 'Sustainability & maintenance guidance'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-interior-design-material-and-finish-selection', { w: 1600 }),
   },
   {
     num: '04',
     title: 'Residential Interiors',
     desc: 'Tailored homes that balance comfort, proportion and crafted detail.',
     points: ['Private residences & apartments', 'Custom joinery design', 'Lighting & furniture specification'],
-    image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-interior-design-residential-interiors', { w: 1600 }),
   },
   {
     num: '05',
     title: 'Commercial Interiors',
     desc: 'Commercial spaces designed for clarity, flexibility and brand expression.',
     points: ['Office & workspace layouts', 'Retail & hospitality fit-outs', 'Brand integration'],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-interior-design-commercial-interiors', { w: 1600 }),
   },
   {
     num: '06',
     title: '3D Visualization',
     desc: 'Photoreal renders and walkthroughs to validate design choices and communicate intent.',
     points: ['Renders & walkthroughs', 'Lighting studies', 'Material & colour verification'],
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-interior-design-3d-visualization', { w: 1600 }),
   },
 ];
 
@@ -66,9 +67,9 @@ const principles = [
 ];
 
 const featured = [
-  { title: 'Lark House', location: 'Nairobi, KE', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80', span: 'lg:col-span-2' },
-  { title: 'Claremont Loft', location: 'Cape Town, ZA', image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80', span: '' },
-  { title: 'Mercer Offices', location: 'Kigali, RW', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80', span: '' },
+  { title: 'Lark House', location: 'Nairobi, KE', image: cld('services-interior-design-related-lark-house', { w: 1600 }), span: 'lg:col-span-2' },
+  { title: 'Claremont Loft', location: 'Cape Town, ZA', image: cld('services-interior-design-related-claremont-loft', { w: 1200 }), span: '' },
+  { title: 'Mercer Offices', location: 'Kigali, RW', image: cld('services-interior-design-related-mercer-offices', { w: 1200 }), span: '' },
 ];
 
 const faqs = [
@@ -107,7 +108,7 @@ export default function InteriorDesignPage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1800&q=80"
+            src={cld('heroes-services-interior-design', { w: 1800 })}
             alt="Interior Design"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -307,7 +308,7 @@ export default function InteriorDesignPage() {
 
           <div className="lg:col-span-5">
             <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[24px] border border-[#E6E6E6] shadow-xl">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80" alt="Interior detail" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+              <img src={cld('services-interior-design-interior-detail', { w: 1600 })} alt="Interior detail" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
             </div>
           </div>
         </div>

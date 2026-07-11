@@ -5,6 +5,7 @@ import { AlertCircle, ArrowRight, CheckCircle, Clock, MessageCircle, Phone } fro
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 const services = [
   'Architecture Drawings',
@@ -207,7 +208,7 @@ export default function QuotePage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80"
+            src={cld('heroes-quote', { w: 1800 })}
             alt="Request a Quote"
             className="absolute inset-0 w-full h-full object-cover"
           />

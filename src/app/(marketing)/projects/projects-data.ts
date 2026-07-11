@@ -1,3 +1,5 @@
+import { cld } from "@/lib/cloudinary";
+
 export type ProjectCategory =
   | "Residential"
   | "Commercial"
@@ -65,14 +67,12 @@ export const projects: ProjectItem[] = [
       "A gated community of contemporary villas designed for long-term value, climate comfort, and refined urban living.",
     description:
       "Global Engineering Agency delivered a complete design-and-build program for a multi-villa community in Kigali. The project combined architectural precision, coordinated engineering systems, and premium interior execution to create homes that feel calm, efficient, and durable.",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80",
-    heroImage:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=80",
+    image: cld('projects-kigali-residential-villas-cover', { w: 1800 }),
+    heroImage: cld('projects-kigali-residential-villas-hero', { w: 2200 }),
     gallery: [
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1400&q=80",
+      cld('projects-kigali-residential-villas-gallery-1', { w: 1400 }),
+      cld('projects-kigali-residential-villas-gallery-2', { w: 1400 }),
+      cld('projects-kigali-residential-villas-gallery-3', { w: 1400 }),
     ],
     highlights: [
       "24 private villas delivered across two phases",
@@ -104,8 +104,7 @@ export const projects: ProjectItem[] = [
       name: "Aline Mukamana",
       company: "Virunga Homes",
       projectType: "Residential Development",
-      profileImage:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
+      profileImage: cld('testimonials-aline-mukamana', { w: 900 }),
     },
   },
   {
@@ -125,14 +124,12 @@ export const projects: ProjectItem[] = [
       "A high-performance office campus with flexible floorplates, efficient cores, and robust life-safety systems.",
     description:
       "This mixed-tenant commercial complex was designed to support evolving workplace needs while maintaining operational efficiency. GEA coordinated architecture, MEP, and fire systems to reduce long-term operational risk and deliver a polished tenant experience.",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80",
-    heroImage:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2200&q=80",
+    image: cld('projects-commercial-office-complex-cover', { w: 1800 }),
+    heroImage: cld('projects-commercial-office-complex-hero', { w: 2200 }),
     gallery: [
-      "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80",
+      cld('projects-commercial-office-complex-gallery-1', { w: 1400 }),
+      cld('projects-commercial-office-complex-gallery-2', { w: 1400 }),
+      cld('projects-commercial-office-complex-gallery-3', { w: 1400 }),
     ],
     highlights: [
       "42,000 sqm office development completed",
@@ -164,8 +161,7 @@ export const projects: ProjectItem[] = [
       name: "Daniel Otieno",
       company: "Apex Workspace Holdings",
       projectType: "Commercial Complex",
-      profileImage:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
+      profileImage: cld('testimonials-daniel-otieno', { w: 900 }),
     },
   },
   {
@@ -185,14 +181,12 @@ export const projects: ProjectItem[] = [
       "A premium apartment tower with hospitality-grade amenities and high-end interior detailing.",
     description:
       "GEA led full project delivery for a branded apartment concept combining private residences with serviced-living standards. The result is a development that performs operationally while maintaining a distinct premium identity.",
-    image:
-      "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1800&q=80",
-    heroImage:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2200&q=80",
+    image: cld('projects-luxury-apartment-development-cover', { w: 1800 }),
+    heroImage: cld('projects-luxury-apartment-development-hero', { w: 2200 }),
     gallery: [
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
+      cld('projects-luxury-apartment-development-gallery-1', { w: 1400 }),
+      cld('projects-luxury-apartment-development-gallery-2', { w: 1400 }),
+      cld('projects-luxury-apartment-development-gallery-3', { w: 1400 }),
     ],
     highlights: [
       "32 floors with integrated amenities and concierge areas",
@@ -224,8 +218,7 @@ export const projects: ProjectItem[] = [
       name: "Grace Namusoke",
       company: "Pearl Urban Developments",
       projectType: "Luxury Apartments",
-      profileImage:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=900&q=80",
+      profileImage: cld('testimonials-grace-namusoke', { w: 900 }),
     },
   },
   {
@@ -245,14 +238,12 @@ export const projects: ProjectItem[] = [
       "A phased hospital modernization that improved patient flow, safety standards, and mechanical reliability.",
     description:
       "GEA executed a live-facility renovation program for a regional hospital, carefully sequencing works to avoid service interruptions. The project upgraded critical care zones, circulation, and building systems while maintaining operational continuity.",
-    image:
-      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1800&q=80",
-    heroImage:
-      "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=2200&q=80",
+    image: cld('projects-hospital-renovation-cover', { w: 1800 }),
+    heroImage: cld('projects-hospital-renovation-hero', { w: 2200 }),
     gallery: [
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1400&q=80",
+      cld('projects-hospital-renovation-gallery-1', { w: 1400 }),
+      cld('projects-hospital-renovation-gallery-2', { w: 1400 }),
+      cld('projects-hospital-renovation-gallery-3', { w: 1400 }),
     ],
     highlights: [
       "Renovation completed with no full ward shutdown",
@@ -284,8 +275,7 @@ export const projects: ProjectItem[] = [
       name: "Dr. Jean Bosco Uwimana",
       company: "Northern Regional Health Board",
       projectType: "Healthcare Renovation",
-      profileImage:
-        "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80",
+      profileImage: cld('testimonials-jean-bosco-uwimana', { w: 900 }),
     },
   },
   {
@@ -305,14 +295,12 @@ export const projects: ProjectItem[] = [
       "A resilient logistics campus with warehousing, yard infrastructure, and energy-efficient support systems.",
     description:
       "This industrial park required robust planning for heavy movement, safety, and utility demands. GEA coordinated construction and systems integration to deliver a scalable logistics environment ready for regional operations.",
-    image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=80",
-    heroImage:
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=2200&q=80",
+    image: cld('projects-logistics-industrial-park-cover', { w: 1800 }),
+    heroImage: cld('projects-logistics-industrial-park-hero', { w: 2200 }),
     gallery: [
-      "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80",
+      cld('projects-logistics-industrial-park-gallery-1', { w: 1400 }),
+      cld('projects-logistics-industrial-park-gallery-2', { w: 1400 }),
+      cld('projects-logistics-industrial-park-gallery-3', { w: 1400 }),
     ],
     highlights: [
       "75,000 sqm operational area",
@@ -344,8 +332,7 @@ export const projects: ProjectItem[] = [
       name: "Ibrahim Mussa",
       company: "Coastal Freight Developments",
       projectType: "Industrial Infrastructure",
-      profileImage:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80",
+      profileImage: cld('testimonials-ibrahim-mussa', { w: 900 }),
     },
   },
   {
@@ -365,14 +352,12 @@ export const projects: ProjectItem[] = [
       "A public-facing government facility designed for transparency, accessibility, and operational efficiency.",
     description:
       "GEA partnered with public stakeholders to design and deliver a modern administration center that balances civic identity with practical daily use. The project emphasized accessibility, security, and durable public-space materials.",
-    image:
-      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?auto=format&fit=crop&w=1800&q=80",
-    heroImage:
-      "https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?auto=format&fit=crop&w=2200&q=80",
+    image: cld('projects-civic-administration-center-cover', { w: 1800 }),
+    heroImage: cld('projects-civic-administration-center-hero', { w: 2200 }),
     gallery: [
-      "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1465447142348-e9952c393450?auto=format&fit=crop&w=1400&q=80",
+      cld('projects-civic-administration-center-gallery-1', { w: 1400 }),
+      cld('projects-civic-administration-center-gallery-2', { w: 1400 }),
+      cld('projects-civic-administration-center-gallery-3', { w: 1400 }),
     ],
     highlights: [
       "Universal accessibility integrated across all floors",
@@ -404,8 +389,7 @@ export const projects: ProjectItem[] = [
       name: "Patrick Nkurunziza",
       company: "Rwanda Civic Infrastructure Unit",
       projectType: "Government Facility",
-      profileImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80",
+      profileImage: cld('testimonials-patrick-nkurunziza', { w: 900 }),
     },
   },
   {
@@ -425,14 +409,12 @@ export const projects: ProjectItem[] = [
       "Terminal-side infrastructure upgrade focused on passenger flow, comfort systems, and operational resilience.",
     description:
       "For this transport infrastructure assignment, GEA delivered phased upgrades across key terminal zones. Work was carefully sequenced around continuous airport operations, with strict safety and compliance controls throughout.",
-    image:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1800&q=80",
-    heroImage:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=2200&q=80",
+    image: cld('projects-airport-terminal-infrastructure-upgrade-cover', { w: 1800 }),
+    heroImage: cld('projects-airport-terminal-infrastructure-upgrade-hero', { w: 2200 }),
     gallery: [
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1521727857535-28d2047314ac?auto=format&fit=crop&w=1400&q=80",
+      cld('projects-airport-terminal-infrastructure-upgrade-gallery-1', { w: 1400 }),
+      cld('projects-airport-terminal-infrastructure-upgrade-gallery-2', { w: 1400 }),
+      cld('projects-airport-terminal-infrastructure-upgrade-gallery-3', { w: 1400 }),
     ],
     highlights: [
       "Upgrades delivered without terminal shutdown",
@@ -464,10 +446,10 @@ export const projects: ProjectItem[] = [
       name: "Claire Uwase",
       company: "Aviation Facilities Authority",
       projectType: "Infrastructure Upgrade",
-      profileImage:
-        "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=80",
+      profileImage: cld('testimonials-claire-uwase', { w: 900 }),
     },
   },
+
   {
     slug: "executive-workplace-interiors",
     title: "Executive Workplace Interiors",
@@ -485,14 +467,12 @@ export const projects: ProjectItem[] = [
       "A contemporary workplace interior program delivering premium executive suites and collaborative zones.",
     description:
       "GEA developed and delivered a full interior transformation for a multi-floor executive workplace. The design strategy emphasized acoustic comfort, material quality, and a spatial identity aligned with the client brand.",
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80",
-    heroImage:
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=2200&q=80",
+    image: cld('projects-executive-workplace-interiors-cover', { w: 1800 }),
+    heroImage: cld('projects-executive-workplace-interiors-hero', { w: 2200 }),
     gallery: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1400&q=80",
+      cld('projects-executive-workplace-interiors-gallery-1', { w: 1400 }),
+      cld('projects-executive-workplace-interiors-gallery-2', { w: 1400 }),
+      cld('projects-executive-workplace-interiors-gallery-3', { w: 1400 }),
     ],
     highlights: [
       "Complete interior fit-out across six executive floors",
@@ -524,8 +504,7 @@ export const projects: ProjectItem[] = [
       name: "Nadia Al Mansoori",
       company: "Al Noor Capital",
       projectType: "Corporate Interior Design",
-      profileImage:
-        "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=80",
+      profileImage: cld('testimonials-nadia-al-mansoori', { w: 900 }),
     },
   },
 ];

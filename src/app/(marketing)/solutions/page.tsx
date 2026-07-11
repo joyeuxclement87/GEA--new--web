@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ChevronDown, Plus, Minus } from 'lucide-react';
 import { useState, useRef } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
 
@@ -25,7 +26,7 @@ const solutionCategories = [
     title: 'Bathroom & Sanitary',
     desc: 'Premium sanitary ware, bathtubs, showers, vanities, and bathroom accessories for residential and commercial projects. Curated for quality and design excellence.',
     productTypes: '120+',
-    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-bathroom-sanitary-card', { w: 1400 }),
   },
   {
     num: '02',
@@ -33,7 +34,7 @@ const solutionCategories = [
     title: 'Tiles & Flooring',
     desc: 'Porcelain, ceramic, natural stone, and wood-effect tiles for floors, walls, and facades. Sourced from world-leading manufacturers with unmatched finish quality.',
     productTypes: '200+',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-tiles-flooring-card', { w: 1400 }),
   },
   {
     num: '03',
@@ -41,7 +42,7 @@ const solutionCategories = [
     title: 'Electrical Solutions',
     desc: 'Complete electrical systems including switchgear, distribution boards, cables, lighting controls, and intelligent energy management solutions for all project scales.',
     productTypes: '180+',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-electrical-card', { w: 1400 }),
   },
   {
     num: '04',
@@ -49,7 +50,7 @@ const solutionCategories = [
     title: 'Plumbing Systems',
     desc: 'High-performance piping, valves, fittings, and drainage systems designed for reliability and long-term performance in residential and industrial applications.',
     productTypes: '150+',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-plumbing-card', { w: 1400 }),
   },
   {
     num: '05',
@@ -57,7 +58,7 @@ const solutionCategories = [
     title: 'HVAC Equipment',
     desc: 'Heating, ventilation, and air conditioning systems from global brands. From split units and VRF systems to industrial chillers and ventilation solutions.',
     productTypes: '90+',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-hvac-card', { w: 1400 }),
   },
   {
     num: '06',
@@ -65,7 +66,7 @@ const solutionCategories = [
     title: 'Solar Energy Solutions',
     desc: 'Complete solar photovoltaic systems, battery storage solutions, inverters, and mounting systems for residential, commercial, and industrial energy independence.',
     productTypes: '60+',
-    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-solar-energy-card', { w: 1400 }),
   },
   {
     num: '07',
@@ -73,7 +74,7 @@ const solutionCategories = [
     title: 'Fire Safety Equipment',
     desc: 'Certified fire detection, suppression, and emergency systems — sprinklers, extinguishers, alarm panels, and evacuation equipment meeting international standards.',
     productTypes: '80+',
-    image: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-fire-safety-card', { w: 1400 }),
   },
   {
     num: '08',
@@ -81,7 +82,7 @@ const solutionCategories = [
     title: 'Security Systems',
     desc: 'Integrated access control, CCTV, intrusion detection, and smart security solutions protecting residential, commercial, and industrial properties.',
     productTypes: '70+',
-    image: 'https://images.unsplash.com/photo-1557597774-9d475d030a96?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-security-systems-card', { w: 1400 }),
   },
   {
     num: '09',
@@ -89,7 +90,7 @@ const solutionCategories = [
     title: 'Water Pumps',
     desc: 'Submersible pumps, booster systems, pressure tanks, and industrial pumping solutions for water supply, irrigation, and building services applications.',
     productTypes: '50+',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-water-pumps-card', { w: 1400 }),
   },
   {
     num: '10',
@@ -97,7 +98,7 @@ const solutionCategories = [
     title: 'Water Heaters',
     desc: 'Solar water heaters, heat pump systems, electric, and gas water heaters for domestic and commercial hot water supply with energy-efficient performance.',
     productTypes: '40+',
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-water-heaters-card', { w: 1400 }),
   },
   {
     num: '11',
@@ -105,7 +106,7 @@ const solutionCategories = [
     title: 'Doors & Windows',
     desc: 'Aluminium, uPVC, and timber doors and windows engineered for thermal performance, security, and architectural aesthetics. Glazing systems and facade elements.',
     productTypes: '100+',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-doors-windows-card', { w: 1400 }),
   },
   {
     num: '12',
@@ -113,7 +114,7 @@ const solutionCategories = [
     title: 'Paint & Finishes',
     desc: 'Interior and exterior paints, decorative coatings, texture finishes, and waterproofing systems from professional-grade brands for lasting results.',
     productTypes: '110+',
-    image: 'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-paint-finishes-card', { w: 1400 }),
   },
   {
     num: '13',
@@ -121,7 +122,7 @@ const solutionCategories = [
     title: 'Hardware & Tools',
     desc: 'Professional construction tools, precision hardware, fixings, anchors, and specialist equipment for engineering, contracting, and fit-out projects.',
     productTypes: '300+',
-    image: 'https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-hardware-tools-card', { w: 1400 }),
   },
   {
     num: '14',
@@ -129,7 +130,7 @@ const solutionCategories = [
     title: 'Smart Building Solutions',
     desc: 'Building automation systems, IoT sensors, smart lighting controls, and integrated building management platforms for intelligent, efficient facilities.',
     productTypes: '45+',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80',
+    image: cld('solutions-smart-building-card', { w: 1400 }),
   },
 ];
 
@@ -137,37 +138,37 @@ const featuredCollections = [
   {
     name: 'Premium Bathroom Collection',
     desc: "Curated sanitary ware, taps, showers and accessories from Europe's leading design houses.",
-    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80',
+    image: cld('solutions-bathroom-sanitary-featured', { w: 1200 }),
     slug: 'bathroom-sanitary',
   },
   {
     name: 'Luxury Tile Collection',
     desc: 'Marble-effect porcelain, handcrafted ceramics, and natural stone for exceptional interiors.',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80',
+    image: cld('solutions-tiles-flooring-featured', { w: 1200 }),
     slug: 'tiles-flooring',
   },
   {
     name: 'Commercial HVAC Systems',
     desc: 'VRF, chiller, and AHU systems engineered for large-scale commercial and hospitality projects.',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80',
+    image: cld('solutions-hvac-featured', { w: 1200 }),
     slug: 'hvac',
   },
   {
     name: 'Smart Security Solutions',
     desc: 'Integrated access control, surveillance, and perimeter protection for intelligent buildings.',
-    image: 'https://images.unsplash.com/photo-1557597774-9d475d030a96?auto=format&fit=crop&w=1200&q=80',
+    image: cld('solutions-security-systems-featured', { w: 1200 }),
     slug: 'security-systems',
   },
   {
     name: 'Solar Energy Systems',
     desc: 'Grid-tied and off-grid PV systems with battery storage for sustainable energy independence.',
-    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80',
+    image: cld('solutions-solar-energy-featured', { w: 1200 }),
     slug: 'solar-energy',
   },
   {
     name: 'Industrial Plumbing Solutions',
     desc: 'Heavy-duty piping, pump stations, and water treatment solutions for industrial facilities.',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    image: cld('solutions-plumbing-featured', { w: 1200 }),
     slug: 'plumbing',
   },
 ];
@@ -182,14 +183,14 @@ const whyPoints = [
 ];
 
 const industries = [
-  { name: 'Residential', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', size: 'tall' },
-  { name: 'Commercial', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80', size: 'normal' },
-  { name: 'Hospitality', image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80', size: 'normal' },
-  { name: 'Industrial', image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80', size: 'tall' },
-  { name: 'Healthcare', image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80', size: 'normal' },
-  { name: 'Education', image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80', size: 'normal' },
-  { name: 'Government', image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80', size: 'tall' },
-  { name: 'Infrastructure', image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80', size: 'normal' },
+  { name: 'Residential', image: cld('solutions-industries-residential', { w: 800 }), size: 'tall' },
+  { name: 'Commercial', image: cld('solutions-industries-commercial', { w: 800 }), size: 'normal' },
+  { name: 'Hospitality', image: cld('solutions-industries-hospitality', { w: 800 }), size: 'normal' },
+  { name: 'Industrial', image: cld('solutions-industries-industrial', { w: 800 }), size: 'tall' },
+  { name: 'Healthcare', image: cld('solutions-industries-healthcare', { w: 800 }), size: 'normal' },
+  { name: 'Education', image: cld('solutions-industries-education', { w: 800 }), size: 'normal' },
+  { name: 'Government', image: cld('solutions-industries-government', { w: 800 }), size: 'tall' },
+  { name: 'Infrastructure', image: cld('solutions-industries-infrastructure', { w: 800 }), size: 'normal' },
 ];
 
 const brandNames = [
@@ -319,7 +320,7 @@ export default function SolutionsPage() {
               initial={{ scale: 1.06, opacity: 0 }}
               animate={{ scale: 1, opacity: 0.28 }}
               transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2400&q=80"
+              src={cld('heroes-solutions', { w: 2400 })}
               alt="Premium building materials and construction products"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -452,7 +453,7 @@ export default function SolutionsPage() {
                   <motion.img
                     whileHover={{ scale: 1.03 }}
                     transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80"
+                    src={cld('solutions-showcase-premium-materials', { w: 1000 })}
                     alt="GEA premium building materials showcase"
                     className="w-full h-full object-cover"
                   />
@@ -464,7 +465,7 @@ export default function SolutionsPage() {
                   style={{ boxShadow: '0 20px 50px rgba(0,0,0,0.1)' }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80"
+                    src={cld('solutions-tiles-flooring-showcase', { w: 600 })}
                     alt="Premium tiles and flooring"
                     className="w-full h-full object-cover"
                   />
@@ -742,7 +743,7 @@ export default function SolutionsPage() {
                 <motion.img
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-                  src="https://images.unsplash.com/photo-1574359411659-15573a27fd0c?auto=format&fit=crop&w=1200&q=80"
+                  src={cld('solutions-showcase-professional-products', { w: 1200 })}
                   alt="Professional building products and materials"
                   className="w-full h-full object-cover"
                 />
@@ -1065,7 +1066,7 @@ export default function SolutionsPage() {
                 <motion.img
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+                  src={cld('solutions-showcase-technical-consultation', { w: 1200 })}
                   alt="Technical consultation for building materials"
                   className="w-full h-full object-cover"
                 />

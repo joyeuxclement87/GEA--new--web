@@ -10,141 +10,141 @@ import { cld } from '@/lib/cloudinary';
 const deliverables = [
   {
     num: '01',
-    title: 'Project Planning',
-    desc: 'Develop comprehensive project plans, schedules, budgets, and execution strategies that set every project up for success from day one.',
-    points: ['Scope & objective definition', 'Master schedule development', 'Budget & resource planning', 'Execution strategy'],
-    image: cld('services-project-management-project-planning', { w: 1400 }),
+    title: 'Mechanical Engineering',
+    desc: 'Design efficient mechanical systems including ventilation, water supply, drainage, pumping, and equipment coordination.',
+    points: ['Ventilation & airflow design', 'Pumping & drainage systems', 'Equipment sizing & selection', 'Mechanical coordination sets'],
+    image: cld('services-mep-engineering-mechanical-engineering', { w: 1400 }),
   },
   {
     num: '02',
-    title: 'Cost Control',
-    desc: 'Monitor project expenses closely to maintain financial efficiency and protect margins throughout the project lifecycle.',
-    points: ['Budget tracking & forecasting', 'Variance analysis', 'Cost-saving recommendations', 'Financial reporting'],
-    image: cld('services-project-management-cost-control', { w: 1400 }),
+    title: 'Electrical Engineering',
+    desc: 'Power distribution, lighting systems, backup power, low-voltage infrastructure, and electrical protection.',
+    points: ['Power distribution design', 'Lighting & backup power', 'Low-voltage infrastructure', 'Protection & earthing systems'],
+    image: cld('services-mep-engineering-electrical-engineering', { w: 1400 }),
   },
   {
     num: '03',
-    title: 'Schedule Management',
-    desc: 'Plan and monitor project timelines with discipline, ensuring every milestone is achieved on time and delays are caught early.',
-    points: ['Milestone tracking', 'Critical path management', 'Resource sequencing', 'Delay mitigation'],
-    image: cld('services-project-management-schedule-management', { w: 1400 }),
+    title: 'Plumbing Systems',
+    desc: 'Water supply, drainage, sanitary systems, rainwater management, and utility infrastructure engineered to last.',
+    points: ['Water supply & sanitary design', 'Drainage & waste systems', 'Rainwater management', 'Utility infrastructure planning'],
+    image: cld('services-mep-engineering-plumbing-systems', { w: 1400 }),
   },
   {
     num: '04',
-    title: 'Contractor Coordination',
-    desc: 'Manage communication and collaboration between contractors, consultants, suppliers, and stakeholders to keep every party aligned.',
-    points: ['Stakeholder communication', 'Site meetings & coordination', 'Consultant liaison', 'Supplier management'],
-    image: cld('services-project-management-contractor-coordination', { w: 1400 }),
+    title: 'Utility Coordination',
+    desc: 'Coordinate all engineering services to eliminate conflicts and clashes before construction ever begins.',
+    points: ['Cross-discipline clash detection', 'Service routing coordination', 'Trade sequencing input', 'Coordinated shop drawings'],
+    image: cld('services-mep-engineering-utility-coordination', { w: 1400 }),
   },
   {
     num: '05',
-    title: 'Risk Management',
-    desc: 'Identify potential risks early and implement proactive mitigation strategies that protect budget, schedule, and quality.',
-    points: ['Risk identification & assessment', 'Mitigation planning', 'Contingency strategies', 'Continuous monitoring'],
-    image: cld('services-project-management-risk-management', { w: 1400 }),
+    title: 'Energy Efficiency',
+    desc: 'Design systems that reduce operating costs and improve long-term building performance and sustainability.',
+    points: ['Load & efficiency calculations', 'Energy-conscious equipment selection', 'Lifecycle cost analysis', 'Sustainability alignment'],
+    image: cld('services-mep-engineering-energy-efficiency', { w: 1400 }),
   },
   {
     num: '06',
-    title: 'Quality Control',
-    desc: 'Monitor construction quality at every stage to ensure compliance with specifications, drawings, and industry standards.',
-    points: ['Inspections & site audits', 'Specification compliance', 'Snagging & defect tracking', 'Standards enforcement'],
-    image: cld('services-project-management-quality-control', { w: 1400 }),
+    title: 'Code Compliance',
+    desc: 'Ensure engineering systems comply with local regulations, safety requirements, and international standards.',
+    points: ['Regulatory compliance review', 'Safety standard alignment', 'Permit & approval support', 'International code coordination'],
+    image: cld('services-mep-engineering-code-compliance', { w: 1400 }),
   },
   {
     num: '07',
-    title: 'Progress Reporting',
-    desc: 'Provide regular progress updates, reports, and project performance reviews so clients are informed at every stage.',
-    points: ['Weekly & monthly reporting', 'Performance dashboards', 'Stakeholder briefings', 'Post-project evaluation'],
-    image: cld('services-project-management-progress-reporting', { w: 1400 }),
+    title: 'Construction Support',
+    desc: 'Provide technical support throughout construction and commissioning to keep every system on track.',
+    points: ['Site technical support', 'Contractor coordination', 'Commissioning oversight', 'Snagging & handover support'],
+    image: cld('services-mep-engineering-construction-support', { w: 1400 }),
   },
 ];
 
 const process = [
-  { num: '01', title: 'Project Initiation', desc: 'Understand project objectives, scope, budget, and stakeholders before any planning begins.' },
-  { num: '02', title: 'Planning', desc: 'Develop schedules, budgets, procurement plans, and resource allocation in full detail.' },
-  { num: '03', title: 'Execution', desc: 'Coordinate contractors, suppliers, consultants, and project activities on the ground.' },
-  { num: '04', title: 'Monitoring & Control', desc: 'Track progress, manage risks, control quality, and monitor budgets continuously.' },
-  { num: '05', title: 'Project Completion', desc: 'Finalize documentation, inspections, handover, and post-project evaluation.' },
+  { num: '01', title: 'Project Assessment', desc: 'Review architectural drawings, project requirements, and building usage before design begins.' },
+  { num: '02', title: 'System Design', desc: 'Develop coordinated mechanical, electrical, and plumbing solutions tailored to the project.' },
+  { num: '03', title: 'Technical Documentation', desc: 'Prepare detailed engineering drawings and specifications ready for construction.' },
+  { num: '04', title: 'Construction Coordination', desc: 'Support contractors and consultants during implementation on site.' },
+  { num: '05', title: 'Testing & Commissioning', desc: 'Verify system performance before project handover to the client.' },
 ];
 
 const strengths = [
-  { num: '01', title: 'End-to-End Oversight', desc: 'Managing every project phase from planning to completion with a single point of accountability.' },
-  { num: '02', title: 'Transparent Communication', desc: 'Keeping clients informed with regular reporting and clear, honest communication.' },
-  { num: '03', title: 'Efficient Coordination', desc: 'Aligning teams, contractors, suppliers, and consultants for seamless execution.' },
-  { num: '04', title: 'Proven Delivery', desc: 'Delivering projects safely, on schedule, within budget, and to the highest standards.' },
-  { num: '05', title: 'Risk-Aware Planning', desc: 'Identifying issues before they become problems, and building contingency into every plan.' },
-  { num: '06', title: 'Experienced Leadership', desc: 'Project managers with a track record across residential, commercial, and industrial developments.' },
+  { num: '01', title: 'Multidisciplinary Coordination', desc: 'MEP systems designed alongside architecture and construction from day one.' },
+  { num: '02', title: 'Efficient Building Performance', desc: 'Solutions that improve comfort, reliability, and operational efficiency.' },
+  { num: '03', title: 'Regulatory Compliance', desc: 'Engineering designs developed to meet applicable standards and regulations.' },
+  { num: '04', title: 'End-to-End Support', desc: 'Professional assistance from design through commissioning and handover.' },
+  { num: '05', title: 'Experienced Engineers', desc: 'A qualified team with deep experience across mechanical, electrical, and plumbing disciplines.' },
+  { num: '06', title: 'Coordinated Documentation', desc: 'Drawing sets cross-checked across every discipline before they reach the site.' },
 ];
 
 const relatedProjects = [
   {
-    title: 'Commercial Office Development',
-    category: 'Corporate Project Management',
+    title: 'Commercial Office Building',
+    category: 'Integrated MEP Design',
     location: 'Nairobi, Kenya',
-    image: cld('services-project-management-related-commercial-office-development', { w: 1600 }),
+    image: cld('services-mep-engineering-related-commercial-office-building', { w: 1600 }),
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
-    title: 'Residential Housing Estate',
-    category: 'Master-Planned Delivery',
+    title: 'Hospital Development',
+    category: 'Healthcare Engineering Systems',
     location: 'Kigali, Rwanda',
-    image: cld('services-project-management-related-residential-housing-estate', { w: 1200 }),
+    image: cld('services-mep-engineering-related-hospital-development', { w: 1200 }),
     span: '',
   },
   {
-    title: 'Mixed-Use Development',
-    category: 'Multi-Stakeholder Coordination',
+    title: 'Luxury Residential Apartments',
+    category: 'Residential MEP Coordination',
     location: 'Dubai, UAE',
-    image: cld('services-project-management-related-mixed-use-development', { w: 1200 }),
+    image: cld('services-mep-engineering-related-luxury-residential-apartments', { w: 1200 }),
     span: '',
   },
   {
     title: 'Industrial Facility',
-    category: 'Industrial Project Delivery',
+    category: 'Industrial Engineering Systems',
     location: 'Mombasa, Kenya',
-    image: cld('services-project-management-related-industrial-facility', { w: 1200 }),
+    image: cld('services-mep-engineering-related-industrial-facility', { w: 1200 }),
     span: '',
   },
   {
-    title: 'Hotel Construction',
-    category: 'Hospitality Project Management',
+    title: 'Hotel Project',
+    category: 'Hospitality Engineering Systems',
     location: 'Marrakech, Morocco',
-    image: cld('services-project-management-related-hotel-construction', { w: 1200 }),
+    image: cld('services-mep-engineering-related-hotel-project', { w: 1200 }),
     span: '',
   },
   {
-    title: 'Institutional Building',
-    category: 'Public & Institutional Delivery',
+    title: 'Educational Campus',
+    category: 'Institutional Engineering Systems',
     location: 'Berlin, Germany',
-    image: cld('services-project-management-related-institutional-building', { w: 1200 }),
+    image: cld('services-mep-engineering-related-educational-campus', { w: 1200 }),
     span: '',
   },
 ];
 
 const faqs = [
   {
-    q: 'What does project management include?',
-    a: 'Our project management services include project planning, scheduling, budgeting and cost control, contractor and stakeholder coordination, risk management, quality control, and regular progress reporting from initiation through completion.',
+    q: 'What are MEP engineering services?',
+    a: 'MEP stands for Mechanical, Electrical, and Plumbing — the engineering systems that provide ventilation, power, lighting, water supply, and drainage within a building. MEP engineering covers the design, documentation, and coordination of these systems.',
   },
   {
-    q: 'Can GEA manage projects designed by another consultant?',
-    a: 'Yes. We regularly step in to manage projects designed or documented by other architects, engineers, or consultants, taking full responsibility for coordination and delivery through construction.',
+    q: 'Why are MEP systems important?',
+    a: 'MEP systems are the backbone of every building — they provide comfort, safety, functionality, and operational efficiency. Poorly designed or coordinated MEP systems lead to costly rework, inefficiency, and compliance issues down the line.',
   },
   {
-    q: 'How do you ensure projects stay on budget?',
-    a: 'We track expenses continuously against the approved budget, flag variances early, and provide clear financial reporting throughout the project so decisions can be made before costs escalate.',
+    q: 'Do you provide MEP designs for residential projects?',
+    a: 'Yes. We design mechanical, electrical, and plumbing systems for residential projects of every scale, from individual homes to large multi-unit residential developments.',
   },
   {
-    q: 'How often do clients receive project updates?',
-    a: 'Clients typically receive structured progress reports on a weekly or monthly basis, along with direct communication at key milestones and immediate updates on any significant risk or change.',
+    q: 'Can GEA coordinate MEP with architectural drawings?',
+    a: 'Yes. Our MEP engineers work directly alongside our architectural and structural teams, coordinating systems with the building design from the earliest stages to eliminate conflicts before construction.',
   },
   {
-    q: 'Do you supervise construction on-site?',
-    a: 'Yes. Our project managers provide continuous on-site supervision, monitoring quality, safety, and progress to ensure the work matches the approved drawings and specifications.',
+    q: 'Do you provide construction supervision?',
+    a: 'Yes. We provide technical support and supervision throughout construction and commissioning, ensuring installed systems match the approved design and perform as intended.',
   },
   {
-    q: 'Can you coordinate multiple contractors?',
-    a: 'Absolutely. Coordinating multiple contractors, consultants, and suppliers is central to our project management service, ensuring every trade works in sequence without conflict or delay.',
+    q: 'Can existing buildings be upgraded with new MEP systems?',
+    a: 'Yes. We regularly assess and upgrade MEP systems in existing buildings — improving energy efficiency, reliability, and compliance without unnecessary disruption to ongoing operations.',
   },
 ];
 
@@ -162,7 +162,7 @@ function FaqItem({ q, a, isOpen, onToggle }: { q: string; a: string; isOpen: boo
   );
 }
 
-export default function ProjectManagementPage() {
+export default function MepEngineeringPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeStep, setActiveStep] = useState<number>(0);
 
@@ -176,8 +176,8 @@ export default function ProjectManagementPage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src={cld('heroes-services-project-management', { w: 1800 })}
-                        alt="Project Management"
+            src={cld('heroes-services-mep-engineering', { w: 1800 })}
+                        alt="Mechanical, Electrical & Plumbing Engineering"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/75 to-transparent" />
@@ -188,20 +188,20 @@ export default function ProjectManagementPage() {
           <div className="flex items-center gap-2 mb-10 text-[11px] font-[500] text-white/40" style={{ fontFamily: 'Inter, sans-serif' }}>
             <Link href="/services" className="hover:text-white/70 transition-colors">Expertise</Link>
             <ChevronRight className="h-3.5 w-3.5" strokeWidth={1.5} />
-            <span className="text-white/70">Project Management</span>
+            <span className="text-white/70">Mechanical, Electrical &amp; Plumbing</span>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="inline-flex items-center gap-3 mb-6">
             <span className="h-[1px] w-6 bg-[#C8A45D]" />
-            <span className="text-[10px] font-[600] uppercase tracking-[0.28em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Construction &amp; Planning</span>
+            <span className="text-[10px] font-[600] uppercase tracking-[0.28em] text-[#C8A45D]" style={{ fontFamily: 'Inter, sans-serif' }}>Engineering Systems</span>
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.08, ease: [0.16, 1, 0.3, 1] }} className="text-[36px] sm:text-[52px] lg:text-[68px] font-[800] tracking-[-0.03em] leading-[1.06] text-white mb-5 max-w-[800px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            Managing Projects with Precision, Transparency, and Confidence.
+            Integrated Building Systems Designed for Performance.
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.22, ease: [0.16, 1, 0.3, 1] }} className="text-[15px] leading-[1.8] font-[300] text-white/55 max-w-[540px] mb-10" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Global Engineering Agency provides professional project management services that ensure every project is delivered on time, within budget, and to the highest quality standards through strategic planning, coordination, and continuous supervision.
+            Global Engineering Agency designs and coordinates Mechanical, Electrical, and Plumbing systems that improve efficiency, safety, comfort, and long-term building performance.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.85, delay: 0.3, ease: [0.16, 1, 0.3, 1] }} className="flex flex-wrap gap-4">
@@ -211,7 +211,7 @@ export default function ProjectManagementPage() {
             </Link>
             <Link href="/projects" className="inline-flex items-center gap-2.5 rounded-[999px] border border-white/20 px-7 py-3.5 text-[13.5px] font-[500] text-white/80 transition-all duration-300 hover:border-white/40 hover:text-white">
               <ArrowLeft className="h-4 w-4" strokeWidth={1.5} />
-              View Managed Projects
+              View Engineering Projects
             </Link>
           </motion.div>
         </div>
@@ -228,14 +228,14 @@ export default function ProjectManagementPage() {
                 <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]" style={{ fontFamily: 'Inter, sans-serif' }}>Why It Matters</span>
               </div>
               <h2 className="text-3xl lg:text-[44px] font-[700] text-[#1F2937] tracking-tight leading-[1.2]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-                Great Projects <br />
-                <span className="font-[300] text-[#10367D]">Are Managed, Not Left to Chance.</span>
+                Engineering Systems That <br />
+                <span className="font-[300] text-[#10367D]">Power Modern Buildings.</span>
               </h2>
             </div>
 
             <div className="lg:col-span-7 pt-4">
               <p className="text-[17px] leading-[1.9] font-[300] text-[#1F2937]/70" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Effective project management is the foundation of every successful construction project. GEA coordinates people, resources, budgets, timelines, contractors, and stakeholders to ensure efficient project execution from start to finish. Without disciplined oversight, even the best designs can be undermined by delays, cost overruns, or miscommunication — with the right project manager in place, every stage moves with clarity and confidence.
+                MEP systems are the backbone of every successful building. They provide comfort, safety, functionality, and operational efficiency while ensuring compliance with modern engineering standards. At GEA, architecture, structural engineering, and MEP systems are designed together from the very beginning of every project — not layered on afterward — so every building performs the way it was always meant to.
               </p>
             </div>
 
@@ -251,7 +251,7 @@ export default function ProjectManagementPage() {
             <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">What We Provide</span>
           </div>
           <h2 className="text-4xl lg:text-[52px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] max-w-[700px]" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            Complete <span className="font-[300]">project oversight.</span>
+            Fully coordinated <span className="font-[300]">building systems.</span>
           </h2>
         </div>
 
@@ -293,7 +293,7 @@ export default function ProjectManagementPage() {
         </div>
       </section>
 
-      {/* PROJECT MANAGEMENT PROCESS (Premium Stepper Timeline) */}
+      {/* ENGINEERING PROCESS (Premium Stepper Timeline) */}
       <section className="bg-white py-24 lg:py-36">
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
           <div className="text-center max-w-[650px] mx-auto mb-20">
@@ -302,8 +302,8 @@ export default function ProjectManagementPage() {
               <span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">How We Work</span>
               <span className="h-[1px] w-6 bg-[#10367D]" />
             </div>
-            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] mb-4">From initiation to completion.</h2>
-            <p className="text-[15.5px] font-[300] text-[#1F2937]/60">Explore each phase of our project management process.</p>
+            <h2 className="text-4xl lg:text-[48px] font-[700] text-[#1F2937] tracking-tight leading-[1.1] mb-4">From first review to full commissioning.</h2>
+            <p className="text-[15.5px] font-[300] text-[#1F2937]/60">Explore each phase of our engineering process.</p>
           </div>
 
           {/* Stepper Buttons */}
@@ -354,8 +354,8 @@ export default function ProjectManagementPage() {
       <section className="bg-[#0D1B2A] text-white py-20 lg:py-28">
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 lg:mb-14">
-            <div className="max-w-[560px]"><div className="inline-flex items-center gap-3 mb-5"><span className="h-[1px] w-6 bg-[#C8A45D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]">Why Choose Us</span></div><h2 className="text-3xl lg:text-[42px] font-[700] tracking-tight leading-[1.2]">Experienced leadership <span className="font-[300] text-white/70">for every project.</span></h2></div>
-            <p className="text-[13.5px] leading-[1.75] font-[300] text-white/45 max-w-[340px]">Every project is managed with the discipline, transparency, and accountability of a premium delivery partner.</p>
+            <div className="max-w-[560px]"><div className="inline-flex items-center gap-3 mb-5"><span className="h-[1px] w-6 bg-[#C8A45D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#C8A45D]">Why Choose Us</span></div><h2 className="text-3xl lg:text-[42px] font-[700] tracking-tight leading-[1.2]">Integrated engineering designed for <span className="font-[300] text-white/70">long-term performance.</span></h2></div>
+            <p className="text-[13.5px] leading-[1.75] font-[300] text-white/45 max-w-[340px]">Every system is coordinated, documented, and verified the way a premium engineering consultancy would sign its own name to it.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-white/10">
@@ -383,7 +383,7 @@ export default function ProjectManagementPage() {
       <section className="bg-white py-24 lg:py-40">
         <div className="mx-auto max-w-[1440px] px-8 lg:px-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-20">
-            <div><div className="inline-flex items-center gap-3 mb-6"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Related Work</span></div><h2 className="text-4xl lg:text-[56px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Planned, coordinated, <span className="font-[300]">delivered.</span></h2></div>
+            <div><div className="inline-flex items-center gap-3 mb-6"><span className="h-[1px] w-6 bg-[#10367D]" /><span className="text-[10px] font-[600] uppercase tracking-[0.25em] text-[#10367D]">Related Work</span></div><h2 className="text-4xl lg:text-[56px] font-[700] text-[#1F2937] tracking-tight leading-[1.1]">Engineered, coordinated, <span className="font-[300]">delivered.</span></h2></div>
             <Link href="/projects" className="inline-flex items-center gap-4 text-[13px] font-[600] tracking-[0.04em] text-[#1F2937] group transition-all duration-300 mb-2" style={{ fontFamily: 'Inter, sans-serif' }}><span className="h-[1px] bg-[#1F2937] w-6 transition-all duration-300 group-hover:w-12 group-hover:bg-[#10367D]" /><span className="group-hover:text-[#10367D] transition-colors">View All Projects</span><ArrowRight className="h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#10367D]" strokeWidth={1.5} /></Link>
           </div>
 
@@ -426,11 +426,11 @@ export default function ProjectManagementPage() {
       <section className="relative overflow-hidden bg-[#0D1B2A] py-32 lg:py-44">
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C8A45D] to-transparent" />
         <div className="relative z-10 mx-auto max-w-[1440px] px-8 lg:px-16 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-[64px] font-[700] tracking-tight leading-[1.03] text-white mb-6">Let&apos;s deliver your project <span className="text-[#C8A45D]">with confidence.</span></h2>
-          <p className="mx-auto max-w-[680px] text-[16px] leading-[1.8] font-[300] text-white/55 mb-8">Whether you&apos;re planning a residential, commercial, or industrial project, our experienced project managers ensure efficient coordination, transparent communication, and successful delivery.</p>
+          <h2 className="text-4xl sm:text-5xl lg:text-[64px] font-[700] tracking-tight leading-[1.03] text-white mb-6">Let&apos;s engineer buildings <span className="text-[#C8A45D]">that perform better.</span></h2>
+          <p className="mx-auto max-w-[680px] text-[16px] leading-[1.8] font-[300] text-white/55 mb-8">Our integrated Mechanical, Electrical &amp; Plumbing solutions improve comfort, efficiency, reliability, and long-term value for every project.</p>
           <div className="flex items-center justify-center gap-4">
             <Link href="/quote" className="inline-flex items-center gap-3 rounded-full bg-[#C8A45D] px-12 py-5 text-[14px] font-[700] tracking-[0.02em] text-[#1F2937] transition-all duration-300 hover:bg-white hover:text-[#10367D]">Request Consultation<ArrowRight className="h-4 w-4" strokeWidth={2} /></Link>
-            <Link href="/projects" className="inline-flex items-center justify-center rounded-full border border-white/20 px-12 py-5 text-[14px] font-[500] tracking-[0.02em] text-white/80 transition-all duration-300 hover:border-[#C8A45D]/60 hover:text-white">Explore Our Projects</Link>
+            <Link href="/projects" className="inline-flex items-center justify-center rounded-full border border-white/20 px-12 py-5 text-[14px] font-[500] tracking-[0.02em] text-white/80 transition-all duration-300 hover:border-[#C8A45D]/60 hover:text-white">View Our Projects</Link>
           </div>
         </div>
       </section>
@@ -438,9 +438,10 @@ export default function ProjectManagementPage() {
       {/* INTERNAL LINKS (SEO) */}
       <section className="sr-only" aria-hidden="false">
         <nav aria-label="Related services">
+          <Link href="/services#hvac">HVAC Systems</Link>
+          <Link href="/services/fire-protection-systems">Fire Protection Systems</Link>
+          <Link href="/services#solar-energy">Solar Energy Solutions</Link>
           <Link href="/services/general-contracting">General Contracting</Link>
-          <Link href="/services/boq-cost-estimation">BOQ &amp; Cost Estimation</Link>
-          <Link href="/quote">Project Consultation</Link>
           <Link href="/services/architecture-drawings">Architecture Drawings</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/contact">Contact</Link>

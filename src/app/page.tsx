@@ -3,11 +3,12 @@
 import { AnimatePresence, motion, useInView, animate } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ArrowRight, Linkedin, Instagram, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
+import { cld } from '@/lib/cloudinary';
 
 const backgroundImages = [
-  'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=80',
-  'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80',
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80',
+  'https://res.cloudinary.com/mcgv18nh/image/upload/v1783777750/can_enhance_logo_and_olace_202605090810_rrlcnv.jpg',
+  cld('heroes-home-2', { w: 2000 }),
+  cld('heroes-home-3', { w: 2000 }),
 ];
 
 const featuredProjects = [
@@ -16,21 +17,21 @@ const featuredProjects = [
     title: 'The Horizon Commission',
     category: 'Structural Engineering & Architecture',
     location: 'Dubai, UAE',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80'
+    image: cld('projects-the-horizon-commission-cover', { w: 1600 })
   },
   {
     id: '02',
     title: 'Opus Residence',
     category: 'Interior Finishes & Supply',
     location: 'London, UK',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80'
+    image: cld('projects-opus-residence-cover', { w: 1600 })
   },
   {
     id: '03',
     title: 'Aura Technology Hub',
     category: 'Commercial Contracting',
     location: 'Berlin, Germany',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80'
+    image: cld('projects-aura-technology-hub-cover', { w: 1600 })
   }
 ];
 
@@ -38,17 +39,17 @@ const products = [
   {
     title: 'Premium Tiles & Stone',
     desc: 'Porcelain, ceramic, and natural stone from world-leading manufacturers.',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80'
+    image: cld('home-premium-tiles-stone', { w: 800 })
   },
   {
     title: 'Architectural Bathware',
     desc: 'High-performance sanitary ware and minimalist plumbing fixtures.',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80'
+    image: cld('home-architectural-bathware', { w: 800 })
   },
   {
     title: 'Specialist Hardware',
     desc: 'Precision-engineered fittings and bespoke finishing hardware.',
-    image: 'https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=800&q=80'
+    image: cld('home-specialist-hardware', { w: 800 })
   }
 ];
 
@@ -64,37 +65,37 @@ const testimonials = [
     quote: "GEA's engineering precision and ability to source ultra-premium materials entirely transformed our commercial development. A truly integrated partner.",
     author: "Elena Rostova",
     role: "Director of Development, Horizon Group",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+    avatar: cld('testimonials-elena-rostova', { w: 200 })
   },
   {
     quote: "From the initial structural blueprints to the final bathroom finishes, their attention to detail is unmatched in the industry.",
     author: "Marcus Chen",
     role: "Lead Architect, Studio Opus",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+    avatar: cld('testimonials-marcus-chen', { w: 200 })
   },
   {
     quote: "They delivered our mixed-use tower on schedule and under budget — something we had not experienced with any previous contractor. Exceptional execution.",
     author: "Amara Diallo",
     role: "CEO, Meridian Properties",
-    avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=200&q=80"
+    avatar: cld('testimonials-amara-diallo', { w: 200 })
   },
   {
     quote: "The procurement team sourced bespoke Italian stone finishes within two weeks. The quality and logistics coordination were world-class.",
     author: "Oliver Strauss",
     role: "Project Director, Strauss Developments",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80"
+    avatar: cld('testimonials-oliver-strauss', { w: 200 })
   },
   {
     quote: "GEA's real estate advisory helped us identify and secure three high-yield parcels in growth corridors we wouldn't have found on our own.",
     author: "Fatima Al-Rashidi",
     role: "Investment Manager, Gulf Capital Partners",
-    avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&q=80"
+    avatar: cld('testimonials-fatima-al-rashidi', { w: 200 })
   },
   {
     quote: "Seamless communication, rigorous quality control, and a genuine commitment to sustainability. GEA is our go-to partner for every major build.",
     author: "James Okonkwo",
     role: "Managing Director, Apex Construct Ltd",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+    avatar: cld('testimonials-james-okonkwo', { w: 200 })
   }
 ];
 
@@ -103,19 +104,19 @@ const insights = [
     category: 'Engineering',
     date: 'Oct 12, 2024',
     title: 'The Future of Sustainable Structural Design',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'
+    image: cld('insights-the-future-of-sustainable-structural-design', { w: 800 })
   },
   {
     category: 'Supply Chain',
     date: 'Sep 28, 2024',
     title: 'Navigating Global Material Sourcing in 2025',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80'
+    image: cld('insights-navigating-global-material-sourcing-in-2025', { w: 800 })
   },
   {
     category: 'Real Estate',
     date: 'Sep 15, 2024',
     title: 'Maximizing ROI on High-End Residential Developments',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'
+    image: cld('insights-maximizing-roi-on-high-end-residential-developments', { w: 800 })
   }
 ];
 
@@ -388,7 +389,7 @@ export default function HomePage() {
             {/* Large portrait image */}
             <div className="relative w-full aspect-[4/5] rounded-[32px] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80"
+                src={cld('engineers-on-site', { w: 1000 })}
                 alt="GEA engineers on site"
                 className="w-full h-full object-cover"
               />
@@ -401,7 +402,7 @@ export default function HomePage() {
               style={{ boxShadow: '0 24px 60px rgba(0,0,0,0.12)' }}
             >
               <img
-                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+                src={cld('home-premium-bathroom-products', { w: 600 })}
                 alt="Premium bathroom products"
                 className="w-full h-full object-cover"
               />
@@ -726,7 +727,7 @@ export default function HomePage() {
                   <motion.img
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+                    src={cld('home-architectural-precision', { w: 1200 })}
                     alt="Architectural Precision"
                     className="w-full h-full object-cover"
                   />
@@ -858,7 +859,7 @@ export default function HomePage() {
 
             <div className="order-1 lg:order-2 w-full aspect-square lg:aspect-[4/5] overflow-hidden relative">
               <img
-                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80"
+                src={cld('home-luxury-real-estate', { w: 1200 })}
                 alt="Luxury Real Estate"
                 className="w-full h-full object-cover"
               />

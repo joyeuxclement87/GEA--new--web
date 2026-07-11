@@ -1,3 +1,5 @@
+import { cld } from '@/lib/cloudinary';
+
 export type InsightArticle = {
   slug: string;
   category: string;
@@ -34,8 +36,7 @@ export const featuredArticle: InsightArticle = {
   author: "Mina Clarke",
   date: "May 14, 2026",
   readTime: "8 min read",
-  image:
-    "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80",
+  image: cld('insights-how-to-plan-a-commercial-building', { w: 1600 }),
   imageAlt: "Contemporary commercial building under development",
   content: [
     "Commercial projects succeed when the planning phase is structured around clear decision-making, realistic sequencing, and a shared understanding of value. In practice, that means translating ambition into a practical roadmap that controls cost, mitigates risk, and protects design intent.",
@@ -45,8 +46,8 @@ export const featuredArticle: InsightArticle = {
   pullQuote:
     "The strongest buildings are not created by speed alone, but by disciplined planning that leaves room for quality.",
   gallery: [
-    "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
+    cld('insights-how-to-plan-a-commercial-building-gallery-1', { w: 1200 }),
+    cld('insights-how-to-plan-a-commercial-building-gallery-2', { w: 1200 }),
   ],
 };
 
@@ -61,8 +62,7 @@ export const articles: InsightArticle[] = [
     author: "Darren Solis",
     date: "May 02, 2026",
     readTime: "6 min read",
-    image:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80",
+    image: cld('insights-benefits-of-solar-energy', { w: 1200 }),
     imageAlt: "Solar panels on a contemporary building roof",
     content: [
       "Integrating solar energy into a development can improve both performance and long-term value. For commercial and residential projects alike, solar can reduce operational costs while supporting a healthier environmental profile.",
@@ -78,8 +78,7 @@ export const articles: InsightArticle[] = [
     author: "Lina Haddad",
     date: "April 23, 2026",
     readTime: "5 min read",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    image: cld('insights-modern-interior-design-trends', { w: 1200 }),
     imageAlt: "Luxury interior with warm lighting and minimalist styling",
     content: [
       "The most enduring interior spaces balance texture, proportion, and practical comfort. Materials such as stone, oak, and brushed metal continue to perform beautifully because they age gracefully and support layered lighting strategies.",
@@ -95,8 +94,7 @@ export const articles: InsightArticle[] = [
     author: "Elliot Brooks",
     date: "April 10, 2026",
     readTime: "7 min read",
-    image:
-      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80",
+    image: cld('insights-property-investment-guide', { w: 1200 }),
     imageAlt: "Contemporary residential property in an urban setting",
     content: [
       "Property investment decisions are increasingly shaped by a mix of macroeconomic awareness and micro-level design quality. Buyers and investors today are looking for places that perform functionally, socially, and commercially.",
@@ -112,8 +110,7 @@ export const articles: InsightArticle[] = [
     author: "Rafael Torres",
     date: "March 29, 2026",
     readTime: "6 min read",
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+    image: cld('insights-engineering-innovation-trends', { w: 1200 }),
     imageAlt: "Engineering team reviewing a digital model",
     content: [
       "Innovation in engineering is rarely about novelty alone. It is about creating dependable performance at scale, whether that means stronger structural systems, more accurate coordination, or faster procurement cycles.",
@@ -129,8 +126,7 @@ export const articles: InsightArticle[] = [
     author: "Sarah Imani",
     date: "March 16, 2026",
     readTime: "9 min read",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    image: cld('insights-future-of-architectural-design', { w: 1200 }),
     imageAlt: "Modern architectural facade with sustainable design elements",
     content: [
       "Architecture today must do more than create form. It must support resilience, comfort, and long-term relevance in the face of environmental and social change.",

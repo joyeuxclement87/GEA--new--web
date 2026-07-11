@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cld } from "@/lib/cloudinary";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
@@ -54,8 +55,8 @@ const expertiseColumns = [
   {
     heading: "Engineering Systems",
     items: [
-      { label: "Mechanical, Electrical & Plumbing", href: "/services#mep" },
-      { label: "Fire Protection Systems", href: "/services#fire-protection" },
+      { label: "Mechanical, Electrical & Plumbing", href: "/services/mep-engineering" },
+      { label: "Fire Protection Systems", href: "/services/fire-protection-systems" },
       { label: "Security Systems", href: "/services#security-systems" },
       { label: "HVAC Systems", href: "/services#hvac" },
       { label: "Solar Energy Solutions", href: "/services#solar-energy" },
@@ -194,7 +195,7 @@ function ExpertisePanel({ onClose }: { onClose: () => void }) {
         <div className="border-l border-[#E6E6E6] flex flex-col">
           <div className="relative h-44 overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=560&q=80"
+              src={cld('nav-featured-architectural-project', { w: 560 })}
               alt="Featured architectural project"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />
@@ -290,7 +291,7 @@ function ProductsPanel({ onClose }: { onClose: () => void }) {
         <div className="flex flex-col">
           <div className="relative h-48 overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=480&q=80"
+              src={cld('nav-premium-bathroom-collection', { w: 480 })}
               alt="Premium Bathroom Collection"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />

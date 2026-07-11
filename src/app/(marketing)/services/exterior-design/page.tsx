@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Minus, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
+import { cld } from '@/lib/cloudinary';
 
 const provisions = [
   {
@@ -12,49 +13,49 @@ const provisions = [
     title: 'Building Facade Design',
     desc: 'Create modern and visually balanced building exteriors that reflect the project\'s identity.',
     points: ['Cladding & curtain walls', 'Thermal performance studies', 'Aesthetic & visual styling'],
-    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-exterior-design-building-facade-design', { w: 1600 }),
   },
   {
     num: '02',
     title: 'Architectural Concept Development',
     desc: 'Develop exterior concepts that combine creativity, functionality, and construction requirements.',
     points: ['Volumetric & massing studies', 'Contextual integration', 'Initial sketching & 3D models'],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-exterior-design-architectural-concept-development', { w: 1600 }),
   },
   {
     num: '03',
     title: 'Material Selection',
     desc: 'Recommend durable, high-performance materials that also deliver refined appearances.',
     points: ['Durability & weather resistance', 'Tactile & visual harmony', 'Sustainability certifications'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-exterior-design-material-selection', { w: 1600 }),
   },
   {
     num: '04',
     title: 'Outdoor Space Integration',
     desc: 'Design exterior environments that connect buildings with their surroundings and landscape.',
     points: ['Landscape coordination', 'Terrace & entrance design', 'Threshold transitions'],
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-exterior-design-outdoor-space-integration', { w: 1600 }),
   },
   {
     num: '05',
     title: 'Lighting & Exterior Details',
     desc: 'Enhance architectural character through considered lighting and finishing details.',
     points: ['Architectural lighting design', 'Custom metal & glass details', 'Canopy & entryway detailing'],
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-exterior-design-lighting-and-exterior-details', { w: 1600 }),
   },
   {
     num: '06',
     title: 'Residential Exterior Design',
     desc: 'Personalised home exteriors that reflect lifestyle, comfort, and modern design principles.',
     points: ['Custom home envelopes', 'Villa & estate design', 'Material styling & finishes'],
-    image: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-exterior-design-residential-exterior-design', { w: 1600 }),
   },
   {
     num: '07',
     title: 'Commercial Exterior Design',
     desc: 'Professional facades and site presence that strengthen corporate identity and user experience.',
     points: ['High-rise & office facades', 'Brand & identity integration', 'Durability & compliance'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80',
+    image: cld('services-exterior-design-commercial-exterior-design', { w: 1600 }),
   },
 ];
 
@@ -73,9 +74,9 @@ const principles = [
 ];
 
 const featured = [
-  { title: 'Cliffside Villa', location: 'Dar es Salaam, TZ', service: 'Residential Exterior Design', year: '2024', image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80' },
-  { title: 'Market Square Offices', location: 'Kigali, RW', service: 'Commercial Exterior Design', year: '2023', image: 'https://images.unsplash.com/photo-1488330001831-9ca1b9b8c8b1?auto=format&fit=crop&w=1600&q=80' },
-  { title: 'Harbor Apartments', location: 'Mombasa, KE', service: 'Apartment Development', year: '2025', image: 'https://images.unsplash.com/photo-1505691723518-36a0dcdc93d5?auto=format&fit=crop&w=1600&q=80' },
+  { title: 'Cliffside Villa', location: 'Dar es Salaam, TZ', service: 'Residential Exterior Design', year: '2024', image: cld('services-exterior-design-related-cliffside-villa', { w: 1600 }) },
+  { title: 'Market Square Offices', location: 'Kigali, RW', service: 'Commercial Exterior Design', year: '2023', image: cld('services-exterior-design-related-market-square-offices', { w: 1600 }) },
+  { title: 'Harbor Apartments', location: 'Mombasa, KE', service: 'Apartment Development', year: '2025', image: cld('services-exterior-design-related-harbor-apartments', { w: 1600 }) },
 ];
 
 const faqs = [
@@ -113,7 +114,7 @@ export default function ExteriorDesignPage() {
             initial={{ scale: 1.06, opacity: 0 }}
             animate={{ scale: 1, opacity: 0.30 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=80"
+            src={cld('heroes-services-exterior-design', { w: 1800 })}
             alt="Exterior Design"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -314,7 +315,7 @@ export default function ExteriorDesignPage() {
 
           <div className="lg:col-span-5">
             <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[24px] border border-[#E6E6E6] shadow-xl">
-              <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=80" alt="Exterior detail" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+              <img src={cld('services-exterior-design-exterior-detail', { w: 1600 })} alt="Exterior detail" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
             </div>
           </div>
         </div>
