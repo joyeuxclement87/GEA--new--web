@@ -514,7 +514,7 @@ export const expertiseLinks = [
   { label: "General Contracting", href: "/services#general-contracting" },
   { label: "Project Management", href: "/services#project-management" },
   { label: "Interior Design", href: "/services/interior-design" },
-  { label: "HVAC Systems", href: "/services#hvac" },
+  { label: "HVAC Systems", href: "/services/hvac-systems" },
   { label: "Fire Protection", href: "/services#fire-protection" },
   { label: "Real Estate", href: "/services#real-estate-services" },
 ];

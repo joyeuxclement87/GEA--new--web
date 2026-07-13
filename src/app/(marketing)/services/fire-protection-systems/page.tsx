@@ -439,8 +439,8 @@ export default function FireProtectionSystemsPage() {
       <section className="sr-only" aria-hidden="false">
         <nav aria-label="Related services">
           <Link href="/services/mep-engineering">MEP Engineering</Link>
-          <Link href="/services#security-systems">Security Systems</Link>
-          <Link href="/services#hvac">HVAC Systems</Link>
+          <Link href="/services/security-systems">Security Systems</Link>
+          <Link href="/services/hvac-systems">HVAC Systems</Link>
           <Link href="/services/general-contracting">General Contracting</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/contact">Contact</Link>

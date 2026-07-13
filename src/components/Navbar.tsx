@@ -12,11 +12,9 @@ import {
   Layers,
   Menu,
   MessageCircle,
-  Paintbrush,
   Phone,
   Search,
   Shield,
-  Sun,
   Thermometer,
   Waves,
   Wind,
@@ -57,20 +55,20 @@ const expertiseColumns = [
     items: [
       { label: "Mechanical, Electrical & Plumbing", href: "/services/mep-engineering" },
       { label: "Fire Protection Systems", href: "/services/fire-protection-systems" },
-      { label: "Security Systems", href: "/services#security-systems" },
-      { label: "HVAC Systems", href: "/services#hvac" },
-      { label: "Solar Energy Solutions", href: "/services#solar-energy" },
+      { label: "Security Systems", href: "/services/security-systems" },
+      { label: "HVAC Systems", href: "/services/hvac-systems" },
+      { label: "Solar Energy Solutions", href: "/services/solar-energy-solutions" },
     ],
   },
   {
     heading: "Property & Investment",
     items: [
-      { label: "Real Estate Services", href: "/services/real-estate" },
+      { label: "Real Estate Services", href: "/services/real-estate-services" },
       {
         label: "Property Refurbishment",
-        href: "/services#property-refurbishment",
+        href: "/services/property-refurbishment",
       },
-      { label: "Property Demolition", href: "/services#property-demolition" },
+      { label: "Property Demolition", href: "/services/property-demolition" },
     ],
   },
 ];
@@ -80,39 +78,66 @@ const productCategories = [
     label: "Bathroom & Sanitary",
     desc: "Fixtures & sanitary ware",
     icon: Bath,
+    href: "/materials/bathroom-sanitary",
     slug: "bathroom-sanitary",
   },
   {
     label: "Tiles & Flooring",
     desc: "Ceramic, porcelain & stone",
     icon: Layers,
+    href: "/materials/tiles-flooring",
     slug: "tiles-flooring",
   },
-  { label: "Electrical", desc: "Wiring, switches & panels", icon: Zap, slug: "electrical" },
-  { label: "Plumbing", desc: "Pipes, fittings & valves", icon: Droplets, slug: "plumbing" },
-  { label: "HVAC", desc: "Cooling & ventilation systems", icon: Wind, slug: "hvac" },
-  { label: "Security Systems", desc: "CCTV & access control", icon: Shield, slug: "security-systems" },
   {
-    label: "Solar Solutions",
-    desc: "Panels, inverters & batteries",
-    icon: Sun,
-    slug: "solar-energy",
+    label: "Electrical",
+    desc: "Wiring, switches & panels",
+    icon: Zap,
+    href: "/materials/electrical",
+    slug: "electrical",
   },
-  { label: "Water Pumps", desc: "Submersible & pressure pumps", icon: Waves, slug: "water-pumps" },
+  {
+    label: "Plumbing",
+    desc: "Pipes, fittings & valves",
+    icon: Droplets,
+    href: "/materials/plumbing",
+    slug: "plumbing",
+  },
+
+  {
+    label: "Security Systems",
+    desc: "CCTV & access control",
+    icon: Shield,
+    href: "/materials/security-systems",
+    slug: "security-systems",
+  },
+  {
+    label: "Water Pumps",
+    desc: "Submersible & pressure pumps",
+    icon: Waves,
+    href: "/solutions/water-pumps",
+    slug: "water-pumps",
+  },
   {
     label: "Water Heaters",
     desc: "Solar & electric heaters",
     icon: Thermometer,
+    href: "/solutions/water-heaters",
     slug: "water-heaters",
   },
-  { label: "Doors & Windows", desc: "Aluminium, uPVC & wood", icon: Cpu, slug: "doors-windows" },
   {
-    label: "Paint & Finishes",
-    desc: "Interior & exterior coatings",
-    icon: Paintbrush,
-    slug: "paint-finishes",
+    label: "Doors & Windows",
+    desc: "Aluminium, uPVC & wood",
+    icon: Cpu,
+    href: "/solutions/doors-windows",
+    slug: "doors-windows",
   },
-  { label: "Fire Protection", desc: "Suppression & detection", icon: Flame, slug: "fire-safety" },
+  {
+    label: "Fire Protection",
+    desc: "Suppression & detection",
+    icon: Flame,
+    href: "/solutions/fire-safety",
+    slug: "fire-safety",
+  },
 ];
 
 const recentSearches = [
@@ -124,7 +149,7 @@ const quickLinks = [
   { label: "Services", href: "/services" },
   { label: "Materials", href: "/products" },
   { label: "Projects", href: "/projects" },
-  { label: "Real Estate", href: "/services/real-estate" },
+  { label: "Real Estate", href: "/services/real-estate-services" },
   { label: "News", href: "/insights" },
   { label: "Get a Quote", href: "/quote" },
 ];
@@ -261,13 +286,13 @@ function ProductsPanel({ onClose }: { onClose: () => void }) {
           >
             Product Categories
           </p>
-          <div className="grid grid-cols-4 gap-1.5">
+          <div className="grid grid-cols-3 gap-1.5">
             {productCategories.map((cat) => {
               const Icon = cat.icon;
               return (
                 <Link
                   key={cat.label}
-                  href={`/solutions/${cat.slug}`}
+                  href={cat.href ?? `/solutions/${cat.slug}`}
                   onClick={onClose}
                   className="group/card flex items-start gap-3 rounded-xl border border-transparent p-3 transition-all duration-200 hover:border-[#E6E6E6] hover:bg-[#F8F8F8] hover:-translate-y-0.5"
                 >
@@ -287,42 +312,31 @@ function ProductsPanel({ onClose }: { onClose: () => void }) {
             })}
           </div>
         </div>
-
-        <div className="flex flex-col">
-          <div className="relative h-48 overflow-hidden">
-            <img
-              src={cld('nav-premium-bathroom-collection', { w: 480 })}
-              alt="Premium Bathroom Collection"
-              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1F2937]/70 to-transparent" />
-          </div>
-          <div className="flex flex-1 flex-col justify-between bg-[#F8F8F8] p-5">
-            <div>
-              <span className="text-[9px] font-[600] uppercase tracking-[0.2em] text-[#C8A45D]">
-                Featured Collection
-              </span>
-              <p
-                className="mt-1.5 text-[13px] font-[600] text-[#1F2937] leading-snug"
-                style={{ fontFamily: "Manrope, sans-serif" }}
-              >
-                Premium Bathroom
-                <br />
-                Collection 2026
-              </p>
-              <p className="mt-1.5 text-[11px] text-[#1F2937]/50 leading-relaxed">
-                Curated sanitary ware & fixtures for luxury interiors.
-              </p>
-            </div>
-            <Link
-              href="/solutions/bathroom-sanitary"
-              onClick={onClose}
-              className="mt-4 inline-flex items-center gap-1.5 text-[12px] font-[500] text-[#10367D] transition-all duration-200 hover:gap-3 hover:text-[#C8A45D] group/coll"
+        <div className="flex flex-col justify-between bg-[#F8F8F8] p-5">
+          <div>
+            <span className="text-[9px] font-[600] uppercase tracking-[0.2em] text-[#C8A45D]">
+              Featured Collection
+            </span>
+            <p
+              className="mt-1.5 text-[13px] font-[600] text-[#1F2937] leading-snug"
+              style={{ fontFamily: "Manrope, sans-serif" }}
             >
-              Explore Collection
-              <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover/coll:translate-x-1" />
-            </Link>
+              Premium Bathroom
+              <br />
+              Collection 2026
+            </p>
+            <p className="mt-1.5 text-[11px] text-[#1F2937]/50 leading-relaxed">
+              Curated sanitary ware & fixtures for luxury interiors.
+            </p>
           </div>
+          <Link
+            href="/materials/bathroom-sanitary"
+            onClick={onClose}
+            className="mt-4 inline-flex items-center gap-1.5 text-[12px] font-[500] text-[#10367D] transition-all duration-200 hover:gap-3 hover:text-[#C8A45D] group/coll"
+          >
+            Explore Collection
+            <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover/coll:translate-x-1" />
+          </Link>
         </div>
       </div>
 
@@ -567,7 +581,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                             productCategories.map((cat) => (
                               <Link
                                 key={cat.label}
-                                href={`/solutions/${cat.slug}`}
+                                href={cat.href ?? `/solutions/${cat.slug}`}
                                 onClick={onClose}
                                 className="flex items-center gap-2.5 py-2 text-[14px] text-[#1F2937]/60 hover:text-[#C8A45D] transition-colors"
                               >

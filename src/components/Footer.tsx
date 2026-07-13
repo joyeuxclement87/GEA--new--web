@@ -15,7 +15,7 @@ const footerServices = [
   { label: "General Contracting", href: "/services/general-contracting" },
   { label: "Project Management", href: "/services/project-management" },
   { label: "Interior Design", href: "/services/interior-design" },
-  { label: "HVAC Systems", href: "/services#hvac" },
+  { label: "HVAC Systems", href: "/services/hvac-systems" },
   { label: "Solar Energy Solutions", href: "/services#solar-energy" },
 ];
 

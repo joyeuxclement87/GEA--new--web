@@ -438,7 +438,7 @@ export default function MepEngineeringPage() {
       {/* INTERNAL LINKS (SEO) */}
       <section className="sr-only" aria-hidden="false">
         <nav aria-label="Related services">
-          <Link href="/services#hvac">HVAC Systems</Link>
+          <Link href="/services/hvac-systems">HVAC Systems</Link>
           <Link href="/services/fire-protection-systems">Fire Protection Systems</Link>
           <Link href="/services#solar-energy">Solar Energy Solutions</Link>
           <Link href="/services/general-contracting">General Contracting</Link>

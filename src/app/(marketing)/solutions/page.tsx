@@ -39,27 +39,20 @@ const solutionCategories = [
   {
     num: '03',
     slug: 'electrical',
-    title: 'Electrical Solutions',
-    desc: 'Complete electrical systems including switchgear, distribution boards, cables, lighting controls, and intelligent energy management solutions for all project scales.',
+    title: 'Electrical',
+    desc: 'Wiring, switches & panels',
     productTypes: '180+',
     image: cld('solutions-electrical-card', { w: 1400 }),
   },
   {
     num: '04',
     slug: 'plumbing',
-    title: 'Plumbing Systems',
-    desc: 'High-performance piping, valves, fittings, and drainage systems designed for reliability and long-term performance in residential and industrial applications.',
+    title: 'Plumbing',
+    desc: 'Pipes, fittings & valves',
     productTypes: '150+',
     image: cld('solutions-plumbing-card', { w: 1400 }),
   },
-  {
-    num: '05',
-    slug: 'hvac',
-    title: 'HVAC Equipment',
-    desc: 'Heating, ventilation, and air conditioning systems from global brands. From split units and VRF systems to industrial chillers and ventilation solutions.',
-    productTypes: '90+',
-    image: cld('solutions-hvac-card', { w: 1400 }),
-  },
+
   {
     num: '06',
     slug: 'solar-energy',
@@ -71,8 +64,8 @@ const solutionCategories = [
   {
     num: '07',
     slug: 'fire-safety',
-    title: 'Fire Safety Equipment',
-    desc: 'Certified fire detection, suppression, and emergency systems — sprinklers, extinguishers, alarm panels, and evacuation equipment meeting international standards.',
+    title: 'Fire Protection',
+    desc: 'Suppression & detection',
     productTypes: '80+',
     image: cld('solutions-fire-safety-card', { w: 1400 }),
   },
@@ -80,7 +73,7 @@ const solutionCategories = [
     num: '08',
     slug: 'security-systems',
     title: 'Security Systems',
-    desc: 'Integrated access control, CCTV, intrusion detection, and smart security solutions protecting residential, commercial, and industrial properties.',
+    desc: 'CCTV & access control',
     productTypes: '70+',
     image: cld('solutions-security-systems-card', { w: 1400 }),
   },
@@ -88,7 +81,7 @@ const solutionCategories = [
     num: '09',
     slug: 'water-pumps',
     title: 'Water Pumps',
-    desc: 'Submersible pumps, booster systems, pressure tanks, and industrial pumping solutions for water supply, irrigation, and building services applications.',
+    desc: 'Submersible & pressure pumps',
     productTypes: '50+',
     image: cld('solutions-water-pumps-card', { w: 1400 }),
   },
@@ -96,7 +89,7 @@ const solutionCategories = [
     num: '10',
     slug: 'water-heaters',
     title: 'Water Heaters',
-    desc: 'Solar water heaters, heat pump systems, electric, and gas water heaters for domestic and commercial hot water supply with energy-efficient performance.',
+    desc: 'Solar & electric heaters',
     productTypes: '40+',
     image: cld('solutions-water-heaters-card', { w: 1400 }),
   },
@@ -104,7 +97,7 @@ const solutionCategories = [
     num: '11',
     slug: 'doors-windows',
     title: 'Doors & Windows',
-    desc: 'Aluminium, uPVC, and timber doors and windows engineered for thermal performance, security, and architectural aesthetics. Glazing systems and facade elements.',
+    desc: 'Aluminium, uPVC & wood',
     productTypes: '100+',
     image: cld('solutions-doors-windows-card', { w: 1400 }),
   },
@@ -147,12 +140,7 @@ const featuredCollections = [
     image: cld('solutions-tiles-flooring-featured', { w: 1200 }),
     slug: 'tiles-flooring',
   },
-  {
-    name: 'Commercial HVAC Systems',
-    desc: 'VRF, chiller, and AHU systems engineered for large-scale commercial and hospitality projects.',
-    image: cld('solutions-hvac-featured', { w: 1200 }),
-    slug: 'hvac',
-  },
+
   {
     name: 'Smart Security Solutions',
     desc: 'Integrated access control, surveillance, and perimeter protection for intelligent buildings.',
@@ -214,6 +202,18 @@ const technicalServices = [
   'Technical Consultation',
   'Installation Guidance',
 ];
+
+const getSolutionHref = (slug: string) => {
+  const materialRoutes: Record<string, string> = {
+    'bathroom-sanitary': '/materials/bathroom-sanitary',
+    'tiles-flooring': '/materials/tiles-flooring',
+    electrical: '/materials/electrical',
+    plumbing: '/materials/plumbing',
+    'security-systems': '/materials/security-systems',
+  };
+
+  return materialRoutes[slug] ?? `/solutions/${slug}`;
+};
 
 const faqs = [
   {
@@ -565,7 +565,7 @@ export default function SolutionsPage() {
                   transition={{ duration: 0.65, delay: (idx % 4) * 0.06, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <a
-                    href={`/solutions/${cat.slug}`}
+                    href={getSolutionHref(cat.slug)}
                     id={`category-${cat.slug}`}
                     className="group flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 py-8 lg:py-10 transition-all duration-300 hover:bg-white/60 px-4 -mx-4 rounded-[12px]"
                   >
@@ -671,7 +671,7 @@ export default function SolutionsPage() {
               {featuredCollections.map((col, idx) => (
                 <motion.a
                   key={col.slug + idx}
-                  href={`/solutions/${col.slug}`}
+                  href={getSolutionHref(col.slug)}
                   id={`collection-${col.slug}`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

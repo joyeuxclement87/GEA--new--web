@@ -19,12 +19,14 @@ const fadeUp = {
 // ─── Data ───────────────────────────────────────────────────────────
 
 // Services with a dedicated detail page live at /services/[slug]
-const servicesWithDetailPage = new Set(["architecture-drawings", "interior-design", "exterior-design", "landscaping", "general-contracting", "project-management", "boq-cost-estimation", "project-consultation", "mep", "fire-protection"]);
+const servicesWithDetailPage = new Set(["architecture-drawings", "interior-design", "exterior-design", "landscaping", "general-contracting", "project-management", "boq-cost-estimation", "project-consultation", "mep", "fire-protection", "hvac", "solar-energy", "real-estate-services", "property-refurbishment", "property-demolition"]);
 
 // Slugs whose detail page route differs from the listing slug.
 const detailPageSlugOverrides: Record<string, string> = {
   mep: "mep-engineering",
   "fire-protection": "fire-protection-systems",
+  hvac: "hvac-systems",
+  "solar-energy": "solar-energy-solutions",
 };
 
 const services = [
